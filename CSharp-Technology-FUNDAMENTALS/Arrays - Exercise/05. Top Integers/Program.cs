@@ -16,6 +16,7 @@ namespace _05._Top_Integers
                     if (arr[i] <= arr[j])
                     {
                         currIterationNumIsBigger = false;
+                        break;
                     }
                 }
                 if (currIterationNumIsBigger)
