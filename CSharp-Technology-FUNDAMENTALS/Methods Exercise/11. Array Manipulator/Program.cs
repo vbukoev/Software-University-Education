@@ -51,15 +51,13 @@ namespace _11._Array_Manipulator
 
             if (position == "first")
             {
-                foreach (var num in arr)
+                foreach (int num in arr)
                 {
                     if (num % 2 == resultEvenOrOdd)
                     {
                         count++;
                         nums.Add(num);
-
                     }
-
                     if (count == numCnt) break;
                 }
             }
@@ -71,7 +69,6 @@ namespace _11._Array_Manipulator
                     {
                         count++;
                         nums.Add(arr[currIndex]);
-
                     }
 
                     if (count == numCnt) break;
