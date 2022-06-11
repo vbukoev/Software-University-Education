@@ -273,7 +273,7 @@ namespace _11._Array_Manipulator
 
                 }
             }
-            Console.WriteLine(index > -1 ? index.ToString() : "No Matches");
+            Console.WriteLine(index > -1 ? index.ToString() : "No matches");
         }
         private static int[] ExchangeArr(int[] arr, int splitIndex)
         {
