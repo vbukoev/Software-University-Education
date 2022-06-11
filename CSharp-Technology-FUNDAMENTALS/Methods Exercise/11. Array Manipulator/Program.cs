@@ -26,7 +26,7 @@ namespace _11._Array_Manipulator
                     FindNumbers(arr, command[0], int.Parse(command[1]), command[2]);
                 }
             }
-
+            Console.WriteLine($"[{string.Join(", ", arr)}]");
         }
 
         private static void FindNumbers(int[] arr, string position, int numCnt, string evenOrOdd)
