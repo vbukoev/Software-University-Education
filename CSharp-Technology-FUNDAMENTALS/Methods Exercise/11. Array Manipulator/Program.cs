@@ -48,6 +48,7 @@ namespace _11._Array_Manipulator
 
             int count = 0;
             List<int> nums = new List<int>();
+
             if (position == "first")
             {
                 foreach (var num in arr)
