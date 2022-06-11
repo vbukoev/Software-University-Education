@@ -8,6 +8,7 @@ namespace _11._Array_Manipulator
     {
         static void Main(string[] args)
         {
+
             int[] arr = Console.ReadLine().Split().Select(int.Parse).ToArray();
             string[] command = Console.ReadLine().Split();
             while (command[0] != "end")
@@ -27,7 +28,30 @@ namespace _11._Array_Manipulator
                 }
                 command = Console.ReadLine().Split();
             }
+
             Console.WriteLine($"[{string.Join(", ", arr)}]");
+
+
+            //int[] arr = Console.ReadLine().Split().Select(int.Parse).ToArray();
+            //string[] command = Console.ReadLine().Split();
+            //while (command[0] != "end")
+            //{
+            //    if (command[0] == "exchange")
+            //    {
+            //        int givenIndex = int.Parse(command[1]);
+            //        arr = ExchangeArr(arr, givenIndex);
+            //    }
+            //    else if (command[0] == "max" || command[0] == "min")
+            //    {
+            //        FindMinMax(arr, command[0], command[1]);
+            //    }
+            //    else
+            //    {
+            //        FindNumbers(arr, command[0], int.Parse(command[1]), command[2]);
+            //    }
+            //    command = Console.ReadLine().Split();
+            //}
+            //Console.WriteLine($"[{string.Join(", ", arr)}]");
         }
 
         private static void FindNumbers(int[] arr, string position, int numCnt, string evenOrOdd)
