@@ -25,6 +25,7 @@ namespace _11._Array_Manipulator
                 {
                     FindNumbers(arr, command[0], int.Parse(command[1]), command[2]);
                 }
+                command = Console.ReadLine().Split();
             }
             Console.WriteLine($"[{string.Join(", ", arr)}]");
         }
