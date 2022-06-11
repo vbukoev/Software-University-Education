@@ -15,7 +15,7 @@ namespace _11._Array_Manipulator
                 if (command[0] == "exchange")
                 {
                     int givenIndex = int.Parse(command[1]);
-                    arr = ExchangeArr(arr, int.Parse(command[1]));
+                    arr = ExchangeArr(arr, givenIndex);
                 }
                 else if (command[0] == "max" || command[0] == "min")
                 {
