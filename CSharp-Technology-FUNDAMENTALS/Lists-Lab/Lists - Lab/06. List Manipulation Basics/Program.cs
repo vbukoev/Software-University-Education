@@ -6,7 +6,7 @@ namespace _06._List_Manipulation_Basics
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            
         }
     }
 }
