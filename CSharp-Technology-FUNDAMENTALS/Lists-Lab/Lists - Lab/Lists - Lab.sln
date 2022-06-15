@@ -3,17 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32126.317
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. Sum Adjacent Equal Numbers", "01. Sum Adjacent Equal Numbers\01. Sum Adjacent Equal Numbers.csproj", "{715D5139-D6DD-407B-B4AE-33A0EBF761C0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01. Sum Adjacent Equal Numbers", "01. Sum Adjacent Equal Numbers\01. Sum Adjacent Equal Numbers.csproj", "{715D5139-D6DD-407B-B4AE-33A0EBF761C0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. Gauss' Trick", "02. Gauss' Trick\02. Gauss' Trick.csproj", "{93C529FE-C1E1-4163-85CE-6D841C6C9129}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02. Gauss' Trick", "02. Gauss' Trick\02. Gauss' Trick.csproj", "{93C529FE-C1E1-4163-85CE-6D841C6C9129}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "00.Demos", "00.Demos\00.Demos.csproj", "{59177632-2112-44BC-B84C-616A205CEADF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "00.Demos", "00.Demos\00.Demos.csproj", "{59177632-2112-44BC-B84C-616A205CEADF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. Merging Lists", "03. Merging Lists\03. Merging Lists.csproj", "{D47EDEA2-BD17-4D8E-AA2E-8ECA4B0559A8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03. Merging Lists", "03. Merging Lists\03. Merging Lists.csproj", "{D47EDEA2-BD17-4D8E-AA2E-8ECA4B0559A8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. List of Products", "04. List of Products\04. List of Products.csproj", "{C4D366D7-6FB4-491C-9F5C-894307463705}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04. List of Products", "04. List of Products\04. List of Products.csproj", "{C4D366D7-6FB4-491C-9F5C-894307463705}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05. Remove Negatives and Reverse", "05. Remove Negatives and Reverse\05. Remove Negatives and Reverse.csproj", "{DDC307FE-8D37-4654-8DDE-A57A0395F446}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "05. Remove Negatives and Reverse", "05. Remove Negatives and Reverse\05. Remove Negatives and Reverse.csproj", "{DDC307FE-8D37-4654-8DDE-A57A0395F446}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06. List Manipulation Basics", "06. List Manipulation Basics\06. List Manipulation Basics.csproj", "{315E205E-8560-4C97-A5A9-50121004BEDE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{DDC307FE-8D37-4654-8DDE-A57A0395F446}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DDC307FE-8D37-4654-8DDE-A57A0395F446}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DDC307FE-8D37-4654-8DDE-A57A0395F446}.Release|Any CPU.Build.0 = Release|Any CPU
+		{315E205E-8560-4C97-A5A9-50121004BEDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{315E205E-8560-4C97-A5A9-50121004BEDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{315E205E-8560-4C97-A5A9-50121004BEDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{315E205E-8560-4C97-A5A9-50121004BEDE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
