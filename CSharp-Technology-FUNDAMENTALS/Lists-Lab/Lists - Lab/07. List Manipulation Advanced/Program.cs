@@ -43,12 +43,15 @@ namespace _06._List_Manipulation_Basics
                     case "PrintEven":
                         PrintEven(numbers);
                         break;
+                    case "PrintOdd":
+                        PrintOdd(numbers);
+                        break;
                 }
             }
             Console.WriteLine(string.Join(" ", numbers));
         }
 
-         
+        
 
         static void PrintContains(int number, List<int> numbers)
         {
@@ -67,7 +70,17 @@ namespace _06._List_Manipulation_Basics
             {
                 if (number%2==0)
                 {
-                    Console.WriteLine($"{number} ");
+                    Console.Write($"{number} ");
+                }
+            }
+        }
+        static void PrintOdd(List<int> numbers)
+        {
+            foreach (var number in numbers)
+            {
+                if (number % 2 != 0)
+                {
+                    Console.Write($"{number} ");
                 }
             }
         }
