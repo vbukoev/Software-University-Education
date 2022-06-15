@@ -7,7 +7,7 @@ namespace _01._Sum_Adjacent_Equal_Numbers
     {
         static void Main(string[] args)
         {
-            
+             
         }
     }
 }
