@@ -38,7 +38,6 @@ namespace _06._List_Manipulation_Basics
                         numbers.Insert(indexToInsert, numberToInsert);
                         break;
                 }
-
             }
             Console.WriteLine(string.Join(" ", numbers));
         }
