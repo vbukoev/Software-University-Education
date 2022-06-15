@@ -49,11 +49,60 @@ namespace _06._List_Manipulation_Basics
                     case "GetSum":
                         GetSum(numbers);
                         break;
+                    case "PrintFilter":
+                        PrintFilter(tokens[1], int.Parse(tokens[2]), numbers);
+                        break;
                 }
             }
             Console.WriteLine(string.Join(" ", numbers));
         }
 
+        static void PrintFilter(string filter, int numberToFilter, List<int> numbers)
+        {
+            switch (filter)
+            {
+                case "<":
+                    foreach (int number in numbers)
+                    {
+                        if (number < numberToFilter)
+                        {
+                            Console.WriteLine($"{number} ");
+                        }
+
+                    }
+                    break;
+                case "<=":
+                    foreach (int number in numbers)
+                    {
+                        if (number <= numberToFilter)
+                        {
+                            Console.WriteLine($"{number} ");
+                        }
+
+                    }
+                    break;
+                case ">":
+                    foreach (int number in numbers)
+                    {
+                        if (number > numberToFilter)
+                        {
+                            Console.WriteLine($"{number} ");
+                        }
+
+                    }
+                    break;
+                case ">=":
+                    foreach (int number in numbers)
+                    {
+                        if (number >= numberToFilter)
+                        {
+                            Console.WriteLine($"{number} ");
+                        }
+
+                    }
+                    break;
+            }
+        }
         static void GetSum(List<int> numbers)
         {
             int sum = 0;
@@ -80,7 +129,7 @@ namespace _06._List_Manipulation_Basics
         {
             foreach (var number in numbers)
             {
-                if (number%2==0)
+                if (number % 2 == 0)
                 {
                     Console.Write($"{number} ");
                 }
