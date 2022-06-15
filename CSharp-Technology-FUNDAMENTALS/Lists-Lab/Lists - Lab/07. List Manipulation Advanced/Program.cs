@@ -46,12 +46,24 @@ namespace _06._List_Manipulation_Basics
                     case "PrintOdd":
                         PrintOdd(numbers);
                         break;
+                    case "GetSum":
+                        GetSum(numbers);
+                        break;
                 }
             }
             Console.WriteLine(string.Join(" ", numbers));
         }
 
-        
+        static void GetSum(List<int> numbers)
+        {
+            int sum = 0;
+
+            foreach (var number in numbers)
+            {
+                sum += number;
+            }
+            Console.WriteLine(sum);
+        }
 
         static void PrintContains(int number, List<int> numbers)
         {
