@@ -16,7 +16,7 @@ namespace _05._Remove_Negatives_and_Reverse
                     numbers.RemoveAt(i);
                     i--;
                 }
-            }
+            } 
             numbers.Reverse();
             if(numbers.Count>0)
             {
