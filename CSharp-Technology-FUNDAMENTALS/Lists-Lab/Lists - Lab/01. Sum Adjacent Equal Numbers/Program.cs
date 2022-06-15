@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace _01._Sum_Adjacent_Equal_Numbers
 {
