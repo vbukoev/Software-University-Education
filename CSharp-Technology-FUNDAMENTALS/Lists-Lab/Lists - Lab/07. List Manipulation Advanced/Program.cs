@@ -6,7 +6,7 @@ namespace _07._List_Manipulation_Advanced
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            
         }
     }
 }
