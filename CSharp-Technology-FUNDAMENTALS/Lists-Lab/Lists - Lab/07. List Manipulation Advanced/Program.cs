@@ -70,6 +70,7 @@ namespace _06._List_Manipulation_Basics
                         }
 
                     }
+                    Console.WriteLine();
                     break;
                 case "<=":
                     foreach (int number in numbers)
@@ -80,6 +81,7 @@ namespace _06._List_Manipulation_Basics
                         }
 
                     }
+                    Console.WriteLine();
                     break;
                 case ">":
                     foreach (int number in numbers)
@@ -90,6 +92,7 @@ namespace _06._List_Manipulation_Basics
                         }
 
                     }
+                    Console.WriteLine();
                     break;
                 case ">=":
                     foreach (int number in numbers)
@@ -100,6 +103,7 @@ namespace _06._List_Manipulation_Basics
                         }
 
                     }
+                    Console.WriteLine();
                     break;
             }
         }
@@ -134,6 +138,7 @@ namespace _06._List_Manipulation_Basics
                     Console.Write($"{number} ");
                 }
             }
+            Console.WriteLine();
         }
         static void PrintOdd(List<int> numbers)
         {
@@ -144,6 +149,7 @@ namespace _06._List_Manipulation_Basics
                     Console.Write($"{number} ");
                 }
             }
+            Console.WriteLine();
         }
     }
 }
