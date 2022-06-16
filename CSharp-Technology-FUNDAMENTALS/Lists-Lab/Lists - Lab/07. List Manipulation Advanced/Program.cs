@@ -66,7 +66,7 @@ namespace _06._List_Manipulation_Basics
                     {
                         if (number < numberToFilter)
                         {
-                            Console.WriteLine($"{number} ");
+                            Console.Write($"{number} ");
                         }
 
                     }
@@ -77,7 +77,7 @@ namespace _06._List_Manipulation_Basics
                     {
                         if (number <= numberToFilter)
                         {
-                            Console.WriteLine($"{number} ");
+                            Console.Write($"{number} ");
                         }
 
                     }
@@ -88,7 +88,7 @@ namespace _06._List_Manipulation_Basics
                     {
                         if (number > numberToFilter)
                         {
-                            Console.WriteLine($"{number} ");
+                            Console.Write($"{number} ");
                         }
 
                     }
@@ -99,7 +99,7 @@ namespace _06._List_Manipulation_Basics
                     {
                         if (number >= numberToFilter)
                         {
-                            Console.WriteLine($"{number} ");
+                            Console.Write($"{number} ");
                         }
 
                     }
@@ -107,7 +107,7 @@ namespace _06._List_Manipulation_Basics
                     break;
             }
         }
-        static void GetSum(List<int> numbers)
+        static int GetSum(List<int> numbers)
         {
             int sum = 0;
 
@@ -115,7 +115,7 @@ namespace _06._List_Manipulation_Basics
             {
                 sum += number;
             }
-            Console.WriteLine(sum);
+            return sum;
         }
 
         static void PrintContains(int number, List<int> numbers)
