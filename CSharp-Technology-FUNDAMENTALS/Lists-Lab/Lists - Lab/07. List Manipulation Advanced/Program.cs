@@ -55,34 +55,34 @@ namespace _06._List_Manipulation_Basics
                        int sum = GetSum(numbers);
                         Console.WriteLine(sum);
                         break;
-                    case "PrintFilter":
-                        PrintFilter(tokens[1], int.Parse(tokens[2]), numbers);
+                    case "Filter":
+                        PrintFiltered(tokens[1], int.Parse(tokens[2]), numbers);
                         break;
                 }
             }
+            
             if (isListChanged)
             {
                 Console.WriteLine(string.Join(" ", numbers));
             }
         }
 
-        static void PrintFilter(string filter, int numberToFilter, List<int> numbers)
+        static void PrintFiltered(string filter, int numberToFilter, List<int> numbers)
         {
             switch (filter)
             {
                 case "<":
-                    foreach (int number in numbers)
+                    foreach (var number in numbers)
                     {
                         if (number < numberToFilter)
                         {
                             Console.Write($"{number} ");
                         }
-
                     }
                     Console.WriteLine();
                     break;
                 case "<=":
-                    foreach (int number in numbers)
+                    foreach (var number in numbers)
                     {
                         if (number <= numberToFilter)
                         {
@@ -93,18 +93,17 @@ namespace _06._List_Manipulation_Basics
                     Console.WriteLine();
                     break;
                 case ">":
-                    foreach (int number in numbers)
+                    foreach (var number in numbers)
                     {
                         if (number > numberToFilter)
                         {
                             Console.Write($"{number} ");
                         }
-
                     }
                     Console.WriteLine();
                     break;
                 case ">=":
-                    foreach (int number in numbers)
+                    foreach (var number in numbers)
                     {
                         if (number >= numberToFilter)
                         {
