@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08. Anonymous Threat", "08.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09.PokemonDontGo", "09.PokemonDontGo\09.PokemonDontGo.csproj", "{D34ED52A-857C-4BB5-8948-4A7FC33B9A5C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10. SoftUni Course Planning", "10. SoftUni Course Planning\10. SoftUni Course Planning.csproj", "{2F6C25AD-F7C4-4BDA-AB31-6B9668EF9F62}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{D34ED52A-857C-4BB5-8948-4A7FC33B9A5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D34ED52A-857C-4BB5-8948-4A7FC33B9A5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D34ED52A-857C-4BB5-8948-4A7FC33B9A5C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F6C25AD-F7C4-4BDA-AB31-6B9668EF9F62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F6C25AD-F7C4-4BDA-AB31-6B9668EF9F62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F6C25AD-F7C4-4BDA-AB31-6B9668EF9F62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F6C25AD-F7C4-4BDA-AB31-6B9668EF9F62}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

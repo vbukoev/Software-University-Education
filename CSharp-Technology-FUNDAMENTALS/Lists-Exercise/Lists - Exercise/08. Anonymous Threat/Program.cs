@@ -13,7 +13,9 @@ namespace _08._Anonymous_Threat
             {
                 string[] commands = Console.ReadLine().Split();
                 string command = commands[0];
+
                 if (command == "3:1") break;
+
                 int startIndex = int.Parse(commands[1]);
                 int endIndex = int.Parse(commands[2]);
                 string concatedWord = "";
@@ -21,7 +23,7 @@ namespace _08._Anonymous_Threat
                 {
                     endIndex = myList.Count - 1;
                 }
-                if (startIndex < myList.Count - 1 || startIndex > 0)
+                if (startIndex < 0 || startIndex > myList.Count - 1)
                 {
                     startIndex = 0;
                 }
