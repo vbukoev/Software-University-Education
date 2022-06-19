@@ -52,26 +52,34 @@ namespace _06._List_Manipulation_Basics
                         PrintOdd(numbers);
                         break;
                     case "GetSum":
-                        GetSum(numbers);
+                       int sum = GetSum(numbers);
+                        Console.WriteLine(sum);
                         break;
-                    case "PrintFilter":
-                        PrintFilter(tokens[1], int.Parse(tokens[2]), numbers);
+                    case "Filter":
+                        PrintFiltered(tokens[1], int.Parse(tokens[2]), numbers);
                         break;
                 }
             }
+<<<<<<< HEAD
+=======
+            
+>>>>>>> a729332734fcbbcde119593490c435ca7f7418ab
             if (isListChanged)
             {
                 Console.WriteLine(string.Join(" ", numbers));
             }
+<<<<<<< HEAD
            
+=======
+>>>>>>> a729332734fcbbcde119593490c435ca7f7418ab
         }
 
-        static void PrintFilter(string filter, int numberToFilter, List<int> numbers)
+        static void PrintFiltered(string filter, int numberToFilter, List<int> numbers)
         {
             switch (filter)
             {
                 case "<":
-                    foreach (int number in numbers)
+                    foreach (var number in numbers)
                     {
                         if (number < numberToFilter)
                         {
@@ -81,7 +89,7 @@ namespace _06._List_Manipulation_Basics
                     Console.WriteLine();
                     break;
                 case "<=":
-                    foreach (int number in numbers)
+                    foreach (var number in numbers)
                     {
                         if (number <= numberToFilter)
                         {
@@ -91,18 +99,17 @@ namespace _06._List_Manipulation_Basics
                     Console.WriteLine();
                     break;
                 case ">":
-                    foreach (int number in numbers)
+                    foreach (var number in numbers)
                     {
                         if (number > numberToFilter)
                         {
                             Console.Write($"{number} ");
                         }
-
                     }
                     Console.WriteLine();
                     break;
                 case ">=":
-                    foreach (int number in numbers)
+                    foreach (var number in numbers)
                     {
                         if (number >= numberToFilter)
                         {
@@ -113,7 +120,7 @@ namespace _06._List_Manipulation_Basics
                     break;
             }
         }
-        static void GetSum(List<int> numbers)
+        static int GetSum(List<int> numbers)
         {
             int sum = 0;
 
@@ -121,9 +128,8 @@ namespace _06._List_Manipulation_Basics
             {
                 sum += number;
             }
-            Console.WriteLine(sum);
+            return sum;
         }
-
         static void PrintContains(int number, List<int> numbers)
         {
             if (numbers.Contains(number))
