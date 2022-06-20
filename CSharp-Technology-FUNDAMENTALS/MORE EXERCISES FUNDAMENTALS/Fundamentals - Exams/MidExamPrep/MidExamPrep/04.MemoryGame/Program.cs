@@ -25,14 +25,14 @@ namespace _04.MemoryGame
                 {
                     sequenceOfElements.Insert(sequenceOfElements.Count / 2, $"-{turnNum}a");
                     sequenceOfElements.Insert(sequenceOfElements.Count / 2, $"-{turnNum}a");
-                    Console.WriteLine("Invalid input! Adding aditional elements to the board");
+                    Console.WriteLine("Invalid input! Adding additional elements to the board");
                 }
                 else if(sequenceOfElements[firstIndex] == sequenceOfElements[secondIndex])
                 {
                     string remove = sequenceOfElements[firstIndex];
                     sequenceOfElements.Remove(remove);
                     sequenceOfElements.Remove(remove);
-                    Console.WriteLine($"Congrats! You have found matching elements - {remove}");
+                    Console.WriteLine($"Congrats! You have found matching elements - {remove}!");
                 }
                 else
                 {
