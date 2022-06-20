@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.The Lift", "02.The Lift\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.MovingTarget", "03.MovingTarget\03.MovingTarget.csproj", "{656325A1-A4CC-465B-936C-A994CBE863CE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.MemoryGame", "04.MemoryGame\04.MemoryGame.csproj", "{C36A8867-96E0-4A5D-9C5F-5815FAF6A5DE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{656325A1-A4CC-465B-936C-A994CBE863CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{656325A1-A4CC-465B-936C-A994CBE863CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{656325A1-A4CC-465B-936C-A994CBE863CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C36A8867-96E0-4A5D-9C5F-5815FAF6A5DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C36A8867-96E0-4A5D-9C5F-5815FAF6A5DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C36A8867-96E0-4A5D-9C5F-5815FAF6A5DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C36A8867-96E0-4A5D-9C5F-5815FAF6A5DE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
