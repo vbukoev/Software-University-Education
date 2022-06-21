@@ -3,19 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32126.317
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.Guinea Pig", "01.Guinea Pig\01.Guinea Pig.csproj", "{15A41227-B126-4386-B3E3-7B74C39D00D7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01.Guinea Pig", "01.Guinea Pig\01.Guinea Pig.csproj", "{15A41227-B126-4386-B3E3-7B74C39D00D7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.The Lift", "02.The Lift\02.The Lift.csproj", "{645E381E-A598-41B1-A64E-1D2B05BEE0F3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02.The Lift", "02.The Lift\02.The Lift.csproj", "{645E381E-A598-41B1-A64E-1D2B05BEE0F3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.MovingTarget", "03.MovingTarget\03.MovingTarget.csproj", "{656325A1-A4CC-465B-936C-A994CBE863CE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03.MovingTarget", "03.MovingTarget\03.MovingTarget.csproj", "{656325A1-A4CC-465B-936C-A994CBE863CE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.MemoryGame", "04.MemoryGame\04.MemoryGame.csproj", "{C36A8867-96E0-4A5D-9C5F-5815FAF6A5DE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04.MemoryGame", "04.MemoryGame\04.MemoryGame.csproj", "{C36A8867-96E0-4A5D-9C5F-5815FAF6A5DE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05.ArrayModifier", "05.ArrayModifier\05.ArrayModifier.csproj", "{0B6D694D-3147-40F6-897C-ECC60BCE5457}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "05.ArrayModifier", "05.ArrayModifier\05.ArrayModifier.csproj", "{0B6D694D-3147-40F6-897C-ECC60BCE5457}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06.HeartDelivery", "06.HeartDelivery\06.HeartDelivery.csproj", "{23AB4562-7672-445A-9AEA-A8AFFC3BDE7F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "06.HeartDelivery", "06.HeartDelivery\06.HeartDelivery.csproj", "{23AB4562-7672-445A-9AEA-A8AFFC3BDE7F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07.WorldTour", "07.WorldTour\07.WorldTour.csproj", "{A85B8B8A-6E9C-4BAB-8A04-77D58C9479AE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "07.WorldTour", "07.WorldTour\07.WorldTour.csproj", "{A85B8B8A-6E9C-4BAB-8A04-77D58C9479AE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.SoftUniReception", "01.SoftUniReception\01.SoftUniReception.csproj", "{7E109A2E-12EA-4B17-9853-3D84C88D2768}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{A85B8B8A-6E9C-4BAB-8A04-77D58C9479AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A85B8B8A-6E9C-4BAB-8A04-77D58C9479AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A85B8B8A-6E9C-4BAB-8A04-77D58C9479AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E109A2E-12EA-4B17-9853-3D84C88D2768}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E109A2E-12EA-4B17-9853-3D84C88D2768}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E109A2E-12EA-4B17-9853-3D84C88D2768}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E109A2E-12EA-4B17-9853-3D84C88D2768}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
