@@ -35,7 +35,6 @@ namespace _05.ArrayModifier
                 }
             }
         }
-
         private static void Swap(int firstIndex, int secondIndex, List<int> numbers)
         {
             int num1 = numbers[firstIndex];
@@ -56,6 +55,5 @@ namespace _05.ArrayModifier
                 numbers[i]--;
             }
         }
-
     }
 }
