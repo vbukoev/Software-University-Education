@@ -23,6 +23,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.Numbers", "03.Numbers\03
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.CounterStrike", "01.CounterStrike\01.CounterStrike.csproj", "{DD5D9FA0-1754-478F-A565-C7C8711FC317}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.ShootfortheWin", "02.ShootfortheWin\02.ShootfortheWin.csproj", "{B7EBAC23-0936-4467-AF5C-1FFB25D969A7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.DestinationMapper", "02.DestinationMapper\02.DestinationMapper.csproj", "{C5622B03-01D2-493C-B317-9AC02F5801F8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +73,14 @@ Global
 		{DD5D9FA0-1754-478F-A565-C7C8711FC317}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DD5D9FA0-1754-478F-A565-C7C8711FC317}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DD5D9FA0-1754-478F-A565-C7C8711FC317}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7EBAC23-0936-4467-AF5C-1FFB25D969A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7EBAC23-0936-4467-AF5C-1FFB25D969A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7EBAC23-0936-4467-AF5C-1FFB25D969A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7EBAC23-0936-4467-AF5C-1FFB25D969A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5622B03-01D2-493C-B317-9AC02F5801F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5622B03-01D2-493C-B317-9AC02F5801F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5622B03-01D2-493C-B317-9AC02F5801F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5622B03-01D2-493C-B317-9AC02F5801F8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
