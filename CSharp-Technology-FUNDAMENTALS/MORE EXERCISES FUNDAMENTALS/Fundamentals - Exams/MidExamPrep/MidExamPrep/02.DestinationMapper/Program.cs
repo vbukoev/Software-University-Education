@@ -9,7 +9,7 @@ namespace _02.DestinationMapper
         static void Main(string[] args)
         {             
             string newText = Console.ReadLine();
-            string pattern = @"(=|\/)(?<l>[A-Z][A-Za-z]{2,})\1";
+            string pattern = @"(=|\/)(?<locationm>[A-Z][A-Za-z]{2,})\1";
             int count = 0;
             Regex regex = new Regex(pattern, RegexOptions.Compiled);
             List<string> sequence = new List<string>();
