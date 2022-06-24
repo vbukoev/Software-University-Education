@@ -20,7 +20,7 @@ namespace _02.ShoppingList
                 {
                     case "Urgent":
                         string item = tokens[1];
-                        if (!initialList.Contains(item)) initialList.Insert(0, item)                        
+                        if (!initialList.Contains(item)) initialList.Insert(0, item);                      
                         break;
                     case "Unnecessary":
                         string unnecessary = tokens[1];
