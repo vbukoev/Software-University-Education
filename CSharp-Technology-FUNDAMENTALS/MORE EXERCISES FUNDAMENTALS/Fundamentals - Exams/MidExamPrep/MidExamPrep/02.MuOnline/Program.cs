@@ -69,6 +69,6 @@ namespace _02.MuOnline
             Console.WriteLine("You've made it!");
             Console.WriteLine($"Bitcoins: {initialBitcoins}");
             Console.WriteLine($"Health: {initialHealth}");
-        }    
+        }
     }
 }
