@@ -42,8 +42,7 @@ namespace _05._Students2
             }
             return false;
         }
-    }
-   
+    }   
     class Student
     {
         public Student(string firstName, string lastName, int age, string homeTown)
