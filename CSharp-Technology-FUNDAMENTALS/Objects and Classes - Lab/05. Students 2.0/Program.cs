@@ -57,7 +57,5 @@ namespace _05._Students2
         public string LastName { get; set; }
         public int Age { get; set; }
         public string HomeTown { get; set; }
-
-
     }
 }
