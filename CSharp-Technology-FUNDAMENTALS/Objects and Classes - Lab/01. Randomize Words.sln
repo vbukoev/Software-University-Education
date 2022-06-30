@@ -1,21 +1,21 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.0.32126.317
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32126.315
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.Randomize Words", "Objects and Classes - Lab\01.Randomize Words.csproj", "{19579698-A8C2-40D5-9B2F-6C47F745FA2B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01.Randomize Words", "Objects and Classes - Lab\01.Randomize Words.csproj", "{19579698-A8C2-40D5-9B2F-6C47F745FA2B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. Big Factorial", "02. Big Factorial\02. Big Factorial.csproj", "{7E870E24-8B39-4884-B0C0-8DEF2FA8C39F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02. Big Factorial", "02. Big Factorial\02. Big Factorial.csproj", "{7E870E24-8B39-4884-B0C0-8DEF2FA8C39F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. Songs", "03. Songs\03. Songs.csproj", "{8FE1F493-84B5-4703-B1D8-55CB04050445}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03. Songs", "03. Songs\03. Songs.csproj", "{8FE1F493-84B5-4703-B1D8-55CB04050445}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. Students", "04. Students\04. Students.csproj", "{050E77C4-CAEB-4356-8710-C60EDF9E960D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04. Students", "04. Students\04. Students.csproj", "{050E77C4-CAEB-4356-8710-C60EDF9E960D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05. Students 2.0", "05. Students 2.0\05. Students 2.0.csproj", "{95008B34-041A-44E7-9C38-6B467C464AF6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "05. Students2", "05. Students 2.0\05. Students2.csproj", "{95008B34-041A-44E7-9C38-6B467C464AF6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06. Store Boxes", "06. Store Boxes\06. Store Boxes.csproj", "{95E8947F-5096-440C-B272-B0D72797C627}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "06. Store Boxes", "06. Store Boxes\06. Store Boxes.csproj", "{95E8947F-5096-440C-B272-B0D72797C627}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07. Vehicle Catalogue", "07. Vehicle Catalogue\07. Vehicle Catalogue.csproj", "{E100C6E4-25C6-476D-94EB-5F2F5F368AEB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "07. Vehicle Catalogue", "07. Vehicle Catalogue\07. Vehicle Catalogue.csproj", "{E100C6E4-25C6-476D-94EB-5F2F5F368AEB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
