@@ -19,7 +19,7 @@ namespace _02.Articles
                     case "Edit":
                         art.Edit(argument);
                         break;
-                    case "Change Author":
+                    case "ChangeAuthor":
                         art.ChangeAuthor(argument);
                         break;
                     case "Rename":
