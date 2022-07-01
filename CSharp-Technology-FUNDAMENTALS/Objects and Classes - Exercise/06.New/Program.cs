@@ -10,7 +10,6 @@ namespace _06.New
         static void Main(string[] args)
         {
             List<Vehicle> vehicles = new List<Vehicle>();
-
             while (true)
             {
                 string[] inputAr = Console.ReadLine().Split(new[] {" "}, StringSplitOptions.RemoveEmptyEntries);
