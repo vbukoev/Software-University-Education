@@ -66,7 +66,7 @@ namespace _06.Newnew
             }
             if (carCnt > 0) Console.WriteLine($"Cars have average horsepower of: {totalCarHp/carCnt:f2}.");
             else Console.WriteLine($"Cars have average horsepower of: {0:f2}.");
-            if (truckCnt > 0) Console.WriteLine($"Cars have average horsepower of: {totalTruckHp / truckCnt:f2}.");
+            if (truckCnt > 0) Console.WriteLine($"Trucks have average horsepower of: {totalTruckHp / truckCnt:f2}.");
             else Console.WriteLine($"Trucks have average horsepower of: {0:f2}.");
 
         }
