@@ -1,6 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
 namespace _02
 {
     internal class Program
@@ -37,5 +41,13 @@ namespace _02
             FamilyPeople.Add(newMember);
         }
         public Person Oldest() => FamilyPeople.OrderByDescending(member=>member.Age).First();        
+    }
+    class Family
+    {
+
+    }
+    class Person
+    {
+        
     }
 }
