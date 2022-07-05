@@ -16,9 +16,9 @@ namespace _03_
                 if (drive[0] == "End") break;
                 cars.Find(car => car.Model == drive[1]).Drive(int.Parse(drive[2]));
                 drive = Console.ReadLine().Split();
-
-                foreach (var item in cars) Console.WriteLine($"{item.Model} {item.FuelAmount:f2} {item.Distance:f2}");
+                
             }
+            foreach (var item in cars) Console.WriteLine($"{item.Model} {item.FuelAmount:f2} {item.Distance}");
         }
         class Car
         {
