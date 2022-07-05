@@ -35,6 +35,7 @@ namespace _02
         {
             Person newMember = new Person(info[0], int.Parse(info[1]));
             FamilyPeople.Add(newMember);
-        }        public Person Oldest() => FamilyPeople.OrderByDescending(member=>member.Age).First();        
+        }
+        public Person Oldest() => FamilyPeople.OrderByDescending(member=>member.Age).First();        
     }
 }
