@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace _01._Count_Real_Numbers
 {
@@ -6,7 +8,14 @@ namespace _01._Count_Real_Numbers
     {
         static void Main(string[] args)
         {
-            
+            double[] numbers = Console.ReadLine().Split().Select(double.Parse).ToArray();
+            SortedDictionary<double, int> cnts = new SortedDictionary<double, int>();
+            foreach (var number in numbers)
+            {
+                if (cnts.ContainsKey(number)) cnts[number]++;
+                else cnts.Add(number, 1);
+            }
+            foreach (var item in cnts) Console.WriteLine($"{item.Key} -> {item.Value}");
         }
     }
 }
