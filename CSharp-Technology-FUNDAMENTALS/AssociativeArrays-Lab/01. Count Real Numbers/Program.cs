@@ -10,7 +10,7 @@ namespace _01._Count_Real_Numbers
         {
             double[] numbers = Console.ReadLine().Split().Select(double.Parse).ToArray();
             var cnts = new SortedDictionary<double, int>();
-            foreach (var number in numbers)
+            foreach (var  number in numbers)
             {
                 if (cnts.ContainsKey(number)) cnts[number]++;
                 else cnts.Add(number, 1);
