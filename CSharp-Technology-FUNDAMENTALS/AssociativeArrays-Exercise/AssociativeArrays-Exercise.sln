@@ -5,13 +5,15 @@ VisualStudioVersion = 17.0.32126.317
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01.CountCharsinaString", "01.CountCharsinaString\01.CountCharsinaString.csproj", "{4AEF0388-70D3-4E60-A3A8-E16ECAEF6C2B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.AMinerTask", "02.AMinerTask\02.AMinerTask.csproj", "{4A08CCBD-D2F7-47D2-90BB-7927D2E01A3C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02.AMinerTask", "02.AMinerTask\02.AMinerTask.csproj", "{4A08CCBD-D2F7-47D2-90BB-7927D2E01A3C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.LegendaryFarming", "03.LegendaryFarming\03.LegendaryFarming.csproj", "{B6EC8532-9CEE-494E-9823-B9C850D25EA7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03.LegendaryFarming", "03.LegendaryFarming\03.LegendaryFarming.csproj", "{B6EC8532-9CEE-494E-9823-B9C850D25EA7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.Orders", "04.Orders\04.Orders.csproj", "{69260965-DFFD-4A78-9A71-582E2197CD81}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04.Orders", "04.Orders\04.Orders.csproj", "{69260965-DFFD-4A78-9A71-582E2197CD81}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07.StudentAcademy", "07.StudentAcademy\07.StudentAcademy.csproj", "{FF264A1A-F588-4E19-AAC4-DD5F00C41446}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "07.StudentAcademy", "07.StudentAcademy\07.StudentAcademy.csproj", "{FF264A1A-F588-4E19-AAC4-DD5F00C41446}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05.SoftUniParking", "05.SoftUniParking\05.SoftUniParking.csproj", "{1C148466-B30D-4F04-88CF-7DC38559CEBE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{FF264A1A-F588-4E19-AAC4-DD5F00C41446}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FF264A1A-F588-4E19-AAC4-DD5F00C41446}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FF264A1A-F588-4E19-AAC4-DD5F00C41446}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C148466-B30D-4F04-88CF-7DC38559CEBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C148466-B30D-4F04-88CF-7DC38559CEBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C148466-B30D-4F04-88CF-7DC38559CEBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C148466-B30D-4F04-88CF-7DC38559CEBE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
