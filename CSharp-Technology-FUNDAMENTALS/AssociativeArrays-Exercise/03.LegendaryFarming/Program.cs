@@ -138,94 +138,87 @@
 //    }
 //}
 using System;
-using System.Collections.Generic;
 using System.Linq;
+using System.Collections.Generic;
 
-namespace LegendaryFarming
+namespace _03LegendaryFarming
 {
-    class LegendaryItems
+    class Program
     {
         static void Main(string[] args)
         {
-            Dictionary<string, int> legendaryItems = new Dictionary<string, int>
+            var keyElements = new Dictionary<string, int>();
+
+            keyElements["fragments"] = 0;
+            keyElements["motes"] = 0;
+            keyElements["shards"] = 0;
+
+            var junkElements = new Dictionary<string, int>();
+
+            bool haveWinner = false;
+
+            while (haveWinner != true)
             {
-                { "motes",0 },
-                {"shards",0 },
-                {"fragments",0 }
-            };
+                var tokens = Console.ReadLine()
+                    .ToLower()
+                    .Split(" ", StringSplitOptions.RemoveEmptyEntries)
+                    .ToArray();
 
-            Dictionary<string, int> junkItems = new Dictionary<string, int>();
-
-            string winnerItem = string.Empty;
-            bool isRunning = true;
-
-            while (isRunning)
-            {
-                string[] input = Console.ReadLine().Split();
-
-                for (int i = 0; i < input.Length; i += 2)
+                for (int i = 0; i < tokens.Length; i += 2)
                 {
-                    int itemValue = int.Parse(input[i]);
-                    string item = input[i + 1].ToLower();
+                    string type = tokens[i + 1];
+                    int quantity = int.Parse(tokens[i]);
 
-                    if (legendaryItems.ContainsKey(item))
+                    if (keyElements.ContainsKey(type))
                     {
-                        legendaryItems[item] += itemValue;
+                        keyElements[type] += quantity;
 
-                        if (legendaryItems[item] >= 250)
+                        if (keyElements["motes"] >= 250)
                         {
-                            legendaryItems[item] -= 250;
-                            winnerItem = item;
-                            isRunning = false;
+                            Console.WriteLine("Dragonwrath obtained!");
+                            keyElements["motes"] -= 250;
+                            haveWinner = true;
+                            break;
+                        }
+                        else if (keyElements["fragments"] >= 250)
+                        {
+                            Console.WriteLine("Valanyr obtained!");
+                            keyElements["fragments"] -= 250;
+                            haveWinner = true;
+                            break;
+                        }
+                        else if (keyElements["shards"] >= 250)
+                        {
+                            Console.WriteLine("Shadowmourne obtained!");
+                            keyElements["shards"] -= 250;
+                            haveWinner = true;
                             break;
                         }
                     }
                     else
                     {
-                        if (junkItems.ContainsKey(item))
+                        if (!junkElements.ContainsKey(type))
                         {
-                            junkItems[item] += itemValue;
+                            junkElements[type] = quantity;
                         }
                         else
                         {
-                            junkItems[item] = itemValue;
+                            junkElements[type] += quantity;
                         }
                     }
                 }
+
             }
 
-            if (winnerItem == "motes")
+            foreach (var kvp in keyElements.OrderByDescending(x => x.Value))
             {
-                Console.WriteLine("Dragonwrath obtained!");
+                Console.WriteLine($"{kvp.Key}: {kvp.Value}");
             }
-            else if (winnerItem == "shards")
+
+            foreach (var kvp in junkElements)
             {
-                Console.WriteLine("Shadowmourne obtained!");
+                Console.WriteLine($"{kvp.Key}: {kvp.Value}");
             }
-            else
-            {
-                Console.WriteLine("Valanyr obtained!");
-            }
-
-            legendaryItems = legendaryItems
-                .OrderByDescending(x => x.Value)
-                .ThenBy(x => x.Key)
-                .ToDictionary(x => x.Key, y => y.Value);
-
-            foreach (var element in legendaryItems)
-            {
-                Console.WriteLine($"{element.Key}: {element.Value}");
-            }
-
-            junkItems = junkItems
-                .OrderBy(x => x.Key)
-                .ToDictionary(x => x.Key, x => x.Value);
-
-            foreach (var element in junkItems)
-            {
-                Console.WriteLine($"{element.Key}: {element.Value}");
-            }
-
         }
     }
 }
