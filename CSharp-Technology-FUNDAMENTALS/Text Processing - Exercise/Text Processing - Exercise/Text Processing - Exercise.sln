@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. Valid Usernames", "01. 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.CharacterMultiplier", "02.CharacterMultiplirt\02.CharacterMultiplier.csproj", "{5E9766A7-0079-4C03-953A-93480D3B7D9B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.ExtractFile", "03.ExtractFile\03.ExtractFile.csproj", "{8A273E55-349E-4930-BCE9-CA9ED4D6ABFB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{5E9766A7-0079-4C03-953A-93480D3B7D9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5E9766A7-0079-4C03-953A-93480D3B7D9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5E9766A7-0079-4C03-953A-93480D3B7D9B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A273E55-349E-4930-BCE9-CA9ED4D6ABFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A273E55-349E-4930-BCE9-CA9ED4D6ABFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A273E55-349E-4930-BCE9-CA9ED4D6ABFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A273E55-349E-4930-BCE9-CA9ED4D6ABFB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
