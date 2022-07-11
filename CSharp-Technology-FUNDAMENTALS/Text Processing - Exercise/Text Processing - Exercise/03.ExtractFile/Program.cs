@@ -6,7 +6,7 @@ namespace _03.ExtractFile
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            
         }
     }
 }
