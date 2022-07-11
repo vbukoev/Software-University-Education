@@ -18,7 +18,11 @@ namespace _01._Valid_Usernames
                     {
                         char currChar = word[j];
                         if (char.IsLetterOrDigit(currChar) || currChar == '-' || currChar == '_') isValid = true;
-                        else break;                        
+                        else
+                        {
+                            isValid = false;
+                            break;
+                        }
                     }
                 }
                 if (isValid) Console.WriteLine(word);
