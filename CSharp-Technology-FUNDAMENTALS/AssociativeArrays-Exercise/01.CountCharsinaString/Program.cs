@@ -20,7 +20,8 @@ namespace _01.CountCharsinaString
                 else continue;
             }
             chars.OrderByDescending(@char => @char.Value);
-            foreach (var newChar in chars) Console.WriteLine($"{newChar.Key} -> {newChar.Value}");            
+            foreach (var newChar in chars) Console.WriteLine($"{newChar.Key} -> {newChar.Value}");         
+            
         }
     }
 }

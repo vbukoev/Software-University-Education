@@ -17,14 +17,14 @@ namespace _06.Courses
                 var courseName = tokens[0];
                 var studentName = tokens[1];
                 if (!dictionary.ContainsKey(courseName)) dictionary.Add(courseName, new List<string>());
-                    dictionary[courseName].Add(studentName);
+                dictionary[courseName].Add(studentName);
             }
             
             foreach (var course in dictionary)
             {
                 Console.WriteLine($"{course.Key}: {course.Value.Count}");
                 foreach (var student in course.Value) 
-                    Console.WriteLine($"-- {student}");
+                Console.WriteLine($"-- {student}");
             }
         }
     }
