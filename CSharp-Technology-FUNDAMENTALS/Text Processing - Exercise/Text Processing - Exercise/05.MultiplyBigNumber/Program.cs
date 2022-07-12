@@ -6,7 +6,7 @@ namespace _05.MultiplyBigNumber
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            
         }
     }
 }
