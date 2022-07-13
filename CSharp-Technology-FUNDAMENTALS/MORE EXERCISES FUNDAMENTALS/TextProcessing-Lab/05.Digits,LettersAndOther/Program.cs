@@ -6,7 +6,7 @@ namespace _05.Digits_LettersAndOther
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            
         }
     }
 }
