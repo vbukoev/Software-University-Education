@@ -17,6 +17,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "06.ReplaceRepeatingChars", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07.Explosion", "07.Explosion\07.Explosion.csproj", "{C506EFE6-C20B-46E2-991F-0B9587091B09}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08.LetChngN", "08.LetChngN\08.LetChngN.csproj", "{718058D3-D06F-4B33-A780-29506B8823B2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{C506EFE6-C20B-46E2-991F-0B9587091B09}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C506EFE6-C20B-46E2-991F-0B9587091B09}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C506EFE6-C20B-46E2-991F-0B9587091B09}.Release|Any CPU.Build.0 = Release|Any CPU
+		{718058D3-D06F-4B33-A780-29506B8823B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{718058D3-D06F-4B33-A780-29506B8823B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{718058D3-D06F-4B33-A780-29506B8823B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{718058D3-D06F-4B33-A780-29506B8823B2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
