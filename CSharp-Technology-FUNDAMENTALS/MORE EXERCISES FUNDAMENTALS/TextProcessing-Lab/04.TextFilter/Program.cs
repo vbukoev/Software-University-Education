@@ -6,7 +6,7 @@ namespace _04.TextFilter
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            
         }
     }
 }
