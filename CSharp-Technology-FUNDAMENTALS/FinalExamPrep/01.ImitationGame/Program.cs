@@ -6,7 +6,7 @@ namespace _01.ImitationGame
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            
         }
     }
 }
