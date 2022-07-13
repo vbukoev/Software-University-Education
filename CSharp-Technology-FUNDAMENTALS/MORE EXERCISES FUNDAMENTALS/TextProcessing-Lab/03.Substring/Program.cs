@@ -10,9 +10,9 @@ namespace _03.Substring
             string wholeString = Console.ReadLine();
             while (wholeString.Contains(subStringToRemove))
             {
-                int startIndex = wholeString.IndexOf(subStringToRemove);
-                wholeString = wholeString.Remove(startIndex, subStringToRemove.Length);
-                
+                int startindex = wholeString.IndexOf(subStringToRemove);
+                wholeString = wholeString.Remove(startindex, subStringToRemove.Length);
+
             }
             Console.WriteLine(wholeString);
         }
