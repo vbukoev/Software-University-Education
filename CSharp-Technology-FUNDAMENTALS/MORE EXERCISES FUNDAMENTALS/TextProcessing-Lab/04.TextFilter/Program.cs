@@ -8,11 +8,8 @@ namespace _04.TextFilter
         {
             string[] banWords = Console.ReadLine().Split(", ");
             string text = Console.ReadLine();
-            foreach (var bannedWord in banWords)
-            {
-                string replaced = new string('*', bannedWord.Length);
-                text = text.Replace(bannedWord, replaced);
-            }
+            foreach (var bannedWord in banWords) 
+                text = text.Replace(bannedWord, new string('*', bannedWord.Length));           
             Console.WriteLine(text);
         }
     }
