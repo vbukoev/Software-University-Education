@@ -9,7 +9,6 @@ namespace _06.ReplaceRepeatingChars
         {
             string text = Console.ReadLine();
             StringBuilder sb = new StringBuilder();
-            StringSplitOptions 
             for (int i = 0; i < text.Length - 1; i++)
             {
                 char curChar = text[i];
