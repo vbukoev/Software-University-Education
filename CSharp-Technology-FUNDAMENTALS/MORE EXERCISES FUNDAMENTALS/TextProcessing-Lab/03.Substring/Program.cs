@@ -8,12 +8,7 @@ namespace _03.Substring
         {
             string subStringToRemove = Console.ReadLine();
             string wholeString = Console.ReadLine();
-            while (wholeString.Contains(subStringToRemove))
-            {
-                int startindex = wholeString.IndexOf(subStringToRemove);
-                wholeString = wholeString.Remove(startindex, subStringToRemove.Length);
-
-            }
+            while (wholeString.Contains(subStringToRemove)) wholeString = wholeString.Replace(subStringToRemove, String.Empty);
             Console.WriteLine(wholeString);
         }
     }
