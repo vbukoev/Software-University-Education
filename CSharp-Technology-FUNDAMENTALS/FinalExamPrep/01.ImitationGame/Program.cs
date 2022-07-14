@@ -30,7 +30,6 @@ namespace _01.ImitationGame
             }
             Console.WriteLine($"The decrypted message is: {message}");
         }
-
         static string Move(string message, string[] tokens)
         {
             int length = int.Parse(tokens[1]);
@@ -53,7 +52,5 @@ namespace _01.ImitationGame
             message = message.Replace(substring, replacemnet);
             return message;
         }
-
-
     }
 }
