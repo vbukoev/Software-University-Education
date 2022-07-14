@@ -43,7 +43,7 @@ namespace _01.ImitationGame
         {
             int index = int.Parse(tokens[1]);
             string value = tokens[2];
-            message = message.Insert(0, value);
+            message = message.Insert(index, value);
             return message;
         }
         static string ChangeAll(string message, string[] tokens)
