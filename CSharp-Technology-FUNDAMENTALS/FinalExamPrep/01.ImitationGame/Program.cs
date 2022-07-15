@@ -92,6 +92,7 @@ namespace _01.ImitationGame
         }
 
         private static string Move(string message, string[] tokens)
+
         {
             int length = int.Parse(tokens[1]);
             string smthToMove = message.Substring(0, length);
