@@ -9,11 +9,18 @@ namespace _04.CaesarCipher
         {
             string text = Console.ReadLine();
             StringBuilder sb  =new StringBuilder();
-            foreach (var item in text)
+            for (int i = 0; i < text.Length; i++)
             {
-                char encrypted = (char)(item + 3);
-                sb.Append(encrypted);   
+                char encryptedChar = (char)(text[i] + 3);
+                sb.Append(encryptedChar);
             }
+            //the same way but with foreach 
+            //vvvvvvvvvv
+            //foreach (var item in text)
+            //{
+            //    char encrypted = (char)(item + 3);
+            //    sb.Append(encrypted);   
+            //}
             Console.WriteLine(sb);
             
         }
