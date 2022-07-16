@@ -15,6 +15,7 @@ namespace _04.CaesarCipher
                 sb.Append(encrypted);   
             }
             Console.WriteLine(sb);
+            
         }
     }
 }
