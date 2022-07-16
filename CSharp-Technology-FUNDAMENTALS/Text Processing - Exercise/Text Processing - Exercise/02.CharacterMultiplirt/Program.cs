@@ -13,7 +13,7 @@ namespace _02.CharacterMultiplirt
             int total = CharacterMultiplier(firstWord, secondWord);
             Console.WriteLine(total);
         }
-        //adding a private method CharacterMultiplier
+        //adding a private method CharacterMultiplier(it is set by the assignment)
         private static int CharacterMultiplier(string firstWord, string secondWord)
         {
             int total = 0;
