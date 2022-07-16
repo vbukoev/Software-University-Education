@@ -7,7 +7,7 @@ namespace _01._Valid_Usernames
     {
         static void Main(string[] args)
         {
-            var words = Console.ReadLine().Split(", ").ToArray();
+            var words = Console.ReadLine().Split(", ",  StringSplitOptions.RemoveEmptyEntries).ToArray();
             for (int i = 0; i < words.Length; i++)
             {
                 string word = words[i];
