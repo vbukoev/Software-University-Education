@@ -10,11 +10,11 @@ namespace _02.CharacterMultiplirt
             var words = Console.ReadLine().Split(" ").ToArray();
             string firstWord = words[0];
             string secondWord = words[1];
-            int total = CharacterMultiplirt(firstWord, secondWord);
+            int total = CharacterMultiplier(firstWord, secondWord);
             Console.WriteLine(total);
         }
-
-        private static int CharacterMultiplirt(string firstWord, string secondWord)
+        //adding a private method CharacterMultiplier
+        private static int CharacterMultiplier(string firstWord, string secondWord)
         {
             int total = 0;
             if (firstWord.Length == secondWord.Length)
