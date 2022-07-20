@@ -6,7 +6,7 @@ namespace _02.MatchPhoneNumber
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+        
         }
     }
 }
