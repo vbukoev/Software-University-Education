@@ -13,7 +13,7 @@ namespace _01.MatchFullName
             var input = Console.ReadLine();
             var pattern = @"\b[A-Z][a-z]+ [A-Z][a-z]+\b";
             var results = Regex.Matches(input, pattern);
-            foreach (var result in results) Console.Write($"{result} ");
+            foreach (Match result in results) Console.Write(result.Value + " ");
         }
     }
 }
