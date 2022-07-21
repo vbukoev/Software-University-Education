@@ -26,13 +26,13 @@ namespace _08.LetChngN
                     char curSym = curToken[j];
                     if (char.IsLetter(curSym)&& char.IsUpper(curSym))
                     {
-                        int position = curSym - 65 + 1; //->(curSym-64)<-
+                        int position = curSym - 65 + 1; //-> (curSym-64) <-
                         num = num / position;
                         break;
                     }
                     else if (char.IsLetter(curSym) && char.IsLower(curSym))
                     {
-                        int position = curSym - 97 + 1;//->(curSym-96)<-
+                        int position = curSym - 97 + 1;//-> (curSym-96) <-
                         num = num * position;
                         break;
                     }
