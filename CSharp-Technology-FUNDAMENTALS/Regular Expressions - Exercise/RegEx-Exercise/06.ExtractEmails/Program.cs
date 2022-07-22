@@ -6,7 +6,7 @@ namespace _06.ExtractEmails
     {
         static void Main(string[] args)
         {
-
+            
         }
     }
 }
