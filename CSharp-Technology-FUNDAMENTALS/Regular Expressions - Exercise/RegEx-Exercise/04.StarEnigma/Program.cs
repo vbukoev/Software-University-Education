@@ -10,7 +10,8 @@ namespace _04.StarEnigma
     {
         static void Main(string[] args)
         {
-            int n = int.Parse(Console.ReadLine());
+            int n = int.Parse(Console.ReadLine()); // num of messages - this is the length of the for loop
+
             List<string> attackedNames = new List<string>(); 
             List<string> destroyedNames = new List<string>();
             int attacked = 0;
@@ -23,21 +24,21 @@ namespace _04.StarEnigma
                 StringBuilder decoded = new StringBuilder();
                 int sum = 0;
                 foreach (Match match in matches) sum++;
-                foreach (var @char in message) decoded.Append((char)@char - sum);
+                foreach (var @char in message) decoded.Append((char)(@char - sum));
                 Regex regex1 = new Regex(@"@(?<planet>[A-Za-z]+)[^\@,!:>]*[\-]*:(?<population>\d+)[^\@,!:>]*[\-]*!(?<attakType>[AD])![^\@,!:>]*[\-]*->(?<soldiers>\d+)");
                 MatchCollection matches1 = regex1.Matches(decoded.ToString());
                 foreach (Match match in matches1)
                 {
                     string name = match.Groups["planet"].Value;
                     int popultion = int.Parse(match.Groups["population"].Value);
-                    char attackType = char.Parse(match.Groups["attakType"].Value);
+                    string attackType = match.Groups["attakType"].Value;
                     int soldiers = int.Parse(match.Groups["soldiers"].Value);
-                    if (attackType == 'A')
+                    if (attackType == "A")
                     {
                         attacked++;
                         attackedNames.Add(name);
                     }
-                    if (attackType == 'D')
+                    if (attackType == "D")
                     {
                         destroyed++;
                         destroyedNames.Add(name);
@@ -45,12 +46,9 @@ namespace _04.StarEnigma
                 }                
             }
             Console.WriteLine($"Attacked planets: {attacked}");
-            foreach (var nameOfTheAttack in attackedNames.OrderBy(x => x)) Console.WriteLine($"-> {nameOfTheAttack}");
+            foreach (var kvp in attackedNames.OrderBy(x => x)) Console.WriteLine($"-> {kvp}");
             Console.WriteLine($"Destroyed planets: {destroyed}");
-            foreach (var nameOfTheDestoy in destroyedNames.OrderBy(x => x)) Console.WriteLine($"-> {nameOfTheDestoy}");
-            {
-
-            }
+            foreach (var kvp in destroyedNames.OrderBy(x => x)) Console.WriteLine($"-> {kvp}");
         }
     }
 }
