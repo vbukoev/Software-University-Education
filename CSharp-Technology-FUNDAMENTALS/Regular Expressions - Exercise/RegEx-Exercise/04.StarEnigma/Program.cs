@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text.RegularExpressions;
 
 namespace _04.StarEnigma
 {
@@ -6,7 +9,7 @@ namespace _04.StarEnigma
     {
         static void Main(string[] args)
         {
-            
+           
         }
     }
 }
