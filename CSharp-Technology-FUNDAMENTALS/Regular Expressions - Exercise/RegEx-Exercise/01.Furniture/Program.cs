@@ -6,7 +6,7 @@ namespace _01.Furniture
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            
         }
     }
 }
