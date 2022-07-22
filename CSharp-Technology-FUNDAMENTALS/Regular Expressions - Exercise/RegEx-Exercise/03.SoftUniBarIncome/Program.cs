@@ -6,7 +6,7 @@ namespace _03.SoftUniBarIncome
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            
         }
     }
 }
