@@ -32,14 +32,14 @@ namespace _04.StarEnigma
                 {
                     string name = match.Groups["planet"].Value;
                     int popultion = int.Parse(match.Groups["population"].Value);
-                    string attackType = match.Groups["attakType"].Value;
+                    char attackType = char.Parse(match.Groups["attakType"].Value);
                     int soldiers = int.Parse(match.Groups["soldiers"].Value);
-                    if (attackType == "A")
+                    if (attackType == 'A')
                     {
                         attacked++;
                         attackedNames.Add(name);
                     }
-                    if (attackType == "D")
+                    if (attackType == 'D')
                     {
                         destroyed++;
                         destroyedNames.Add(name);
