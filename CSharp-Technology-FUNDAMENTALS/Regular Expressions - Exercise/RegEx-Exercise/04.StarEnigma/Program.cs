@@ -11,7 +11,6 @@ namespace _04.StarEnigma
         static void Main(string[] args)
         {
             int n = int.Parse(Console.ReadLine()); // num of messages - this is the length of the for loop
-
             List<string> attackedNames = new List<string>(); 
             List<string> destroyedNames = new List<string>();
             int attacked = 0;
@@ -23,8 +22,10 @@ namespace _04.StarEnigma
                 MatchCollection matches = regex.Matches(message);
                 StringBuilder decoded = new StringBuilder();
                 int sum = 0;
-                foreach (Match match in matches) sum++;
-                foreach (var @char in message) decoded.Append((char)(@char - sum));
+                foreach (Match match in matches) 
+                    sum++;
+                foreach (var @char in message) 
+                    decoded.Append((char)(@char - sum));
                 Regex regex1 = new Regex(@"@(?<planet>[A-Za-z]+)[^\@,!:>]*[\-]*:(?<population>\d+)[^\@,!:>]*[\-]*!(?<attakType>[AD])![^\@,!:>]*[\-]*->(?<soldiers>\d+)");
                 MatchCollection matches1 = regex1.Matches(decoded.ToString());
                 foreach (Match match in matches1)
