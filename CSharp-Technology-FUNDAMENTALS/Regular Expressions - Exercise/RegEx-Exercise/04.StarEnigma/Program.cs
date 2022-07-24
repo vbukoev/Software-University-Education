@@ -46,7 +46,9 @@ namespace _04.StarEnigma
                     }
                 }                
             }
+
             Console.WriteLine($"Attacked planets: {attacked}");
+
             foreach (var kvp in attackedNames.OrderBy(x => x)) 
                 Console.WriteLine($"-> {kvp}");
             Console.WriteLine($"Destroyed planets: {destroyed}");
