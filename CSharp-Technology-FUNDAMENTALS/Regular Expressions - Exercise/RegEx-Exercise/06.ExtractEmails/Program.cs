@@ -1,19 +1,20 @@
-﻿    using System;
-    using System.Linq;
-    using System.Text.RegularExpressions;
+﻿using System;
+using System.Linq;
+using System.Text.RegularExpressions;
 
-    namespace _06.ExtractEmails
+namespace _06.ExtractEmails
+{
+    internal class Program
     {
-        internal class Program
+        static void Main(string[] args)
         {
-            static void Main(string[] args)
-            {
-                string pattern = @"(^|\s)[A-Za-z0-9][\w*\-\.]*[A-Za-z0-9]@[A-Za-z]+([.-][A-Za-z]+)+\b";
-                string input = Console.ReadLine();
+            string pattern = @"(^|\s)[A-Za-z0-9][\w*\-\.]*[A-Za-z0-9]@[A-Za-z]+([.-][A-Za-z]+)+\b";
 
-                MatchCollection matches= Regex.Matches(input, pattern);
+            string input = Console.ReadLine();
 
-                matches.ToList().ForEach(Console.WriteLine);
-            }
+            MatchCollection matches = Regex.Matches(input, pattern);
+
+            matches.ToList().ForEach(Console.WriteLine);
         }
     }
+}
