@@ -6,7 +6,7 @@ namespace _03.ThePianist
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            
         }
     }
 }
