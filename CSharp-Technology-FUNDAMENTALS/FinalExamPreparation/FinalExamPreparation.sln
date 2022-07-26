@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.32126.317
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.AdAstra", "01Task\02.AdAstra.csproj", "{28911F8A-114A-4CDE-B046-B8C5B547DEA8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.ThePianist", "03.ThePianist\03.ThePianist.csproj", "{31E52ABC-BD20-4E8B-8308-AA5FC1ED23E1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{28911F8A-114A-4CDE-B046-B8C5B547DEA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{28911F8A-114A-4CDE-B046-B8C5B547DEA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{28911F8A-114A-4CDE-B046-B8C5B547DEA8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31E52ABC-BD20-4E8B-8308-AA5FC1ED23E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31E52ABC-BD20-4E8B-8308-AA5FC1ED23E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31E52ABC-BD20-4E8B-8308-AA5FC1ED23E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31E52ABC-BD20-4E8B-8308-AA5FC1ED23E1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
