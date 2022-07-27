@@ -8,7 +8,7 @@ namespace _03.ThePianist
     {
         static void Main(string[] args)
         {
-            Dictionary<string, (string author, string key)> pieces = new Dictionary<string, (string author, string key)>();
+            var pieces = new Dictionary<string, (string author, string key)>();
             int numberOfLoops = int.Parse(Console.ReadLine());
             for (int i = 0; i < numberOfLoops; i++)
             {
