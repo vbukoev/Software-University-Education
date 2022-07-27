@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03.ThePianist", "03.ThePian
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.SecretChat", "01.SecretChat\01.SecretChat.csproj", "{D4FBF38A-CAB5-4C74-A36A-497BE6B3C514}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.World Tour", "01.World Tour\01.World Tour.csproj", "{F6AB8B07-869B-4DDF-8EA8-0827298B1635}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{D4FBF38A-CAB5-4C74-A36A-497BE6B3C514}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D4FBF38A-CAB5-4C74-A36A-497BE6B3C514}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D4FBF38A-CAB5-4C74-A36A-497BE6B3C514}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6AB8B07-869B-4DDF-8EA8-0827298B1635}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6AB8B07-869B-4DDF-8EA8-0827298B1635}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6AB8B07-869B-4DDF-8EA8-0827298B1635}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6AB8B07-869B-4DDF-8EA8-0827298B1635}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
