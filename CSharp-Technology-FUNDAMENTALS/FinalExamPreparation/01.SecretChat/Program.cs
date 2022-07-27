@@ -18,28 +18,34 @@ namespace _01.SecretChat
                 switch (action)
                 {
                     case "InsertSpace":
-                        int index = int.Parse(command[1]);
-                        if (index >= 0 && index < input.Length) input = input.Insert(index, " ");
-                        break;
-                    case "Reverse":
-                        var index1 = command[1];
-                        var charArray = index1.ToCharArray();
-                        Array.Reverse(charArray);
-                        if (input.Contains(index1))
                         {
-                            string newString = new string(charArray);
-                            Regex regPlace = new Regex(index1);
-                            input = regPlace.Replace(input, "", 1);
-                            input = input + newString;
-                            
+                            int index = int.Parse(command[1]);
+                            if (index >= 0 && index < input.Length) input = input.Insert(index, " ");
+                            break;
                         }
-                        else Console.WriteLine("error");
-                        break;
+                    case "Reverse":
+                        {
+                            var index1 = command[1];
+                            var charArray = index1.ToCharArray();
+                            Array.Reverse(charArray);
+                            if (input.Contains(index1))
+                            {
+                                string newString = new string(charArray);
+                                Regex regPlace = new Regex(index1);
+                                input = regPlace.Replace(input, "", 1);
+                                input = input + newString;
+
+                            }
+                            else Console.WriteLine("error");
+                            break;
+                        }
                     case "ChangeAll":
-                        string subString = command[1];
-                        string replace = command[2];
-                        input = input.Replace(subString, replace);                        
-                        break;
+                        {
+                            string subString = command[1];
+                            string replace = command[2];
+                            input = input.Replace(subString, replace);
+                            break;
+                        }                        
                 }
                 Console.WriteLine(input);
                 cmd = Console.ReadLine();
