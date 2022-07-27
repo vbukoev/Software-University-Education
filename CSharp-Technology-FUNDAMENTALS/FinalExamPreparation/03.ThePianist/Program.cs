@@ -59,8 +59,7 @@ namespace _03.ThePianist
                 }
                 cmd = Console.ReadLine();
             }
-            foreach (var item in pieces)
-                Console.WriteLine($"{item.Key} -> Composer: {item.Value.author}, Key: {item.Value.key}");
+            foreach (var item in pieces) Console.WriteLine($"{item.Key} -> Composer: {item.Value.author}, Key: {item.Value.key}");
         }
     }
 }
