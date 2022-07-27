@@ -20,7 +20,6 @@ namespace _01.SecretChat
                     case "InsertSpace":
                         int index = int.Parse(command[1]);
                         if (index >= 0 && index < input.Length) input = input.Insert(index, " ");
-                        Console.WriteLine(input);
                         break;
                     case "Reverse":
                         var index1 = command[1];
@@ -32,17 +31,17 @@ namespace _01.SecretChat
                             Regex regPlace = new Regex(index1);
                             input = regPlace.Replace(input, "", 1);
                             input = input + newString;
-                            Console.WriteLine(input);
+                            
                         }
                         else Console.WriteLine("error");
                         break;
                     case "ChangeAll":
                         string subString = command[1];
                         string replace = command[2];
-                        input = input.Replace(subString, replace);
-                        Console.WriteLine(input);
+                        input = input.Replace(subString, replace);                        
                         break;
                 }
+                Console.WriteLine(input);
                 cmd = Console.ReadLine();
             }
             Console.WriteLine($"You have a new text message: {input}");
