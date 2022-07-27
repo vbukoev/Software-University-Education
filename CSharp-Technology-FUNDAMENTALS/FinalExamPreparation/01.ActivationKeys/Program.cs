@@ -36,8 +36,7 @@ namespace _01.ActivationKeys
                                 substring = substring.ToUpper();
                                 var index = 0;
                                 for (int i = start; i < end; i++)
-                                {
-                                    
+                                {                                    
                                     toChar[i] = substring[index];
                                     index++;
                                 }
@@ -47,8 +46,7 @@ namespace _01.ActivationKeys
                                 substring = substring.ToLower();
                                 index = 0;
                                 for (int i = start; i < end; i++)
-                                {
-                                    
+                                {                                    
                                     toChar[i] = substring[index];
                                     index++;
                                 }

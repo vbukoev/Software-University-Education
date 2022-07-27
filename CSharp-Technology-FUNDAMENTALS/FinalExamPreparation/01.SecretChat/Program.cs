@@ -10,7 +10,6 @@ namespace _01.SecretChat
         {
             string input = Console.ReadLine();
             string cmd = Console.ReadLine();
-            StringBuilder sb =new StringBuilder();
             while (true)
             {
                 if (cmd == "Reveal") break;
