@@ -34,9 +34,13 @@ namespace _01.SecretChat
                                 Regex regPlace = new Regex(index1);
                                 input = regPlace.Replace(input, "", 1);
                                 input = input + newString;
-
                             }
-                            else Console.WriteLine("error");
+                            else 
+                            { 
+                                Console.WriteLine("error");
+                                cmd = Console.ReadLine();
+                                continue;
+                            }
                             break;
                         }
                     case "ChangeAll":
