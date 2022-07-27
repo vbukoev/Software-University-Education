@@ -9,8 +9,8 @@ namespace _03.ThePianist
         static void Main(string[] args)
         {
             var pieces = new Dictionary<string, (string author, string key)>();
-            int numberOfLoops = int.Parse(Console.ReadLine());
-            for (int i = 0; i < numberOfLoops; i++)
+            int n = int.Parse(Console.ReadLine());
+            for (int i = 0; i < n; i++)
             {
                 var input = Console.ReadLine().Split("|");
                 var piece = input[0];
