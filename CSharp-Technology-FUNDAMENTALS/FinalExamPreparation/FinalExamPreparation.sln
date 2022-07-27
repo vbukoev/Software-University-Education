@@ -9,9 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03.ThePianist", "03.ThePian
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.SecretChat", "01.SecretChat\01.SecretChat.csproj", "{D4FBF38A-CAB5-4C74-A36A-497BE6B3C514}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.World Tour", "01.World Tour\01.World Tour.csproj", "{F6AB8B07-869B-4DDF-8EA8-0827298B1635}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.WorldTour", "01.World Tour\01.WorldTour.csproj", "{F6AB8B07-869B-4DDF-8EA8-0827298B1635}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.Imitation Game", "01.Imitation Game\01.Imitation Game.csproj", "{6F2600A4-6389-4118-BAA5-70002A7B9B6F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.ImitationGame", "01.Imitation Game\01.ImitationGame.csproj", "{6F2600A4-6389-4118-BAA5-70002A7B9B6F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.ActivationKeys", "01.ActivationKeys\01.ActivationKeys.csproj", "{D278D6CE-ABEC-4B6A-A2F3-25ECB7FF33B0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{6F2600A4-6389-4118-BAA5-70002A7B9B6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6F2600A4-6389-4118-BAA5-70002A7B9B6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6F2600A4-6389-4118-BAA5-70002A7B9B6F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D278D6CE-ABEC-4B6A-A2F3-25ECB7FF33B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D278D6CE-ABEC-4B6A-A2F3-25ECB7FF33B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D278D6CE-ABEC-4B6A-A2F3-25ECB7FF33B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D278D6CE-ABEC-4B6A-A2F3-25ECB7FF33B0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
