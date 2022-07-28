@@ -6,7 +6,7 @@ namespace _01.PasswordReset
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            
         }
     }
 }
