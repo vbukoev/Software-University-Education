@@ -17,11 +17,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01.ActivationKeys", "01.Act
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02.FancyBarcodes", "02.FancyBarcodes\02.FancyBarcodes.csproj", "{01AF9CF8-16AA-4F6A-9CE1-BCAF74D7089D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.EmojiDetector", "02.EmojiDetector\02.EmojiDetector.csproj", "{F12AB378-1E27-42BE-BDB8-51A74F09186C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02.EmojiDetector", "02.EmojiDetector\02.EmojiDetector.csproj", "{F12AB378-1E27-42BE-BDB8-51A74F09186C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.P!rates", "03.P!rates\03.P!rates.csproj", "{91041627-95AA-43FE-A1E4-9E6D51E1D215}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03.P!rates", "03.P!rates\03.P!rates.csproj", "{91041627-95AA-43FE-A1E4-9E6D51E1D215}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.HeroesOfCodeandLogicVII", "03.HeroesOfCodeandLogicVII\03.HeroesOfCodeandLogicVII.csproj", "{6E36C28B-185B-4FB1-ACF4-075CB834F014}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03.HeroesOfCodeandLogicVII", "03.HeroesOfCodeandLogicVII\03.HeroesOfCodeandLogicVII.csproj", "{6E36C28B-185B-4FB1-ACF4-075CB834F014}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.PasswordReset", "01.PasswordReset\01.PasswordReset.csproj", "{D6EEF774-E1E5-4AC0-9DD8-BFA76F34E78A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +71,10 @@ Global
 		{6E36C28B-185B-4FB1-ACF4-075CB834F014}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6E36C28B-185B-4FB1-ACF4-075CB834F014}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6E36C28B-185B-4FB1-ACF4-075CB834F014}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6EEF774-E1E5-4AC0-9DD8-BFA76F34E78A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6EEF774-E1E5-4AC0-9DD8-BFA76F34E78A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6EEF774-E1E5-4AC0-9DD8-BFA76F34E78A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6EEF774-E1E5-4AC0-9DD8-BFA76F34E78A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
