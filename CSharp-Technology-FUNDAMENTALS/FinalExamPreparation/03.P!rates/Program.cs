@@ -74,9 +74,20 @@ namespace _03.P_rates
                 }
             }
             var cnt = infoAboutCities.Count;
-            Console.WriteLine($"Ahoy, Captain! There are {cnt} wealthy settlements to go to:");
-            foreach (var item in infoAboutCities)
-                Console.WriteLine($"{item.Key} -> Population: {item.Value.population} citizens, Gold: {item.Value.gold} kg");
+            if (cnt > 0)
+            {
+                Console.WriteLine($"Ahoy, Captain! There are {infoAboutCities.Count} wealthy settlements to go to:");
+
+                foreach (var town in infoAboutCities)
+                {
+                    Console.WriteLine($"{town.Key} -> Population: {town.Value.population} citizens, Gold: {town.Value.gold} kg");
+                }
+            }
+
+            else
+            {
+                Console.WriteLine("Ahoy, Captain! All targets have been plundered and destroyed!");
+            }
         }
     }
 }
