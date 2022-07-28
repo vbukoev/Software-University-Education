@@ -60,7 +60,7 @@ namespace _03.HeroesOfCodeandLogicVII
                         break;
                     case "Heal":
                         amount = int.Parse(splitted[2]);
-                        if (heroes[currName].hp + amount > 180) amount = 100 - heroes[currName].hp;
+                        if (heroes[currName].hp + amount > 100) amount = 100 - heroes[currName].hp;
                         heroes[currName].hp = heroes[currName].hp + amount;
                         Console.WriteLine($"{currName} healed for {amount} HP!");
                         break;
