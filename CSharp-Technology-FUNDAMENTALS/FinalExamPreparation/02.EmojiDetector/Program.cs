@@ -22,7 +22,7 @@ namespace _02.EmojiDetector
                 var num = int.Parse(match.Value);
                 threshold = threshold * num;
             }           
-            foreach (Match item in allEmojis)
+            foreach (Match item in allEmojis) // Cool Emojis
             {
                 BigInteger cntOfCoolness = 0;
                 var itemGroup = item.Groups["nameOfTheEmoji"].Value;
