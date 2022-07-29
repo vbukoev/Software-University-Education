@@ -32,7 +32,8 @@ namespace _01.PasswordReset
                     case "Substitute":
                         var oldC = command[1];
                         var newC = command[2];
-                        if (!input.Contains(oldC)) Console.WriteLine("Nothing to replace!");
+                        if (!input.Contains(oldC)) 
+                            Console.WriteLine("Nothing to replace!");
                         else
                         {
                             input = input.Replace(oldC, newC);
