@@ -6,7 +6,7 @@ namespace _03.NeedForSpeedIII
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            
         }
     }
 }
