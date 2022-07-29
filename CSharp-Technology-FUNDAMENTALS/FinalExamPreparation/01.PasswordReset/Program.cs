@@ -19,7 +19,7 @@ namespace _01.PasswordReset
                 switch (action)
                 {
                     case "TakeOdd":
-                        for (int i = 1; i < input.Length; i+=2) sb.Append(input[i]); //index "i" has to be with step of 2  
+                        for (int i = 1; i < input.Length; i+=2) sb.Append(input[i]); //index "i" has to be with step of 2 so that it will get only the odd indices
                         input= sb.ToString();
                         Console.WriteLine(input);
                         break;
