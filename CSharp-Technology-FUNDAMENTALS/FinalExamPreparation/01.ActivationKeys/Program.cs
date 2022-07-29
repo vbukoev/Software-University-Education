@@ -68,6 +68,7 @@ namespace _01.ActivationKeys
                     default:
                         break;
                 }
+
             }
             Console.WriteLine($"Your activation key is: {actKey}");
         }
