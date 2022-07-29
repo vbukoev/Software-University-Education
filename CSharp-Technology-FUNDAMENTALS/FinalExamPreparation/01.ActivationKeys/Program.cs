@@ -10,9 +10,10 @@ namespace _01.ActivationKeys
         static void Main(string[] args)
         {
             var actKey  = Console.ReadLine();
-            var cmd = Console.ReadLine();
+            
             while (true)
             {
+                var cmd = Console.ReadLine();
                 if (cmd == "Generate") break;
                 var splitted = cmd.Split(">>>").ToArray();
                 var action = splitted[0];
@@ -67,7 +68,6 @@ namespace _01.ActivationKeys
                     default:
                         break;
                 }
-                cmd = Console.ReadLine();
             }
             Console.WriteLine($"Your activation key is: {actKey}");
         }
