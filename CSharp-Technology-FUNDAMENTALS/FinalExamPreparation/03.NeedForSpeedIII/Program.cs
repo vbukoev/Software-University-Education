@@ -33,11 +33,11 @@ namespace _03.NeedForSpeedIII
                             break;
 
                         case "Refuel":
-
+                            Refuel(tokens[1], int.Parse(tokens[2]), cars);
                             break;
 
                         case "Revert":
-
+                            Revert(tokens[1], int.Parse(tokens[2]), cars);
                             break;
 
                         default: 
@@ -45,6 +45,11 @@ namespace _03.NeedForSpeedIII
                     }
                 }
             }
+        }
+
+         static void Revert(string brand, int km, List<Car> cars)
+        {
+            
         }
     }
     public class Car
