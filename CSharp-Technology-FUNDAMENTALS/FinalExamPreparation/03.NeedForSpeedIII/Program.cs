@@ -46,11 +46,8 @@ namespace _03.NeedForSpeedIII
                             break;
                     }
                 }
-                foreach (var car in cars)
-                
-                    Console.WriteLine($"{car.Brand} -> Mileage: {car.Mileage} kms, Fuel in the tank: {car.Fuel} lt.");
-                
-            
+                foreach (var car in cars)                
+                    Console.WriteLine($"{car.Brand} -> Mileage: {car.Mileage} kms, Fuel in the tank: {car.Fuel} lt.");   
         }
 
         static void Drive(string brand, int distance, int fuel, List<Car> cars)
@@ -67,7 +64,7 @@ namespace _03.NeedForSpeedIII
             if (car.Mileage >= 100000) 
             { 
                 cars.Remove(car);
-                Console.WriteLine($"Time to sell the {car}!");
+                Console.WriteLine($"Time to sell the {car.Brand}!");
             }
         }
 
