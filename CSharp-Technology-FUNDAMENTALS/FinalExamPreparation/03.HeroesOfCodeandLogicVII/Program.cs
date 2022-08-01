@@ -18,7 +18,11 @@ namespace _03.HeroesOfCodeandLogicVII
                 var name = splitted[0];
                 var Hp = int.Parse(splitted[1]);
                 var Mp = int.Parse(splitted[2]);
-                Hero hero = new Hero() { hp = Hp, mp = Mp };
+                Hero hero = new Hero() 
+                { 
+                    hp = Hp, 
+                    mp = Mp 
+                };
                 heroes.Add(name, hero);
             }
 
