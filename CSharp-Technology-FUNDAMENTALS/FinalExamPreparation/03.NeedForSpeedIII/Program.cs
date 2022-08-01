@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace _03.NeedForSpeedIII
 {
@@ -19,8 +20,9 @@ namespace _03.NeedForSpeedIII
                     Fuel = int.Parse(carProps[2])
                 };
                 cars.Add(car);
+            }
 
-                while (true)
+            while (true)
                 {
                     var cmd = Console.ReadLine();
                     if (cmd == "Stop") break;
@@ -29,7 +31,7 @@ namespace _03.NeedForSpeedIII
                     switch (action)
                     {
                         case "Drive":
-
+                            Drive(tokens[1], int.Parse(tokens[2]),int.Parse(tokens[3]), cars);
                             break;
 
                         case "Refuel":
@@ -44,12 +46,46 @@ namespace _03.NeedForSpeedIII
                             break;
                     }
                 }
+                foreach (var car in cars)
+                
+                    Console.WriteLine($"{car.Brand} -> Mileage: {car.Mileage} kms, Fuel in the tank: {car.Fuel} lt.");
+                
+            
+        }
+
+        static void Drive(string brand, int distance, int fuel, List<Car> cars)
+        {
+            Car car = cars.First(x => x.Brand == brand);
+            if (car.Fuel < fuel)
+            {
+                Console.WriteLine("Not enough fuel to make that ride");
+                return;
+            }
+            car.Mileage += distance;
+            car.Fuel -= fuel;
+            Console.WriteLine($"{car.Brand} driven for {distance} kilometers. {fuel} liters of fuel consumed.");
+            if (car.Mileage >= 100000) 
+            { 
+                cars.Remove(car);
+                Console.WriteLine($"Time to sell the {car}!");
             }
         }
 
-         static void Revert(string brand, int km, List<Car> cars)
+        static void Refuel(string brand, int fuel, List<Car> cars)
         {
-            
+            Car car = cars.First(x => x.Brand == brand);
+            var currFuel = car.Fuel;
+            car.Fuel += fuel;
+            if (car.Fuel > 75) car.Fuel = 75;
+            Console.WriteLine($"{car.Brand} refueled with {car.Fuel - currFuel} liters");
+        }
+
+        static void Revert(string brand, int km, List<Car> cars)
+        {
+            Car car = cars.First(x => x.Brand == brand);
+            car.Mileage -= km;
+            Console.WriteLine($"{car.Brand} mileage decreased by {km} kilometers");
+            if (km<10000) car.Mileage = 10000;
         }
     }
     public class Car
