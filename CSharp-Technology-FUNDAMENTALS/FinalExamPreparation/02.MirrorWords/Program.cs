@@ -6,7 +6,7 @@ namespace _02.MirrorWords
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            
         }
     }
 }
