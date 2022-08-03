@@ -49,6 +49,7 @@ namespace Calculator.Controllers
         [HttpPost]
         public IActionResult Calculator(double firstNumber, string operation, double secondNumber)
         {
+
             string result = "";
             switch (operation)
             {
