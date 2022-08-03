@@ -27,7 +27,7 @@ namespace Calculator.Controllers
         {
             return View();
         }
-        
+        [HttpGet]
         public IActionResult Numbers()
         {
             return View();
@@ -36,6 +36,19 @@ namespace Calculator.Controllers
         public IActionResult Numbers(int number)
         {
            
+            ViewBag.NumberRange = number;
+            return View();
+        }
+    
+        [HttpGet]
+        public IActionResult Calculator()
+        {
+        return View();
+        }
+        [HttpPost]
+        public IActionResult Calculator(int number)
+        {
+
             ViewBag.NumberRange = number;
             return View();
         }
