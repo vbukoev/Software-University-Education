@@ -27,6 +27,18 @@ namespace Calculator.Controllers
         {
             return View();
         }
+        
+        public IActionResult Numbers()
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult Numbers(int number)
+        {
+           
+            ViewBag.NumberRange = number;
+            return View();
+        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
