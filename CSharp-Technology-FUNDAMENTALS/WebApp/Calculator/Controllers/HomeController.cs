@@ -48,8 +48,11 @@ namespace Calculator.Controllers
         [HttpPost]
         public IActionResult Calculator(int number)
         {
-
-            ViewBag.NumberRange = number;
+            return View();
+        }
+        [HttpPost]
+        public IActionResult Calculator(double firstNumber, string operation, double secondNumber)
+        {
             return View();
         }
 
