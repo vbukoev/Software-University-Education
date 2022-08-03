@@ -45,11 +45,7 @@ namespace Calculator.Controllers
         {
         return View();
         }
-        [HttpPost]
-        public IActionResult Calculator(int number)
-        {
-            return View();
-        }
+        
         [HttpPost]
         public IActionResult Calculator(double firstNumber, string operation, double secondNumber)
         {
