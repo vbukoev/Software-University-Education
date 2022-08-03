@@ -32,7 +32,7 @@ namespace _02.MirrorWords
                 foreach (var word in mirrorWords) 
                 {                    
                     if (cnt == mirrorWords.Count) Console.Write($"{word.Key} <=> {word.Value}"); // checks if the count is equal to the Dictionary count and if it is it prints the word Key with its value
-                    else Console.Write($"{word.Key} <=> {word.Value}, "); //if it is not it prints 
+                    else Console.Write($"{word.Key} <=> {word.Value}, "); //if it is not it prints the mirrorWords  
                     cnt++; //count increments by 1
                 }
             }
