@@ -19,7 +19,7 @@ namespace _01.ActivationKeys
                 var action = splitted[0];
                 switch (action)
                 {
-                   case "Contains":
+                   case "Contains": 
                    var substring = splitted[1];
                         if (actKey.Contains(substring)) Console.WriteLine($"{actKey} contains {substring}");
                         else Console.WriteLine("Substring not found!");
