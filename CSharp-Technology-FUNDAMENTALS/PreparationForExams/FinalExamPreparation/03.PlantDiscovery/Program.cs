@@ -34,24 +34,13 @@ namespace _03.PlantDiscovery
                 switch (action)
                 {
                     case "Rate":
-                        if (info.ContainsKey(plant))
-                        {
-                            var rating = double.Parse(cmd[2]); //Example for why rating is a double number: rating = 1.22; rating = 9.54
-                            info[plant].rating.Add(rating);
-                        }
-                        else Console.WriteLine("error");
+                        Rate(info, cmd, plant);
                         break;
                     case "Update":
-                        if (info.ContainsKey(plant))
-                        {
-                            var newRarity = int.Parse(cmd[2]);
-                            info[plant] = (newRarity, info[plant].rating);
-                        }
-                        else Console.WriteLine("error");
+                        Update(info, cmd, plant);
                         break;
                     case "Reset":
-                        if (info.ContainsKey(plant)) info[plant].rating.Clear();
-                        else Console.WriteLine("error");
+                        Reset(info, plant);
                         break;
                     default:
                         Console.WriteLine("error");
@@ -73,6 +62,32 @@ namespace _03.PlantDiscovery
                 // item.Value.rating.Sum => Sum of the ratings
                 //item.Value.rating.Count => Count of the ratings
             }
+        }
+
+        private static void Reset(Dictionary<string, (int rarity, List<double> rating)> info, string plant)
+        {
+            if (info.ContainsKey(plant)) info[plant].rating.Clear();
+            else Console.WriteLine("error");
+        }
+
+        private static void Update(Dictionary<string, (int rarity, List<double> rating)> info, string[] cmd, string plant)
+        {
+            if (info.ContainsKey(plant))
+            {
+                var newRarity = int.Parse(cmd[2]);
+                info[plant] = (newRarity, info[plant].rating);
+            }
+            else Console.WriteLine("error");
+        }
+
+        private static void Rate(Dictionary<string, (int rarity, List<double> rating)> info, string[] cmd, string plant)
+        {
+            if (info.ContainsKey(plant))
+            {
+                var rating = double.Parse(cmd[2]); //Example for why rating is a double number: rating = 1.22; rating = 9.54
+                info[plant].rating.Add(rating);
+            }
+            else Console.WriteLine("error");
         }
     }
 }
