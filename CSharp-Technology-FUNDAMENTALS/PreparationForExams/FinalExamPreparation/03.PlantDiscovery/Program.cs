@@ -63,13 +63,15 @@ namespace _03.PlantDiscovery
                 //item.Value.rating.Count => Count of the ratings
             }
         }
-
-        private static void Reset(Dictionary<string, (int rarity, List<double> rating)> info, string plant)
+        private static void Rate(Dictionary<string, (int rarity, List<double> rating)> info, string[] cmd, string plant)
         {
-            if (info.ContainsKey(plant)) info[plant].rating.Clear();
+            if (info.ContainsKey(plant))
+            {
+                var rating = double.Parse(cmd[2]); //Example for why rating is a double number: rating = 1.22; rating = 9.54
+                info[plant].rating.Add(rating);
+            }
             else Console.WriteLine("error");
         }
-
         private static void Update(Dictionary<string, (int rarity, List<double> rating)> info, string[] cmd, string plant)
         {
             if (info.ContainsKey(plant))
@@ -79,14 +81,9 @@ namespace _03.PlantDiscovery
             }
             else Console.WriteLine("error");
         }
-
-        private static void Rate(Dictionary<string, (int rarity, List<double> rating)> info, string[] cmd, string plant)
+        private static void Reset(Dictionary<string, (int rarity, List<double> rating)> info, string plant)
         {
-            if (info.ContainsKey(plant))
-            {
-                var rating = double.Parse(cmd[2]); //Example for why rating is a double number: rating = 1.22; rating = 9.54
-                info[plant].rating.Add(rating);
-            }
+            if (info.ContainsKey(plant)) info[plant].rating.Clear();
             else Console.WriteLine("error");
         }
     }
