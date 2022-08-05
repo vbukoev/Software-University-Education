@@ -67,7 +67,11 @@ namespace _03.PlantDiscovery
 
                     continue;
                 }
-                Console.WriteLine($"- {item.Key}; Rarity: {item.Value.rarity}; Rating: {(item.Value.rating.Sum()/item.Value.rating.Count):f2}");
+                var sumOfTheRatings = item.Value.rating.Sum();
+                var countOfTheRatings = item.Value.rating.Count;
+                Console.WriteLine($"- {item.Key}; Rarity: {item.Value.rarity}; Rating: {(sumOfTheRatings / countOfTheRatings):f2}"); // total = item.Value.rating.Sum()/item.Value.rating.Count
+                // item.Value.rating.Sum => Sum of the ratings
+                //item.Value.rating.Count => Count of the ratings
             }
         }
     }
