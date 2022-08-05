@@ -49,10 +49,11 @@ namespace _03.PlantDiscovery
                         else Console.WriteLine("error");
                             break;
                     case "Reset":
-
-                        break;
-
+                        if (info.ContainsKey(plant)) info[plant].rating.Clear();
+                        else Console.WriteLine("error");
+                            break;
                     default:
+                        Console.WriteLine("error");
                         break;
                 }
             }
