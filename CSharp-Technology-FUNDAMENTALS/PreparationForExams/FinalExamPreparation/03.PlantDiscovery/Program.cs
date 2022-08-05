@@ -34,13 +34,13 @@ namespace _03.PlantDiscovery
                 switch (action)
                 {
                     case "Rate":
-                        Rate(info, cmd, plant);
+                        Rate(info, cmd, plant); // method for Rate Command
                         break;
                     case "Update":
-                        Update(info, cmd, plant);
+                        Update(info, cmd, plant); // method for Update Command
                         break;
                     case "Reset":
-                        Reset(info, plant);
+                        Reset(info, plant); // method for Reset Command
                         break;
                     default:
                         Console.WriteLine("error");
