@@ -48,11 +48,11 @@ namespace _03.PlantDiscovery
                             info[plant] = (newRarity, info[plant].rating);
                         }
                         else Console.WriteLine("error");
-                            break;
+                        break;
                     case "Reset":
                         if (info.ContainsKey(plant)) info[plant].rating.Clear();
                         else Console.WriteLine("error");
-                            break;
+                        break;
                     default:
                         Console.WriteLine("error");
                         break;
@@ -67,7 +67,7 @@ namespace _03.PlantDiscovery
 
                     continue;
                 }
-                Console.WriteLine($"- {item.Key}; Rarity: {item.Value.rarity}; Rating: {item.Value.rating.Sum()/item.Value.rating.Count}");
+                Console.WriteLine($"- {item.Key}; Rarity: {item.Value.rarity}; Rating: {(item.Value.rating.Sum()/item.Value.rating.Count):f2}");
             }
         }
     }
