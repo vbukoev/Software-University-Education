@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace _03.PlantDiscovery
 {
@@ -56,6 +57,17 @@ namespace _03.PlantDiscovery
                         Console.WriteLine("error");
                         break;
                 }
+            }
+            Console.WriteLine("Plants for the exhibition:");
+            foreach (var item in info)
+            {
+                if (item.Value.rating.Count == 0 || item.Value.rating.Sum()==0)
+                {
+                    Console.WriteLine($"- {item.Key}; Rarity: {item.Value.rarity}; Rating: 0.00");
+
+                    continue;
+                }
+                Console.WriteLine($"- {item.Key}; Rarity: {item.Value.rarity}; Rating: {item.Value.rating.Sum()/item.Value.rating.Count}");
             }
         }
     }
