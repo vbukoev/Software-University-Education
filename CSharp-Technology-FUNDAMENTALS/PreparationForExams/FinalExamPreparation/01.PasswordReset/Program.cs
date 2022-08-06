@@ -8,7 +8,7 @@ namespace _01.PasswordReset
         static void Main(string[] args)
         {
             var input = Console.ReadLine();
-            var sb = new StringBuilder();
+            var sb = new StringBuilder(); // stringBuilder
             var cmd = "";
             while (true)
             {
