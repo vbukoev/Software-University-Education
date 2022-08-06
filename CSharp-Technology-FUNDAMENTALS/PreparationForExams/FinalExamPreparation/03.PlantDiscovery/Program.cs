@@ -10,7 +10,7 @@ namespace _03.PlantDiscovery
         {
             int n = int.Parse(Console.ReadLine());
             var info = new Dictionary<string, (int rarity, List<double> rating)>();
-            char[] newCharArray = { ':', '-', ' ' };
+            char[] separators = { ':', '-', ' ' };
             for (int i = 0; i < n; i++)
             {
                 var cmd = Console.ReadLine().Split("<->");
@@ -28,7 +28,7 @@ namespace _03.PlantDiscovery
             {
                 var command = Console.ReadLine();
                 if (command == "Exhibition") break;
-                var cmd = command.Split(newCharArray, StringSplitOptions.RemoveEmptyEntries);
+                var cmd = command.Split(separators, StringSplitOptions.RemoveEmptyEntries);
                 var action = cmd[0];
                 var plant = cmd[1];
                 switch (action)
