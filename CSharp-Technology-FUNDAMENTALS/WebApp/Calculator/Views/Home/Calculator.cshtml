@@ -1,0 +1,8 @@
+﻿<h1>This is a Web Calculator</h1>
+<form method = "POST">
+		<input type = "text" placeholder ="Enter number" name = "firstNumber" pattern = "^\d+\.?\d*$" />
+		<input type = "text" placeholder ="Enter operation(action)" name = "operation" pattern = "^(\+{1}|-{1}|\*{1}|\/{1})$"/>
+		<input type = "text" placeholder ="Enter number" name = "secondNumber" pattern = "^\d+\.?\d*$" />
+		<input type = "submit" value = "Submit"/>		
+	</form>
+	<h3 class = "text-danger mt-5">Result:@ViewBag.Result </h3>
