@@ -15,6 +15,7 @@ namespace _06.ExtractEmails
             MatchCollection matches = Regex.Matches(input, pattern);
 
             matches.ToList().ForEach(Console.WriteLine);
+
         }
     }
 }
