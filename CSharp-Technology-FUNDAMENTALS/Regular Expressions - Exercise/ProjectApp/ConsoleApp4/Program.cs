@@ -7,7 +7,6 @@ namespace ConsoleApp4
         static void Main(string[] args)
         {
             
-
         }
     }
 }
