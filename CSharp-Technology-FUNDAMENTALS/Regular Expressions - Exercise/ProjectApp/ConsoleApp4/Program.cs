@@ -87,5 +87,9 @@ public class cardHolder
                 Console.WriteLine("Thank you for the withdrawal! Have a nice day!");
             }           
         }
+        void balance(cardHolder currentUser)
+        {
+            Console.WriteLine("Current balance: " + currentUser.getBalance());
+        }
     }
 }
