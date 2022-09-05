@@ -116,6 +116,8 @@ public class cardHolder
                 else Console.WriteLine("Card not recognized. Please try again later!");
             }
             catch { Console.WriteLine("Card not recognized. Please try again later!"); }
-            }
+        }
+        Console.WriteLine("Please enter your pin: ");
+        int userPin = 0;
     } 
 }
