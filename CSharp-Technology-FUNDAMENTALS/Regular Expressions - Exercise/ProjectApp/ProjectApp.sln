@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32210.238
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{4D6B8E26-B43D-4176-8D8C-F1C7ED311986}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "App1", "ConsoleApp1\App1.csproj", "{4D6B8E26-B43D-4176-8D8C-F1C7ED311986}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp2", "ConsoleApp2\ConsoleApp2.csproj", "{B1CB3BB0-F44F-4E05-BB99-BD9DDC47F7FB}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp3", "ConsoleApp3\ConsoleApp3.csproj", "{A2836C20-E55C-4C81-93AC-A7F9BECAC141}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp4", "ConsoleApp4\ConsoleApp4.csproj", "{434E147C-A646-4A1E-8005-CCF1F6FB1BA1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ATM", "ConsoleApp4\ATM.csproj", "{434E147C-A646-4A1E-8005-CCF1F6FB1BA1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
