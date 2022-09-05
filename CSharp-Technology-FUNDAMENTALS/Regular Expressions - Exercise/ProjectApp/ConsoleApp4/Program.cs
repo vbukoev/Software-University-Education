@@ -58,5 +58,27 @@ public class cardHolder
     {
         balance = newBalance;
     }
+    public static void Main(String[] args)
+    {
+        void printOptions()
+        {
+            Console.WriteLine("Please choose from the following options...");
+            Console.WriteLine("1. Deposit");
+            Console.WriteLine("2. Withdraw");
+            Console.WriteLine("3. Show Balance");
+            Console.WriteLine("4. Exitt");
+        }
+        void deposit(cardHolder currentUser)
+        {
+            Console.WriteLine("How much money would you like to deposit");
+            double deposit = double.Parse(Console.ReadLine());
+            currentUser.setBalance(deposit);
+            Console.WriteLine("Thank you! Your new balance is: " + currentUser.getBalance());
+        }
+        void withdraw(cardHolder currentUser)
+        {
+
+        }
+    }
 }
 
