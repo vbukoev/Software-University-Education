@@ -68,7 +68,7 @@ public class cardHolder
             Console.WriteLine("1. Deposit");
             Console.WriteLine("2. Withdraw");
             Console.WriteLine("3. Show Balance");
-            Console.WriteLine("4. Exitt");
+            Console.WriteLine("4. Exit");
         }
         void deposit(cardHolder currentUser)
         {
