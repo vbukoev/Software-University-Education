@@ -11,7 +11,10 @@ public class cardHolder
     public cardHolder(string cardNum, int pin, string firstName, string lastName, double balance)
     {
         this.cardNum = cardNum;
-
+        this.pin = pin;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.balance = balance;
     }
 }
 
