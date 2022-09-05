@@ -1,13 +1,17 @@
 ﻿using System;
 
-namespace ConsoleApp4
+public class cardHolder
 {
-    internal class Program
-    {
-        static void Main(string[] args)
-        {
-            
+    String cardNum;
+    int pin;
+    String firstName;
+    String lastName;
+    double balance;
 
-        }
+    public cardHolder(string cardNum, int pin, string firstName, string lastName, double balance)
+    {
+        this.cardNum = cardNum;
+
     }
 }
+
