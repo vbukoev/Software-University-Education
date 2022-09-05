@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 public class cardHolder
 {
@@ -99,5 +100,19 @@ public class cardHolder
         cardHolders.Add(new cardHolder("5136653994882779", 5432, "James", "Hansen", 132312.21));
         cardHolders.Add(new cardHolder("4576149086779833", 3242, "Justin", "Cortright", 31231.31));
         cardHolders.Add(new cardHolder("5486461688406210", 9999, "Loreta", "Jameson", 753.92));
+        
+        Console.WriteLine("Welcome to ATM!");
+        Console.WriteLine("Please insert your card: ");
+        String debitCardNum = "";
+        cardHolder currentUser;
+        while (true)
+        {
+            try
+            {
+                debitCardNum = Console.ReadLine();
+                currentUser = cardHolders.FirstOrDefault(a => a.cardNum = debitCardNum);// added LinQ method
+            }
+           catch { }
+        }
     } 
 }
