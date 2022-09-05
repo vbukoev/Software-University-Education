@@ -119,5 +119,16 @@ public class cardHolder
         }
         Console.WriteLine("Please enter your pin: ");
         int userPin = 0;
+        while (true)
+        {
+            try
+            {
+                userPin = int.Parse(Console.ReadLine());
+                
+                if (currentUser.getPin() == userPin) break;
+                else Console.WriteLine("Incorrect pin! Please try again later!");
+            }
+            catch { Console.WriteLine("Incorrect pin! Please try again later!"); }
+        }
     } 
 }
