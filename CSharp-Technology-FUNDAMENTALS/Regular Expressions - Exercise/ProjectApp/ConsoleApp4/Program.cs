@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 public class cardHolder
 {
@@ -91,5 +92,12 @@ public class cardHolder
         {
             Console.WriteLine("Current balance: " + currentUser.getBalance());
         }
-    }
+
+        List<cardHolder> cardHolders = new List<cardHolder>();
+        cardHolders.Add(new cardHolder("4124384718598783", 1234, "Tamika", "Williamson", 1432.43));
+        cardHolders.Add(new cardHolder("4572828901388201", 9832, "Rosa", "Oyler", 32413.73));
+        cardHolders.Add(new cardHolder("5136653994882779", 5432, "James", "Hansen", 132312.21));
+        cardHolders.Add(new cardHolder("4576149086779833", 3242, "Justin", "Cortright", 31231.31));
+        cardHolders.Add(new cardHolder("5486461688406210", 9999, "Loreta", "Jameson", 753.92));
+    } 
 }
