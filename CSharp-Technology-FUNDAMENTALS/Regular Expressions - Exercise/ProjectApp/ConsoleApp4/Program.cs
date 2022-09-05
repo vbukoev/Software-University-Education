@@ -16,6 +16,7 @@ public class cardHolder
         this.lastName = lastName;
         this.balance = balance;
     }
+    //getters
     public string getNum()
     {
         return cardNum;
@@ -35,6 +36,15 @@ public class cardHolder
     public double getBalance()
     {
         return balance;
+    }
+    //setters
+    public void setNum(String newNum)
+    {
+        cardNum = newNum;
+    }
+    public void setPin(int newPin)
+    {
+        pin = newPin;
     }
 }
 
