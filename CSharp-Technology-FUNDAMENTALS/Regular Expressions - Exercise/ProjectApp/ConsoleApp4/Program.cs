@@ -54,7 +54,7 @@ public class cardHolder
     {
         lastName = newLastName;
     }
-    public void setBalance(int newBalance)
+    public void setBalance(double newBalance)
     {
         balance = newBalance;
     }
@@ -71,7 +71,7 @@ public class cardHolder
         void deposit(cardHolder currentUser)
         {
             Console.WriteLine("How much money would you like to deposit");
-            double deposit = double.Parse(Console.ReadLine());
+            double deposit = Double.Parse(Console.ReadLine());
             currentUser.setBalance(deposit);
             Console.WriteLine("Thank you! Your new balance is: " + currentUser.getBalance());
         }
