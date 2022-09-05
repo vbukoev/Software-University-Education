@@ -16,5 +16,25 @@ public class cardHolder
         this.lastName = lastName;
         this.balance = balance;
     }
+    public string getNum()
+    {
+        return cardNum;
+    }
+    public int getPin()
+    {
+        return pin;
+    }
+    public string getFirstName()
+    {
+        return firstName;
+    } 
+    public string getLastName()
+    {
+        return lastName;
+    }
+    public double getBalance()
+    {
+        return balance;
+    }
 }
 
