@@ -54,7 +54,7 @@ public class cardHolder
     {
         lastName = newLastName;
     }
-    public void setBalance(String newBalance)
+    public void setBalance(int newBalance)
     {
         balance = newBalance;
     }
