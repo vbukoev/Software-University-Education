@@ -28,7 +28,7 @@ public class cardHolder
     public string getFirstName()
     {
         return firstName;
-    } 
+    }
     public string getLastName()
     {
         return lastName;
@@ -70,14 +70,22 @@ public class cardHolder
         }
         void deposit(cardHolder currentUser)
         {
-            Console.WriteLine("How much money would you like to deposit");
+            Console.WriteLine("How much money would you like to deposit: ");
             double deposit = Double.Parse(Console.ReadLine());
             currentUser.setBalance(deposit);
             Console.WriteLine("Thank you! Your new balance is: " + currentUser.getBalance());
         }
         void withdraw(cardHolder currentUser)
         {
-
+            Console.WriteLine("How much money would you like to withdraw: ");
+            double withdrawal = Double.Parse(Console.ReadLine());
+            if (currentUser.getBalance() > withdrawal)
+                Console.WriteLine("Insufficient balance!");
+            else
+            {
+                currentUser.setBalance(currentUser.getBalance() - withdrawal);
+                Console.WriteLine("Thank you for the withdrawal! Have a nice day!");
+            }           
         }
     }
 }
