@@ -6,7 +6,7 @@ namespace _08.TrafficJam
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            
         }
     }
 }
