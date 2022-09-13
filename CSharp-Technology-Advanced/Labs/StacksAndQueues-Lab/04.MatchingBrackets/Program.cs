@@ -16,15 +16,15 @@ namespace _04.MatchingBrackets
                 if (expression[i] == '(')
                 {
                     indices.Push(i);
+                    
                 }
 
                 if (expression[i] == ')')
                 {
                     var startIndex = indices.Pop();
 
-                    
+                    Console.WriteLine(expression.Substring(startIndex, i - startIndex + 1));
                 }
-                Console.WriteLine(expression.Substring(startIndex, i - startIndex));
             }
         }
     }
