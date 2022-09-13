@@ -7,8 +7,8 @@ namespace _07.HotPotato
     {
         static void Main(string[] args)
         {
-            int n = int.Parse(Console.ReadLine());
             string[] kids = Console.ReadLine().Split();
+            int n = int.Parse(Console.ReadLine());
             Queue<string> queue = new Queue<string>(kids);
             int tosses = 1;
             while (queue.Count > 1)
