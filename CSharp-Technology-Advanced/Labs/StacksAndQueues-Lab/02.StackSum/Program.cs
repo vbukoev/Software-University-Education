@@ -33,7 +33,7 @@ namespace _02.StackSum
                 }
                 cmd = Console.ReadLine().ToLower();
             }
-            Console.WriteLine(stack.Sum());
+            Console.WriteLine($"Sum: {stack.Sum()}");
         }
     }
 }
