@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32210.238
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01ReverseAString", "01ReverseAString\01ReverseAString.csproj", "{E6145321-24B7-4205-AA86-A9EF5558D763}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01.ReverseAString", "01ReverseAString\01.ReverseAString.csproj", "{E6145321-24B7-4205-AA86-A9EF5558D763}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.StackSum", "02.StackSum\02.StackSum.csproj", "{E7B55291-D944-4797-A5AD-D3CBFB874C74}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3.SimpleCalculator", "3.SimpleCalculator\3.SimpleCalculator.csproj", "{E8FA5798-F5D4-4839-A45D-A69C927F79A2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.SimpleCalculator", "3.SimpleCalculator\03.SimpleCalculator.csproj", "{E8FA5798-F5D4-4839-A45D-A69C927F79A2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.MatchingBrackets", "04.MatchingBrackets\04.MatchingBrackets.csproj", "{49A7CF9D-D761-482B-8FEE-E758936580A0}"
 EndProject
@@ -18,6 +18,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07.HotPotato", "07.HotPotato\07.HotPotato.csproj", "{CCDEAC12-1DE5-4C2B-A3F6-5D44257D68D9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08.TrafficJam", "08.TrafficJam\08.TrafficJam.csproj", "{E3EC9262-F660-40CC-81F4-A9A1AC251C01}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DEMO", "DEMO\DEMO.csproj", "{A156257D-65D6-4AAD-A067-6494E36836D8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +59,10 @@ Global
 		{E3EC9262-F660-40CC-81F4-A9A1AC251C01}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E3EC9262-F660-40CC-81F4-A9A1AC251C01}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E3EC9262-F660-40CC-81F4-A9A1AC251C01}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A156257D-65D6-4AAD-A067-6494E36836D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A156257D-65D6-4AAD-A067-6494E36836D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A156257D-65D6-4AAD-A067-6494E36836D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A156257D-65D6-4AAD-A067-6494E36836D8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
