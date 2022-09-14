@@ -1,12 +1,12 @@
 ﻿using System;
 
-namespace _01.BasicStackOperations
+namespace _04.FastFood
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            
+            Console.WriteLine("Hello World!");
         }
     }
 }
