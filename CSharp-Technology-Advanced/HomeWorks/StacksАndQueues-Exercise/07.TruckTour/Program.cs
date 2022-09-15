@@ -10,7 +10,7 @@ namespace _07.TruckTour
         {
             var petrolPumps = int.Parse(Console.ReadLine());
             var queue = new Queue<int>();
-            for (int i = 1; i < petrolPumps; i++)
+            for (int i = 1; i <= petrolPumps; i++)
             {
                 var tokens = Console.ReadLine().Split().Select(int.Parse).ToArray();
                 var amountPetrol = tokens[0];
