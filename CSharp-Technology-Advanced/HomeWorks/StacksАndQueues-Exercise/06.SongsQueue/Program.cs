@@ -32,6 +32,7 @@ namespace _06.SongsQueue
                         break;
                 }
             }
+            Console.WriteLine("No more songs!");
         }
     }
 }
