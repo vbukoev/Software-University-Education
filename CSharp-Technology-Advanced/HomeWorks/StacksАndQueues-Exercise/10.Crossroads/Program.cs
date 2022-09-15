@@ -6,7 +6,7 @@ namespace _10.Crossroads
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            
         }
     }
 }
