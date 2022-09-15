@@ -13,6 +13,7 @@ namespace _11.KeyRevolver
             int[] bulletsInfo = Console.ReadLine().Split().Select(int.Parse).ToArray();
             int[] locksInfo = Console.ReadLine().Split().Select(int.Parse).ToArray();
             int reward = int.Parse(Console.ReadLine());
+
             Queue<int> locks = new Queue<int>(locksInfo);
             Stack<int> bullets = new Stack<int>(bulletsInfo);
 
@@ -22,13 +23,19 @@ namespace _11.KeyRevolver
             {
                 StartShootingLocks(bullets, locks, ref bulletsShot, barrelSize);
             }
+            if (locks.Any()) Console.WriteLine($"Couldn't get through. Locks left: {locks.Count}");
+            else
+            {
+                int earnedMoney = reward - (bulletsShot * bulletPrice);
+                Console.WriteLine($"{bullets.Count} bullets left. Earned ${earnedMoney}");
+            }
         }
         static void StartShootingLocks(Stack<int> bullets, Queue<int> locks, ref int bulletsShot, int barrelSize)
         {
             int bulletSize = bullets.Pop(); // Remove it both cases 
             int lockSize = locks.Peek(); // we only peek the value
             bulletsShot++;
-            if (bulletSize >= lockSize) // we shot that lock 
+            if (bulletSize <= lockSize) // we shot that lock 
             {
                 locks.Dequeue(); // remove the lock
                 Console.WriteLine("Bang!");
