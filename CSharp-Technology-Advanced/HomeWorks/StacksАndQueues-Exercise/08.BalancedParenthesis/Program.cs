@@ -24,18 +24,25 @@ namespace _08.BalancedParenthesis
                         break; 
                     }
                     char lastSymbol = stack.Pop();
-                    if (lastSymbol == ')' && lastSymbol != '(')
+                    if (symbol == ')' && lastSymbol != '(')
                     {
                         isBalanced = false;
                         break;
                     }
-                    else if (lastSymbol == )
+                    else if (symbol == ']' && lastSymbol != '[')
                     {
-
+                        isBalanced = false;
+                        break;
                     }
-                    
+                    else if (symbol == '}' && lastSymbol != '{')
+                    {
+                        isBalanced = false;
+                        break;
+                    }
                 }
             }
+            if (isBalanced) Console.WriteLine("YES");
+            else Console.WriteLine("NO");
         }
     }
 }
