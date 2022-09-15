@@ -14,7 +14,6 @@ namespace _10.Crossroads
             var carQueue = new Queue<string>();
             int passedCarCnt = 0;
 
-
             while (true)
             {
                 string input = Console.ReadLine();
@@ -32,6 +31,7 @@ namespace _10.Crossroads
                             carQueue.Dequeue();
                             passedCarCnt++;
                         }
+                        else if (greenLight <= 0) break;
                         else if (greenLight < currCar.Length)
                         {
                             if (greenLight + freeWindow >= currCar.Length)
@@ -52,10 +52,16 @@ namespace _10.Crossroads
                                 }
                             }
                         }
-                        else if (greenLight <= 0) break;
+                        
                     }
-                }                
+                }
+                else
+                {
+                    carQueue.Enqueue(input);
+                }
             }
+            Console.WriteLine("Everyone is safe.");
+            Console.WriteLine($"{passedCarCnt} total cars passed the crossroads.");
         }
     }
 }
