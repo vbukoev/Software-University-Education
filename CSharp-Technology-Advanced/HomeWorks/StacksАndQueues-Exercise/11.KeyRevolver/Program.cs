@@ -35,7 +35,8 @@ namespace _11.KeyRevolver
             }
             else Console.WriteLine("Ping!");
 
-            if (bulletsShot % barrelSize == 0 && bullets.Any()) Console.WriteLine("Reloading!");//if there are any bullets
+            if (bulletsShot % barrelSize == 0 && bullets.Any())//if there are any bullets and reloading on every second bullet which is shot (1 % 2 = 1 ; 2 % 2 = 0 (reload) 3 % 2 = 1 ; 4 % 2 = 0 (reload)...)
+                Console.WriteLine("Reloading!");
         }
     }
 }
