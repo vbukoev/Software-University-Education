@@ -21,7 +21,7 @@ namespace _06.SongsQueue
                         queue.Dequeue();
                         break;
                     case "Add":
-                        string nameOfTheSong = string.Join(" ", tokens.Skip(1));
+                        string nameOfTheSong = string.Join(" ", tokens.Skip(1));// "Skip()" skips the first element which is the command -> (Add)
                         if (queue.Contains(nameOfTheSong)) Console.WriteLine($"{nameOfTheSong} is already contained!");
                         else   
                             queue.Enqueue(nameOfTheSong);                        
