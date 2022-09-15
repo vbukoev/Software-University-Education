@@ -15,11 +15,11 @@ namespace _01.BasicStackOperations
             int elementToPeek = cmdNums[2];
             Stack<int> stack = new Stack<int>();
 
-            for (int i = 0; i < elementToPush; i++) //push of the stack
-            {
-                stack.Push(input[i]);
-            }
-            //Stack<int> stack = new Stack<int>(input);
+            //for (int i = 0; i < elementToPush; i++) //push of the stack
+            //{
+            //    stack.Push(input[i]);
+            //}
+            stack = new Stack<int>(input);
 
             for (int i = 1; i <= elementToPop; i++) //pop of the stack
             {
