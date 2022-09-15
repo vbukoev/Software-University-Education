@@ -31,6 +31,7 @@ namespace _06.SongsQueue
                     default:
                         break;
                 }
+                cmd = Console.ReadLine();
             }
             Console.WriteLine("No more songs!");
         }
