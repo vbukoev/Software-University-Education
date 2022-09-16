@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace _05.SquareWithMaximumSum
 {
@@ -6,7 +7,7 @@ namespace _05.SquareWithMaximumSum
     {
         static void Main(string[] args)
         {
-            
+            var sizes = Console.ReadLine().Split(new[] {' ', ','}, StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToArray();
         }
     }
 }
