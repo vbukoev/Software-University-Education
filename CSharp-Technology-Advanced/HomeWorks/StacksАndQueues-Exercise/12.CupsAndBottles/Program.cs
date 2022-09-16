@@ -6,7 +6,7 @@ namespace _12.CupsAndBottles
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            
         }
     }
 }
