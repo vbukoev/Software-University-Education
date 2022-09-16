@@ -23,7 +23,7 @@ namespace _04.SymbolInMatrix
                 {
                     if (matrix[row, col] == symbol)
                     {
-                        Console.WriteLine($"{row}, {col}");
+                        Console.WriteLine($"({row}, {col})");
                         return;
                     }
                 }
