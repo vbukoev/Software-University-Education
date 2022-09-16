@@ -6,7 +6,7 @@ namespace _05.SquareWithMaximumSum
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            
         }
     }
 }
