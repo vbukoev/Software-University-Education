@@ -6,23 +6,19 @@ namespace Demo
     {
         static void Main(string[] args)
         {
-            int[,] intMatrix = 
-                { 
-                { 5, 2, 3, 1 },
-                { 1, 9, 2, 4 },
-                { 9, 8, 6, 9 }
-            };
-            for (int row = 0; row < intMatrix.GetLength(0); row++)
+            int rowsCount = int.Parse(Console.ReadLine()); // rows Count which is equal to the nums of jagged arrays's length
+            int[][] jagged = new int[rowsCount][];
+
+            for (int row = 0; row < jagged.Length; row++)
             {
-                for (int col = 0; col < intMatrix.GetLength(1); col++)
+                string[] nums = Console.ReadLine().Split(' ');
+                jagged[row] = new int[nums.Length];
+
+                for (int col = 0; col < jagged[row].Length; col++)
                 {
-                    Console.Write("{0} ", intMatrix[row, col]);
+                    jagged[row][col] = int.Parse(nums[col]);
                 }
-                Console.WriteLine();
-            }
-
-
-
+            }           
         }
     }
 }
