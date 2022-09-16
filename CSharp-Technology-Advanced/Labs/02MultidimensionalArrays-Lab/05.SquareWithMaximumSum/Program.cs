@@ -36,6 +36,7 @@ namespace _05.SquareWithMaximumSum
             Console.WriteLine($"{matrix[rowIndex, colIndex]} {matrix[rowIndex, colIndex+1]}");
             Console.WriteLine($"{matrix[rowIndex+1, colIndex]} {matrix[rowIndex+1, colIndex+1]}");
             Console.WriteLine(sum);
+                                                                                                       
         }
     }
 }

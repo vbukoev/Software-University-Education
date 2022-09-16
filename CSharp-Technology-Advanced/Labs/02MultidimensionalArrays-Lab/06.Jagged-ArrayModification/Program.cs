@@ -13,7 +13,7 @@ namespace _06.Jagged_ArrayModification
                 jagged[i] = Console.ReadLine().Split().Select(int.Parse).ToArray();
             }
             string cmd = Console.ReadLine().ToLower();
-            while (cmd!="End")
+            while (cmd != "end")
             {
                 string[] splitted = cmd.Split(' ');
                 int row = int.Parse(splitted[1]);
@@ -22,12 +22,7 @@ namespace _06.Jagged_ArrayModification
 
 
                 //-1
-                if (row >=0 && row < jagged.Length && col>=0 && col < jagged[row].Length)
-                {
-                    Console.WriteLine("Invalid coordinates");
-                   
-                }
-                else
+                if (row >= 0 && row < jagged.Length && col >= 0 && col < jagged[row].Length)
                 {
                     if (splitted[0] == "add")
                     {
@@ -37,15 +32,20 @@ namespace _06.Jagged_ArrayModification
                     {
                         jagged[row][col] -= value;
                     }
-                }                
+                }
+                else
+                {
+                    Console.WriteLine("Invalid coordinates");
+                }
                 cmd = Console.ReadLine().ToLower();
             }
             for (int row = 0; row < jagged.Length; row++)
             {
-                for (int col = 0; col < length; col++)
+                for (int col = 0; col < jagged[row].Length; col++)
                 {
-
+                    Console.Write($"{jagged[row][col] + " "}");
                 }
+                Console.WriteLine();
             }
         }
     }

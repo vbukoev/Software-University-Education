@@ -13,7 +13,6 @@ namespace Demo
             {
                 string[] nums = Console.ReadLine().Split(' ');
                 jagged[row] = new int[nums.Length];
-
                 for (int col = 0; col < jagged[row].Length; col++)
                 {
                     jagged[row][col] = int.Parse(nums[col]);

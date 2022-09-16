@@ -19,7 +19,7 @@ namespace _02.SumMatrixColumns
                     matrix[row, col] = currRow[col];
                 }
             }
-            for (int col = 0; col < matrix.GetLength(1); col++)
+            for (int col = 0; col < matrix.GetLength(1); col++) //we reverse the places of the for loops
             {
                 int sum = 0;
                 for (int row = 0; row < matrix.GetLength(0); row++)
