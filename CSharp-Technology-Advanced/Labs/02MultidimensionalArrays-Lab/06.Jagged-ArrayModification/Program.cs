@@ -6,7 +6,7 @@ namespace _06.Jagged_ArrayModification
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            
         }
     }
 }
