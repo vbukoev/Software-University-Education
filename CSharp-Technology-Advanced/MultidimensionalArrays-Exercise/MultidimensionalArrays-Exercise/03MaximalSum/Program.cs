@@ -11,7 +11,7 @@ namespace _03MaximalSum
             var rows = sizes[0];
             var cols = sizes[1];
             var matrix = new int[rows, cols];
-            for (int row = 0; row < matrix.GetLength(0); row++)
+            for (int row = 0; row < matrix.GetLength(0); row++) // filling the matrix
             {
                 var currRow = Console.ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToArray();
                 for (int col = 0; col < matrix.GetLength(1); col++)
