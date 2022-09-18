@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace _03MaximalSum
 {
@@ -6,7 +7,34 @@ namespace _03MaximalSum
     {
         static void Main(string[] args)
         {
-            
+            var sizes = Console.ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToArray();
+            var rows = sizes[0];
+            var cols = sizes[1];
+            var matrix = new int[rows, cols];
+            for (int row = 0; row < matrix.GetLength(0); row++)
+            {
+                var currRow = Console.ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToArray();
+                for (int col = 0; col < matrix.GetLength(1); col++)
+                {
+                    matrix[row, col] = currRow[col];
+                }
+            }
+            int currSum = 0;
+            int maxSum = int.MinValue; // -2_147_483_648
+            int rowIndex = int.MinValue;// -2_147_483_648
+            int colIndex = int.MinValue;// -2_147_483_648
+
+            for (int row = 0; row < matrix.GetLength(0) - 2; row++)
+            {
+                for (int col = 0; col < matrix.GetLength(1) - 2; col++)
+                {
+                    currSum = matrix[row, col] + matrix[row, col + 1] + matrix[row, col + 2] + matrix[row + 1, col] + matrix[row + 1, col + 1] + matrix[row + 1, col + 2] + matrix[row + 2, col] + matrix[row + 2, col + 2] + matrix[row + 2, col + 1];
+                    if (currSum > maxSum)
+                    {
+                        maxSum = currSum;
+                    }
+                }
+            }
         }
     }
 }
