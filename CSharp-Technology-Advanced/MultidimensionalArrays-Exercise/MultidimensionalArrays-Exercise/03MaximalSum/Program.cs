@@ -32,9 +32,15 @@ namespace _03MaximalSum
                     if (currSum > maxSum)
                     {
                         maxSum = currSum;
+                        rowIndex = row;
+                        colIndex = col;
                     }
                 }
             }
+            Console.WriteLine($"Sum = {maxSum}");
+            Console.WriteLine($"{matrix[rowIndex, colIndex]} {matrix[rowIndex, colIndex + 1]} {matrix[rowIndex, colIndex + 2]}");
+            Console.WriteLine($"{matrix[rowIndex + 1, colIndex]} {matrix[rowIndex + 1, colIndex + 1]} {matrix[rowIndex + 1, colIndex + 2]}");
+            Console.WriteLine($"{matrix[rowIndex + 2, colIndex]} {matrix[rowIndex + 2, colIndex + 1]} {matrix[rowIndex + 2, colIndex + 2]}");
         }
     }
 }
