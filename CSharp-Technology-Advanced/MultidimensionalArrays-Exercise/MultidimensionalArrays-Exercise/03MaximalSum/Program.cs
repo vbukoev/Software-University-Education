@@ -25,12 +25,12 @@ namespace _03MaximalSum
             int rowIndex = int.MinValue;// -2_147_483_648
             int colIndex = int.MinValue;// -2_147_483_648
 
-            for (int row = 0; row < matrix.GetLength(0) - 2; row++)
+            for (int row = 0; row < matrix.GetLength(0) - 2; row++) // by this we are getting a 3X3 square from the whole matrix
             {
                 for (int col = 0; col < matrix.GetLength(1) - 2; col++)
                 {
-                    currSum = matrix[row, col] + matrix[row, col + 1] + matrix[row, col + 2] + matrix[row + 1, col] + matrix[row + 1, col + 1] + matrix[row + 1, col + 2] + matrix[row + 2, col] + matrix[row + 2, col + 2] + matrix[row + 2, col + 1];
-                    if (currSum > maxSum)
+                    currSum = matrix[row, col] + matrix[row, col + 1] + matrix[row, col + 2] + matrix[row + 1, col] + matrix[row + 1, col + 1] + matrix[row + 1, col + 2] + matrix[row + 2, col] + matrix[row + 2, col + 2] + matrix[row + 2, col + 1]; // summing the elements from the 3X3 square 
+                    if (currSum > maxSum) // while the maxSum gets bigger than the currSum
                     {
                         maxSum = currSum;
                         rowIndex = row;
