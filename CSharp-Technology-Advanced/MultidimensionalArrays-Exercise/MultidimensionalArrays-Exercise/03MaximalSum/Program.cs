@@ -22,8 +22,8 @@ namespace _03MaximalSum
 
             int currSum = 0;
             int maxSum = int.MinValue; // -2_147_483_648
-            int rowIndex = int.MinValue;// -2_147_483_648
-            int colIndex = int.MinValue;// -2_147_483_648
+            int rowIndex = int.MinValue;// -2_147_483_648 THIS IS THE INDEX OF THE ROW OF THE MAX SUM FROM 3X3 SQUARE 
+            int colIndex = int.MinValue;// -2_147_483_648 THIS IS THE INDEX OF THE COL OF THE MAX SUM FROM 3X3 SQUARE 
 
             for (int row = 0; row < matrix.GetLength(0) - 2; row++) // by this we are getting a 3X3 square from the whole matrix
             {
