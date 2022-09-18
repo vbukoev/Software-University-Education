@@ -19,6 +19,7 @@ namespace _03MaximalSum
                     matrix[row, col] = currRow[col];
                 }
             }
+
             int currSum = 0;
             int maxSum = int.MinValue; // -2_147_483_648
             int rowIndex = int.MinValue;// -2_147_483_648
