@@ -20,7 +20,7 @@ namespace _01.DiagonalDifference
             int primaryDiagonal = 0;
             int secondaryDiagonal = 0;
             int currCol = 0;
-            int diff = primaryDiagonal - secondaryDiagonal; // gets the difference between the primary and the secondary diagonal
+             // gets the difference between the primary and the secondary diagonal
             for (int row = 0; row < matrix.GetLength(0); row++)
             {
                 int col = row;
@@ -32,6 +32,7 @@ namespace _01.DiagonalDifference
 
                 currCol++;
             }
+            int diff = primaryDiagonal - secondaryDiagonal;
             Console.WriteLine(Math.Abs(diff));
         }
     }
