@@ -20,17 +20,16 @@ namespace _02.SquaresInMatrix
                 }
             }
             int cntOfSquares = 0;
-                for (int row = 0; row < matrix.GetLength(0) - 1; row++) //going through the matrix and looking for squares
+            for (int row = 0; row < matrix.GetLength(0) - 1; row++) //going through the matrixandlookinfor squares
+            {
+                for (int col = 0; col < matrix.GetLength(1) - 1; col++)
                 {
-                    for (int col = 0; col < matrix.GetLength(1) - 1; col++)
+                    if (matrix[row, col] == matrix[row, col + 1] && matrix[row + 1, col] == matrix[row+ 1,col + 1] && matrix[row, col] == matrix[row + 1, col + 1])
                     {
-                        if (matrix[row, col] == matrix[row, col + 1] && matrix[row + 1, col] == matrix[row + 1, col + 1] && matrix[row, col] == matrix[row + 1, col + 1])
-                        {
-                            cntOfSquares++;
-                        }
+                        cntOfSquares++;
                     }
                 }
-            
+            }            
             Console.WriteLine(cntOfSquares);
         }
     }
