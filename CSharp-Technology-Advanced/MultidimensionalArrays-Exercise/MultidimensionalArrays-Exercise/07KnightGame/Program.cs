@@ -60,6 +60,8 @@ namespace _07KnightGame
         {
             int attackedKnigths = 0;
 
+            ////HORIZONTAL
+            
             //horizontal left-up
             if (IsCellValid(row - 1, col - 2, size))
             {
@@ -80,6 +82,9 @@ namespace _07KnightGame
             {
                 if (matrix[row + 1, col + 2] == 'K') attackedKnigths++;
             }
+
+            ///////////VERTICAL
+            
             // vertical up-left
             if (IsCellValid(row -2 , col -1 , size))
             {
