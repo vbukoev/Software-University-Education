@@ -14,7 +14,7 @@ namespace _06JaggedArrayManip
                 double[] data = Console.ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries).Select(double.Parse).ToArray();
                 jaggedMatrix[row] = data;
             }
-            for (int row = 0; row < n-1; row++)
+            for (int row = 0; row < n - 1; row++)
             {
                 double[] rowArray = jaggedMatrix[row];
                 double[] secRowArray = jaggedMatrix[row + 1];
@@ -37,14 +37,14 @@ namespace _06JaggedArrayManip
                 int rowIndex = int.Parse(tokens[1]);
                 int colIndex = int.Parse(tokens[2]);
                 int value = int.Parse(tokens[3]);
-                if (rowIndex >=0 && rowIndex < n && colIndex >= 0 && colIndex <jaggedMatrix[rowIndex].Length) continue;
+                if (rowIndex >= 0 && rowIndex < n && colIndex >= 0 && colIndex < jaggedMatrix[rowIndex].Length) continue;
                 string action = tokens[0];
                 switch (action)
                 {
                     case "Add":
                         jaggedMatrix[rowIndex][colIndex] += value; // adding the value to the matrix
                         break;
-                    case "Substract":
+                    case "Subtract":
                         jaggedMatrix[rowIndex][colIndex] -= value; // substracting the value from the matrix
                         break;
                     default:
