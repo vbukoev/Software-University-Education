@@ -13,7 +13,7 @@ namespace _07KnightGame
                 Console.WriteLine(0);
                 return;
             }
-               
+
             var matrix = new char[size, size];
             for (int row = 0; row < size; row++)
             {
@@ -23,13 +23,14 @@ namespace _07KnightGame
                     matrix[row, col] = chars[col];
                 }
             }
-            
+
             var knightsRemoveCnt = 0;
-            int cntMostAttacked = 0;
-            int rowMostAttacked = 0;
-            int colMostAttacked = 0;
             while (true)
             {
+                
+                int cntMostAttacked = 0;
+                int rowMostAttacked = 0;
+                int colMostAttacked = 0;
                 for (int row = 0; row < size; row++)
                 {
                     for (int col = 0; col < size; col++)
@@ -55,13 +56,13 @@ namespace _07KnightGame
             }
             Console.WriteLine(knightsRemoveCnt);
         }
-        
+
         static int CountAttackedKnigths(int row, int col, int size, char[,] matrix)
         {
             int attackedKnigths = 0;
 
             ////HORIZONTAL
-            
+
             //horizontal left-up
             if (IsCellValid(row - 1, col - 2, size))
             {
@@ -78,17 +79,17 @@ namespace _07KnightGame
                 if (matrix[row - 1, col + 2] == 'K') attackedKnigths++;
             }
             // horizontal rigth-down
-            if (IsCellValid(row +1, col + 2, size))
+            if (IsCellValid(row + 1, col + 2, size))
             {
                 if (matrix[row + 1, col + 2] == 'K') attackedKnigths++;
             }
 
             ///////////VERTICAL
-            
+
             // vertical up-left
-            if (IsCellValid(row -2 , col -1 , size))
+            if (IsCellValid(row - 2, col - 1, size))
             {
-                if (matrix[row -2, col - 1] == 'K') attackedKnigths++;
+                if (matrix[row - 2, col - 1] == 'K') attackedKnigths++;
             }
             //vertical up-rigth
             if (IsCellValid(row - 2, col + 1, size))
