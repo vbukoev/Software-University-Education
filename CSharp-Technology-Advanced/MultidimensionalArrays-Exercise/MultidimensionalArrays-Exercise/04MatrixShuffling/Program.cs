@@ -50,6 +50,7 @@ namespace _04MatrixShuffling
             }
         }
 
+
         private static void Print(string[,] matrix)
         {
             for (int row = 0; row < matrix.GetLength(0); row++) // printing the matrix
