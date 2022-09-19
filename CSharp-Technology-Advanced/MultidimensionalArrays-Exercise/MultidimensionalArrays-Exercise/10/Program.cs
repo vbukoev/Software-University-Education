@@ -35,7 +35,7 @@ namespace _10
                 bool playerWon = false;
                 bool playerLost = false;
                 int newPlayerRow = playerRow;
-                int newPlayerCol = playerCol;   
+                int newPlayerCol = playerCol;
                 switch (move)
                 {
                     case 'U':
@@ -63,16 +63,89 @@ namespace _10
                         break;
                 }
                 //Spread bunnies
+                matrix = SpreadBunnies(matrix, ref playerLost);
 
-                if (playerWon)
+                if (playerWon) // if the player has won
                 {
                     PrintMatrix(matrix);
                     Console.WriteLine($"won: {playerRow} {playerCol}");
+                    return;
                 }
 
                 playerRow = newPlayerRow;
                 playerCol = newPlayerCol;
+
+                if (playerLost) //if the player has lost
+                {
+                    PrintMatrix(matrix);
+                    Console.WriteLine($"dead: {playerRow} {playerCol}");
+                    return;
+                }
             }
+        }
+
+        static char[,] SpreadBunnies(char[,] matrix, ref bool playerLost)
+        {
+            char[,] newMatrix = CopyMatrix(matrix);
+
+            for (int row = 0; row < matrix.GetLength(0); row++)
+            {
+                for (int col = 0; col < matrix.GetLength(1); col++)
+                {
+                    if (matrix[row, col] == 'B')
+                    {
+                        if (IsCellValid(row - 1, col, matrix)) //up
+                        {
+                            if (matrix[row - 1, col] == 'P')
+                            {
+                                playerLost = true;
+                            }
+                            newMatrix[row - 1, col] = 'B';
+                        }
+
+                        if (IsCellValid(row + 1, col, matrix)) //down
+                        {
+                            if (matrix[row + 1, col] == 'P')
+                            {
+                                playerLost = true;
+                            }
+                            newMatrix[row + 1, col] = 'B';
+                        }
+
+                        if (IsCellValid(row, col - 1, matrix)) //left
+                        {
+                            if (matrix[row, col - 1] == 'P')
+                            {
+                                playerLost = true;
+                            }
+                            newMatrix[row, col - 1] = 'B';
+                        }
+
+                        if (IsCellValid(row, col + 1, matrix)) //right
+                        {
+                            if (matrix[row, col + 1] == 'P')
+                            {
+                                playerLost = true;
+                            }
+                            newMatrix[row, col + 1] = 'B';
+                        }
+                    }
+                }
+            }
+            return newMatrix;
+        }
+
+        private static char[,] CopyMatrix(char[,] matrix)
+        {
+            char[,] copy = new char[matrix.GetLength(0), matrix.GetLength(1)];
+            for (int row = 0; row < matrix.GetLength(0); row++)
+            {
+                for (int col = 0; col < matrix.GetLength(1); col++)
+                {
+                    copy[row, col] = matrix[row, col];
+                }
+            }
+            return copy;
         }
 
         private static void PrintMatrix(char[,] matrix)
@@ -107,9 +180,9 @@ namespace _10
         }
         static bool IsCellValid(int row, int col, char[,] matrix)
         {
-            return row >= 0 
+            return row >= 0
                 && row < matrix.GetLength(0)
-                && col >= 0 
+                && col >= 0
                 && col < matrix.GetLength(1);
         }
     }
