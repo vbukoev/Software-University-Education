@@ -21,12 +21,12 @@ namespace _01.DiagonalDifference
             int secondaryDiagonal = 0;
             int currCol = 0;
              // gets the difference between the primary and the secondary diagonal
-            for (int row = 0; row < matrix.GetLength(0); row++)
+            for (int row = 0; row < matrix.GetLength(0); row++) // left - right sum
             {
                 int col = row;
                 primaryDiagonal += matrix[row, col];
             }
-            for (int row = matrix.GetLength(0)-1; row>=0; row--)
+            for (int row = matrix.GetLength(0)-1; row>=0; row--) // right - left sum
             {
                 secondaryDiagonal += matrix[row, currCol];
 
