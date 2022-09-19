@@ -13,7 +13,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04MatrixShuffling", "04Matr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05SnakeMoves", "05SnakeMoves\05SnakeMoves.csproj", "{80152A75-DF3F-45EC-9344-25E9246C10DF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06JaggedArrayManip", "06JaggedArrayManip\06JaggedArrayManip.csproj", "{E89747DA-9008-49BF-B996-B3558E64A5D7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06JaggedArrayManipulation", "06JaggedArrayManip\06JaggedArrayManipulation.csproj", "{E89747DA-9008-49BF-B996-B3558E64A5D7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07KnightGame", "07KnightGame\07KnightGame.csproj", "{0FA35AD2-A27F-4C0C-A4A1-3AB31F31D7A4}"
 EndProject
@@ -21,7 +21,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08Bombs", "08Bombs\08Bombs.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09Miner", "09Miner\09Miner.csproj", "{85C49EC5-43DD-4F7E-91C5-87B67BA24BDA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10", "10\10.csproj", "{1106B6E1-BBFA-48ED-B57D-9F8E78B47CFA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10RadioactiveMutantVampireBunnies", "10\10RadioactiveMutantVampireBunnies.csproj", "{1106B6E1-BBFA-48ED-B57D-9F8E78B47CFA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
