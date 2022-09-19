@@ -7,7 +7,7 @@ namespace _04MatrixShuffling
     {
         static void Main(string[] args)
         {
-            var sizes = Console.ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToArray();
+            var sizes = Console.ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries).Select(n=>int.Parse(n)).ToArray();
             int rows = sizes[0];
             int cols = sizes[1];
             var matrix = new string[rows, cols];
