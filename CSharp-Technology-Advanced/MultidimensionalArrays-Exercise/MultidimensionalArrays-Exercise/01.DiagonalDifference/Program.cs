@@ -11,7 +11,7 @@ namespace _01.DiagonalDifference
             var matrix = new int[sizes, sizes];
             for (int row = 0; row < sizes; row++)
             {
-                var currRow = Console.ReadLine().Split().Select(int.Parse).ToArray();
+                var currRow = Console.ReadLine().Split().Select(n => int.Parse(n)).ToArray();
                 for (int col = 0; col < currRow.Length; col++)
                 {
                     matrix[row, col] = currRow[col];
