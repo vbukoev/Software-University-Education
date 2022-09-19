@@ -29,6 +29,88 @@ namespace _10
                     }
                 }
             }
+            string moves = Console.ReadLine();
+            foreach (char move in moves)
+            {
+                bool playerWon = false;
+                bool playerLost = false;
+                int newPlayerRow = playerRow;
+                int newPlayerCol = playerCol;   
+                switch (move)
+                {
+                    case 'U':
+                        matrix[playerRow, playerCol] = '.';
+                        newPlayerRow--;
+                        MovePlayer(newPlayerRow, playerCol, matrix, ref playerWon, ref playerLost);
+                        break;
+                    case 'D':
+                        matrix[playerRow, playerCol] = '.';
+                        newPlayerRow++;
+                        MovePlayer(newPlayerRow, playerCol, matrix, ref playerWon, ref playerLost);
+                        break;
+                    case 'L':
+                        matrix[playerRow, playerCol] = '.';
+                        newPlayerCol--;
+                        MovePlayer(playerRow, newPlayerCol, matrix, ref playerWon, ref playerLost);
+                        break;
+                    case 'R':
+                        matrix[playerRow, playerCol] = '.';
+                        newPlayerCol++;
+                        MovePlayer(playerRow, newPlayerCol, matrix, ref playerWon, ref playerLost);
+                        break;
+
+                    default:
+                        break;
+                }
+                //Spread bunnies
+
+                if (playerWon)
+                {
+                    PrintMatrix(matrix);
+                    Console.WriteLine($"won: {playerRow} {playerCol}");
+                }
+
+                playerRow = newPlayerRow;
+                playerCol = newPlayerCol;
+            }
+        }
+
+        private static void PrintMatrix(char[,] matrix)
+        {
+            for (int row = 0; row < matrix.GetLength(0); row++)
+            {
+                for (int col = 0; col < matrix.GetLength(1); col++)
+                {
+                    Console.Write(matrix[row, col]);
+                }
+                Console.WriteLine();
+            }
+        }
+
+        static void MovePlayer(int playerRow, int playerCol, char[,] matrix, ref bool playerWon, ref bool playerLost)
+        {
+            if (IsCellValid(playerRow, playerCol, matrix))
+            {
+                if (matrix[playerRow, playerCol] == 'B')
+                {
+                    playerLost = true;
+                }
+                else
+                {
+                    matrix[playerRow, playerCol] = 'P';
+                }
+            }
+            else
+            {
+                playerWon = true;
+            }
+        }
+        static bool IsCellValid(int row, int col, char[,] matrix)
+        {
+            return row >= 0 
+                && row < matrix.GetLength(0)
+                && col >= 0 
+                && col < matrix.GetLength(1);
         }
     }
 }
