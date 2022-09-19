@@ -51,7 +51,7 @@ namespace _06JaggedArrayManip
                         break;
                 }
             }
-            for (int i = 0; i < n; i++)
+            for (int i = 0; i < n; i++) //printing the array
             {
                 Console.WriteLine(string.Join(" ", jaggedMatrix[i]));
             }
