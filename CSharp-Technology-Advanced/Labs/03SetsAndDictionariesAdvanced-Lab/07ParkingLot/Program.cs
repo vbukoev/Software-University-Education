@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace _07ParkingLot
 {
@@ -7,49 +8,36 @@ namespace _07ParkingLot
     {
         static void Main(string[] args)
         {
-            var vip = new HashSet<string>();
-            var guests = new HashSet<string>();
-
+            var plate = new HashSet<string>();
             while (true)
             {
-                var input = Console.ReadLine();
-                if (input == "PARTY") break;
-                foreach (var symbol in input)
+                string[] input = Console.ReadLine().Split(',', StringSplitOptions.RemoveEmptyEntries);
+                if (input[0] == "END") break;
+                string IO = input[0];
+                string plateNum = input[1];
+                switch (IO)
                 {
-                    if (char.IsDigit(symbol))
-                    {
-                        vip.Add(input);
-                    }
-                    else
-                    {
-                        guests.Add(input);
-                    }
-                    break;
-                }
-            }
+                    case "IN":
+                        plate.Add(plateNum);
+                        break;
 
-            while (true)
-            {
-                var command = Console.ReadLine();
-                if (command == "END") break;
-                if (vip.Contains(command))
-                {
-                    vip.Remove(command);
-                }
-                if (guests.Contains(command))
-                {
-                    guests.Remove(command);
+                    case "OUT":
+                        plate.Remove(plateNum);
+                        break;
+                    default:
+                        break;
                 }
             }
-            int cnt = vip.Count + guests.Count;
-            Console.WriteLine(cnt);
-            foreach (var item in vip)
+            if (plate.Count > 0)
             {
-                Console.WriteLine(item);
+                foreach (var item in plate)
+                {
+                    Console.WriteLine(item);
+                }
             }
-            foreach (var item in guests)
+            else
             {
-                Console.WriteLine(item);
+                Console.WriteLine("Parking Lot is Empty");
             }
         }
     }
