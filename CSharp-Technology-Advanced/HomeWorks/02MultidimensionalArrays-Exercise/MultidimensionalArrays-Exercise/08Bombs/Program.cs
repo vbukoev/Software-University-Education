@@ -11,9 +11,12 @@ namespace _08Bombs
             int alive = 0;
             int sumAlive = 0;
             var matrix = new int[size, size];
+            
             ReadMatrix(size, matrix);
+            
             var cmds = Console.ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries).ToArray();
             Explode(size, matrix, cmds);
+            
             //getting the sum of the aliveCells and their count
             AliveCellsAndTheirSum(size, matrix, ref alive, ref sumAlive);
 
