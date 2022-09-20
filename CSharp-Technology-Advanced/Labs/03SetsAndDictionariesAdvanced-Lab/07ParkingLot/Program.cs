@@ -6,7 +6,7 @@ namespace _07ParkingLot
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            
         }
     }
 }
