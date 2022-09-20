@@ -30,7 +30,7 @@ namespace _04ProductShop
                 Console.WriteLine($"{shop.Key}->");
                 foreach (var product in shop.Value)
                 {
-                    Console.WriteLine($"Product: {product.Key}, {product.Value}");
+                    Console.WriteLine($"Product: {product.Key}, Price: {product.Value}");
                 }
             }
         }
