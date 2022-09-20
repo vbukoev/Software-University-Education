@@ -31,6 +31,11 @@ namespace _08Bombs
                 var coordinates = item.Split(",", StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToArray();
                 var bombRow = coordinates[0];
                 var bombCol = coordinates[1];
+                int bombPower = matrix[bombRow, bombCol];
+                if (bombPower < 1)
+                {
+                    continue;
+                }
                 for (int row = 0; row < size; row++)
                 {
                     for (int col = 0; col < size; col++)
