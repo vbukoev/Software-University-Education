@@ -20,7 +20,11 @@ namespace _02AverageStudentGrades
             }
             foreach (var item in students)
             {
-                Console.Write($"{item.Key} -> {item.Value:f2}");
+                Console.Write($"{item.Key} -> ");
+                foreach (var grade in item.Value)
+                {
+                    Console.Write($"{grade:f2} ");
+                }
                 Console.WriteLine($"(avg: {item.Value.Average():f2})");
             }
         }
