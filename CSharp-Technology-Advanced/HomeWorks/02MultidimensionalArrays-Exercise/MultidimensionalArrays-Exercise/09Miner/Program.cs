@@ -64,7 +64,7 @@ namespace _09Miner
                         else continue;
                         break;
                     case "right":
-                        if (c + 1 >= 0)
+                        if (c + 1 <n)
                         {
                             field[r][c] = "*";
                             c++;
@@ -85,7 +85,7 @@ namespace _09Miner
                         else continue;
                         break;
                     case "down":
-                        if (r + 1 >= 0)
+                        if (r + 1 < n)
                         {
                             field[r][c] = "*";
                             r++;
