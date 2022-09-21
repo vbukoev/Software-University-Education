@@ -36,7 +36,9 @@ namespace _02SetsOf
             //        if (firstNum == secondNum) newSet.Add(firstNum); 
             //    }
             //}
+
             Console.WriteLine(String.Join(" ", firstSet)); //another way of cw
+            
             //foreach (var item in newSet) Console.Write(item + " ");
         }
     }

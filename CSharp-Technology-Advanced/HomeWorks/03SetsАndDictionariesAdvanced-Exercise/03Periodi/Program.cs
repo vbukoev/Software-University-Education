@@ -15,7 +15,8 @@ namespace _03Periodi
                 var chemicals = Console.ReadLine()
                     .Split(" ", StringSplitOptions.RemoveEmptyEntries)
                     .ToArray();
-                foreach (var item in chemicals) unique.Add(item);
+                unique.UnionWith(chemicals);
+                //foreach (var item in chemicals) unique.Add(item);
             }
             Console.WriteLine(String.Join(" ", unique.OrderBy(x => x)));
         }
