@@ -6,7 +6,7 @@ namespace _07TheV_Lo
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            
         }
     }
 }

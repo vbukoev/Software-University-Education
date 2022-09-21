@@ -27,15 +27,17 @@ namespace _02SetsOf
                 secondSet.Add(num);
             }
 
-            foreach (var firstNum in firstSet)
-            {
-                foreach (var secondNum in secondSet)
-                {
-                    if (firstNum == secondNum) newSet.Add(firstNum); 
-                }
-            }
-            //Console.WriteLine(String.Join(" ", newSet)); //another way of cw
-            foreach (var item in newSet) Console.Write(item + " ");
+            firstSet.IntersectWith(secondSet);
+
+            //foreach (var firstNum in firstSet)
+            //{
+            //    foreach (var secondNum in secondSet)
+            //    {
+            //        if (firstNum == secondNum) newSet.Add(firstNum); 
+            //    }
+            //}
+            Console.WriteLine(String.Join(" ", firstSet)); //another way of cw
+            //foreach (var item in newSet) Console.Write(item + " ");
         }
     }
 }
