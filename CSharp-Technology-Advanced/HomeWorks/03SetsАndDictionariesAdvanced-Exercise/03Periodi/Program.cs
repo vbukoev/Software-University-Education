@@ -9,7 +9,7 @@ namespace _03Periodi
         static void Main(string[] args)
         {
             int n = int.Parse(Console.ReadLine());
-            var unique = new HashSet<string>();
+            var unique = new SortedSet<string>();
             for (int i = 0; i < n; i++)
             {
                 var chemicals = Console.ReadLine()
@@ -18,7 +18,7 @@ namespace _03Periodi
                 unique.UnionWith(chemicals);
                 //foreach (var item in chemicals) unique.Add(item);
             }
-            Console.WriteLine(String.Join(" ", unique.OrderBy(x => x)));
+            Console.WriteLine(String.Join(" ", unique));
         }
     }
 }
