@@ -8,7 +8,7 @@ namespace _05CountSy
     {
         static void Main(string[] args)
         {
-            var text = new Dictionary<char, int>();
+            var text = new SortedDictionary<char, int>();
             var input = Console.ReadLine();
             foreach (var character in input)
             {
@@ -21,7 +21,7 @@ namespace _05CountSy
                     text[character]++;
                 }
             }
-            foreach (var item in text.OrderBy(x=>x.Key))
+            foreach (var item in text)
             {
                 Console.WriteLine($"{item.Key}: {item.Value} time/s");
             }
