@@ -12,7 +12,9 @@ namespace _03Periodi
             var unique = new HashSet<string>();
             for (int i = 0; i < n; i++)
             {
-                var chemicals = Console.ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries).ToArray();
+                var chemicals = Console.ReadLine()
+                    .Split(" ", StringSplitOptions.RemoveEmptyEntries)
+                    .ToArray();
                 foreach (var item in chemicals) unique.Add(item);
             }
             Console.WriteLine(String.Join(" ", unique.OrderBy(x=>x)));
