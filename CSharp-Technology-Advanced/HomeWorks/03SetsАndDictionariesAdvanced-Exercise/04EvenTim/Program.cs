@@ -16,10 +16,13 @@ namespace _04EvenTim
                 if (!numbers.ContainsKey(num)) numbers.Add(num, 1);
                 else numbers[num]++;
             }
-            foreach (var item in numbers.Where(x => x.Value % 2 == 0))
-            {
-                Console.WriteLine(item.Key);
-            }
+            
+            Console.WriteLine(numbers.Single(x => x.Value % 2 == 0).Key); // used LinQ
+
+            //foreach (var item in numbers.Where(x => x.Value % 2 == 0)) // second solution with a foreach loop 
+            //{
+            //    Console.WriteLine(item.Key);
+            //}
         }
     }
 }
