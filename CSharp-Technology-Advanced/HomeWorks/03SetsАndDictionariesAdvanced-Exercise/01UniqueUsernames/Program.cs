@@ -12,7 +12,7 @@ namespace _01UniqueUsernames
             for (int i = 0; i < n; i++)
             {
                 string username = Console.ReadLine();
-                usernames.Add(username);
+                usernames.Add(username); //the .Add method filters the unique userNames
             }
             foreach (var username in usernames) Console.WriteLine(username); 
         }
