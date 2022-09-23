@@ -7,7 +7,7 @@ namespace _01.OddLines
     {
         static void Main(string[] args)
         {
-            string path = "01.Odd Lines";
+            string path = "Odd Lines";
             string fileName = "input.txt";
             string filePath = Path.Combine(path, fileName); // combining the name of the file with the path
 
