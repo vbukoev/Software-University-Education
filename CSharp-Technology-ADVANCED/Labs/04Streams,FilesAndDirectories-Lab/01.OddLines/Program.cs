@@ -1,30 +1,33 @@
 ﻿using System;
 using System.IO;
 
-namespace _01.OddLines
-{
-    internal class Program
-    {
-        static void Main(string[] args)
-        {
-            string path = "OddLines";
-            string fileName = "input.txt";
-            string filePath = Path.Combine(path, fileName); // combining the name of the file with the path
 
-            using (var reader = new StreamReader(filePath))
+namespace OddLines
+{
+    public class OddLines
+    {
+        static void Main()
+        {
+            string inputFilePath = @"..\..\..\Files\input.txt";
+            string outputFilePath = @"..\..\..\Files\output.txt";
+
+            ExtractOddLines(inputFilePath, outputFilePath);
+        }
+
+        public static void ExtractOddLines(string inputFilePath, string outputFilePath)
+        {
+            using (StreamReader reader = new StreamReader(@"..\..\..\Files\input.txt"))
             {
-                using (var writter = new StreamWriter("output.txt"))
+                using (StreamWriter writer = new StreamWriter(@"..\..\..\Files\output.txt"))
                 {
-                    int cnt = 0;
-                    string line = reader.ReadLine();
-                    while (line != null)
+                    int row = 2;
+                    while (reader.EndOfStream == false)
                     {
-                        if (cnt % 2 == 0)
+                        string line = reader.ReadLine();
+                        if (row++ % 2 == 1)
                         {
-                            writter.WriteLine(line);
+                            writer.WriteLine(line);
                         }
-                        cnt++;
-                        line = reader.ReadLine();
                     }
                 }
             }

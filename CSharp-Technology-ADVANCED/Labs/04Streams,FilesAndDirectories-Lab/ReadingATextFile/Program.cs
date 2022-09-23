@@ -16,6 +16,7 @@ namespace ReadingATextFile
                     cnt++;
                 }
             }
+            //IDisposable we can use "using"
         }
     }
 }
