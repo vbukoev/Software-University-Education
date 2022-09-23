@@ -1,12 +1,25 @@
-﻿using System;
-
-namespace _03.WordCount
+﻿namespace WordCount
 {
-    internal class Program
+    using System;
+    using System.Collections.Generic;
+    using System.IO;
+    using System.Linq;
+    public class WordCount
     {
-        static void Main(string[] args)
+        static void Main()
         {
-            Console.WriteLine("Hello World!");
+            string wordPath = @"..\..\..\Files\words.txt";
+            string textPath = @"..\..\..\Files\text.txt";
+            string outputPath = @"..\..\..\Files\output.txt";
+
+            CalculateWordCounts(wordPath, textPath, outputPath);
+        }
+
+        public static void CalculateWordCounts(string wordsFilePath, string textFilePath, string outputFilePath)
+        {     
+            var textLines = File.ReadAllLines(textFilePath);
+            var words = File.ReadAllLines(wordsFilePath).Split().ToArray();
+            var 
         }
     }
 }

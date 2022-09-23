@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 
 namespace _07FolderSize
 {
@@ -6,7 +7,23 @@ namespace _07FolderSize
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            
+            long bytes = RecurseDirectory("../../../"); 
+        }
+
+        private static void RecurseDirectory(string path)
+        {
+            Console.WriteLine(path);
+            string[]  dirs = Directory.GetFiles(path);
+            foreach (var dir in dirs)
+            {
+                Console.WriteLine(dir);
+            }
+            string[] files = Directory.GetFiles(path);
+            foreach (var file in files)
+            {
+                Console.WriteLine(file);
+            }
         }
     }
 }
