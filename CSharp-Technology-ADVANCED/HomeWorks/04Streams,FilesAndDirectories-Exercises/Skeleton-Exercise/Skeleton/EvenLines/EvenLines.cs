@@ -8,7 +8,7 @@
     {
         static void Main()
         {
-            string inputFilePath = @"../../../text.txt";
+            string inputFilePath = "../../../text.txt";
 
             Console.WriteLine(ProcessLines(inputFilePath));
         }
