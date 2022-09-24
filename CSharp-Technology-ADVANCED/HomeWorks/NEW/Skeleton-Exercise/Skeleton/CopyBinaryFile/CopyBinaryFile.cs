@@ -1,41 +1,36 @@
-﻿namespace EvenLines
+﻿namespace CopyBinaryFile
 {
     using System;
     using System.IO;
-    using System.Linq;
 
-    public class EvenLines
+    public class CopyBinaryFile
     {
         static void Main()
         {
-            string inputFilePath = "../../../text.txt";
+            string inputFilePath = @"..\..\..\copyMe.png";
+            string outputFilePath = @"..\..\..\copyMe-copy.png";
 
-            Console.WriteLine(ProcessLines(inputFilePath));
+            CopyFile(inputFilePath, outputFilePath);
         }
 
-        public static string ProcessLines(string inputFilePath)
+        public static void CopyFile(string inputFilePath, string outputFilePath)
         {
-            char[] symbolsForReplace = { '-', ',', '.', '!', '?' };
-            using StreamReader sr = new StreamReader(inputFilePath);
-
-            var cnt = 0;
-            var currLine = "";
-
-            while (!sr.EndOfStream)
+            using (var streamReader = new FileStream(inputFilePath, FileMode.Open))
             {
-                currLine = sr.ReadLine();
-                if (cnt % 2 == 0)
+                using (var streamWriter = new FileStream(outputFilePath, FileMode.Create))
                 {
-                    foreach (var item in symbolsForReplace)
+                    while (true)
                     {
-                        currLine = currLine.Replace(item, '@');
+                        var buffer = new byte[4096];
+                        int readSize = streamReader.Read(buffer, 0, buffer.Length);
+                        if (readSize == 0)
+                        {
+                            break;
+                        }
+                        streamWriter.Write(buffer, 0, readSize);
                     }
-                    var reversed = currLine.Split(' ');
-                    Console.WriteLine(String.Join(" ", reversed.Reverse()));
                 }
-                cnt++;
             }
-            return "";
         }
     }
 }

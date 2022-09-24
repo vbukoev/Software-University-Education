@@ -2,6 +2,8 @@
 {
     using System;
     using System.IO;
+    using System.IO.Compression;
+
     public class ZipAndExtract
     {
         static void Main()
@@ -18,12 +20,18 @@
 
         public static void ZipFileToArchive(string inputFilePath, string zipArchiveFilePath)
         {
-            throw new NotImplementedException();
+            using (var archive = ZipFile.Open(zipArchiveFilePath, ZipArchiveMode.Create))
+            {
+                archive.CreateEntryFromFile(inputFilePath, Path.GetFileName(inputFilePath));
+            }
         }
 
         public static void ExtractFileFromArchive(string zipArchiveFilePath, string fileName, string outputFilePath)
         {
-            throw new NotImplementedException();
+            using (var archive = ZipFile.Open(zipArchiveFilePath, ZipArchiveMode.Read))
+            {
+                archive.GetEntry(fileName).ExtractToFile(outputFilePath);
+            }
         }
     }
 }
