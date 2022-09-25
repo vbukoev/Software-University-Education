@@ -11,9 +11,9 @@ namespace _08ListOfPredicates
             int range = int.Parse(Console.ReadLine());
             var dividers = Console.ReadLine().Split(' ', StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToList();
             var nums = new List<int>();
-            for (int i = 0; i < range; i++)
+            for (int i = 1; i <= range; i++)
             {
-                nums.Add(i+2);
+                nums.Add(i);
 
             }
             foreach (var item in dividers)
