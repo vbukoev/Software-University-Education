@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32126.317
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01ActionPrint", "01ActionPrint\01ActionPrint.csproj", "{E06B92FE-A1F7-42A4-A148-0A24AC9A9F6F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02KnightsOfHonor", "02KnightsOfHonor\02KnightsOfHonor.csproj", "{2EA1F3D3-24A8-4B98-A27F-17A397409AED}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E06B92FE-A1F7-42A4-A148-0A24AC9A9F6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E06B92FE-A1F7-42A4-A148-0A24AC9A9F6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E06B92FE-A1F7-42A4-A148-0A24AC9A9F6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E06B92FE-A1F7-42A4-A148-0A24AC9A9F6F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2EA1F3D3-24A8-4B98-A27F-17A397409AED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2EA1F3D3-24A8-4B98-A27F-17A397409AED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2EA1F3D3-24A8-4B98-A27F-17A397409AED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2EA1F3D3-24A8-4B98-A27F-17A397409AED}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {714145B7-2866-4FDF-82A8-F178C27D436E}
+	EndGlobalSection
+EndGlobal
