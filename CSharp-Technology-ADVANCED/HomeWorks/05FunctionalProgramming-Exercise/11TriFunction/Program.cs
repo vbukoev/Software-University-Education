@@ -7,16 +7,12 @@ namespace _11TriFunction
     {
         static void Main(string[] args)
         {
-
-
-
             int num = int.Parse(Console.ReadLine());
-            var names = Console.ReadLine().Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries).Where(x=>x.ToCharArray().Sum(c=>c)>=num).ToList();
-            if (names.Count!=0)
-            {
-            Console.WriteLine(names[0]);
-
-            }
+            var names = Console.ReadLine()
+                .Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
+                .Where(x => x.ToCharArray().Sum(c => c) >= num)
+                .ToList();
+            if (names.Count != 0) Console.WriteLine(names[0]); 
         }
     }
 }
