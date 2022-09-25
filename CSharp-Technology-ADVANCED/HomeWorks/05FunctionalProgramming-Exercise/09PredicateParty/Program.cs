@@ -18,6 +18,7 @@ namespace _09PredicateParty
                 var tokens = input.Split(" ", StringSplitOptions.RemoveEmptyEntries).ToArray();
                 string cmd = tokens[0];
                 string criteria = tokens[1];
+
                 switch (cmd)
                 {
                     case "Double":
