@@ -17,7 +17,6 @@
         {
             char[] symbolsForReplace = { '-', ',', '.', '!', '?' };
             using StreamReader sr = new StreamReader(inputFilePath);
-
             var cnt = 0;
             var currLine = "";
 
