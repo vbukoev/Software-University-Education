@@ -15,7 +15,7 @@
 
         public static string ProcessLines(string inputFilePath)
         {
-            char[] symbolsForReplace = { '-', ',', '.', '!', '?' };
+            char[] symbolsForReplace = { '-', ',', '.', '!', '?' }; //char array containing all the symbols
             using StreamReader sr = new StreamReader(inputFilePath);
             var cnt = 0;
             var currLine = "";
