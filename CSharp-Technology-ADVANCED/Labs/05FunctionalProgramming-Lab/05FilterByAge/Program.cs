@@ -33,7 +33,7 @@ namespace _05FilterByAge
             Func<Person, bool> filter = CreateFilter(condition, age);
             string format = Console.ReadLine();
             Func<Person, string> select = GetSelector(format);
-            var res = people.Where(filterF)
+            var res = people.Where(filter)
         }
 
         static Func<Person, string> GetSelector(string format)
