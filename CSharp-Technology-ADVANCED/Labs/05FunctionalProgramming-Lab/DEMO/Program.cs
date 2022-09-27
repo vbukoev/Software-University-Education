@@ -10,6 +10,7 @@ namespace DEMO
             Action<int> action = x => Console.WriteLine($"{x}");
             var x = int.Parse(Console.ReadLine());
             action(x * 5);
+            //C# is multi-paradigm language
         }
     }
 }
