@@ -2,7 +2,7 @@
 
 namespace _01DefineAClassPerson
 {
-    class Program
+    internal class Program
     {
         static void Main(string[] args)
         {
