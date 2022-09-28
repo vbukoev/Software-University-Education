@@ -6,7 +6,9 @@ namespace _01DefineAClassPerson
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var first = new Person(20, "Peter");
+            var second = new Person(18, "George");
+            var third = new Person(43, "Jose");
         }
     }
 }
