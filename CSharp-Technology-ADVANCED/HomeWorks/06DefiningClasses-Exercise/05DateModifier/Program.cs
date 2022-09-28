@@ -2,11 +2,14 @@
 
 namespace _05DateModifier
 {
-    internal class Program
+    public class StartUp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            string first = Console.ReadLine();
+            string sec   = Console.ReadLine();
+            Console.WriteLine(DateModifier.GetDaysBetweenDates(first, sec));
+
         }
     }
 }
