@@ -1,12 +1,12 @@
 ﻿using System;
 
-namespace _02CreatingConstructors
+namespace DefiningClasses
 {
-    internal class Program
+    public class StartUp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            
         }
     }
 }

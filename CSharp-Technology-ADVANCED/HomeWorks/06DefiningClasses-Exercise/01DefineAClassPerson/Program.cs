@@ -1,14 +1,14 @@
 ﻿using System;
 
-namespace _01DefineAClassPerson
+namespace DefiningClasses
 {
-    internal class Program
+    public class StartUp
     {
         static void Main(string[] args)
         {
-            var first = new Person(20, "Peter");
-            var second = new Person(18, "George");
-            var third = new Person(43, "Jose");
+            Person first = new Person(20, "Peter");
+            Person second = new Person(18, "George");
+            Person third = new Person(43, "Jose");
         }
     }
 }
