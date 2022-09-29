@@ -22,7 +22,7 @@ namespace _04FindEvensOrOdds
             Console.WriteLine(String.Join(" ", res));
         }
 
-        private static Func<int, bool> GetFilter(string cmd)
+        public static Func<int, bool> GetFilter(string cmd)
         {
             switch (cmd)
             {
