@@ -20,8 +20,7 @@ namespace _03CustomMinFunction
                 }
                 return minNum; // this is the value that has been => (returned) from the Func 
             };
-            var input = Console.ReadLine().Split(' ', StringSplitOptions.RemoveEmptyEntries).Select(x => int.Parse(x)).ToList();
-            Console.WriteLine(minFunc(input));
+            Console.WriteLine(minFunc(Console.ReadLine().Split(' ', StringSplitOptions.RemoveEmptyEntries).Select(x => int.Parse(x)).ToList()));
 
         }
     }
