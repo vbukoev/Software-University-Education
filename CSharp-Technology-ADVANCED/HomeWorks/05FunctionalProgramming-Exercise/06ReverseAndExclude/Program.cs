@@ -37,6 +37,7 @@ namespace _06ReverseAndExclude
             nums = reverse(nums);
             nums = excludeDivisable(nums, n => n % divider == 0);
             Console.WriteLine(String.Join(" ", nums));
+
             //var nums = Console.ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).Reverse().ToArray();
             //int divisor = int.Parse(Console.ReadLine());
             //Action<int[], int[]> reverse = (arr, reversed) =>
