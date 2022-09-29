@@ -8,45 +8,45 @@
     {
         static void Main(string[] args)
         {
-            int n = int.Parse(Console.ReadLine());
+            var n = int.Parse(Console.ReadLine());
             var cars = new List<Car>();
             for (int i = 0; i < n; i++)
             {
                 var tokens = Console.ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries).ToArray();
-                string model = tokens[0];
-                double fuelAmount = double.Parse(tokens[1]);
-                double fuelConsumptionFor1km = double.Parse(tokens[2]);
-                if (!cars.Any(x=>x.Model.Contains(model)))
+                var model = tokens[0];
+
+                var engineSpeed = int.Parse(tokens[1]);
+                var enginePower = int.Parse(tokens[2]);
+                Engine engine = new Engine(engineSpeed, enginePower);
+
+                var cargoWeight = int.Parse(tokens[3]);
+                var cargoType = tokens[4];
+                Cargo cargo = new Cargo(cargoWeight, cargoType);
+
+                Tire[] tires = new Tire[4]
                 {
-                    var car = new Car(model, fuelAmount, fuelConsumptionFor1km, 0);
-                    cars.Add(car);
-                }
+                    new Tire(double.Parse(tokens[5]), int.Parse(tokens[6])),
+                    new Tire(double.Parse(tokens[7]), int.Parse(tokens[8])),
+                    new Tire(double.Parse(tokens[9]), int.Parse(tokens[10])),
+                    new Tire(double.Parse(tokens[11]), int.Parse(tokens[12])),
+                };
+                Car car = new Car(model, engine, cargo, tires);
+                cars.Add(car);
             }
-            
-            while (true)
+            var command = Console.ReadLine();
+            switch (command)
             {
-                var input = Console.ReadLine();
-                if (input  == "End")
-                {
+                case "fragile":
+                    var res = cars.Where(x => x.Cargo.Type == "fragile").Where(x => x.Tires.Any(y => y.Pressure < 1)).ToList();
+                    foreach (var item in res) Console.WriteLine(item);
                     break;
-                }
-                var command = input.Split(" ", StringSplitOptions.RemoveEmptyEntries).ToArray();
-                var action = command[0];
-                switch (action)
-                {
-                    case "Drive":
-                        var model = command[1];
-                        var km = double.Parse(command[2]);
-                        var car = cars.Where(x => x.Model == model).FirstOrDefault();
-                        car.Drive(km);
-                        break;
-                    default:
-                        break;
-                }
-            }
-            foreach (var item in cars)
-            {
-                Console.WriteLine(item);
+
+                case "flammable":
+                    res = cars.Where(x => x.Cargo.Type == "flammable").Where(x => x.Engine.Power > 250).ToList();
+                    foreach (var item in res) Console.WriteLine(item);
+                    break;
+                default:
+                    break;
             }
         }
     }

@@ -8,33 +8,19 @@ namespace DefiningClasses
     public class Car
     {
         public string Model { get; set; }
-        public double FuelAmount { get; set; }
-        public double FuelConsumptionPerKilometer { get; set; }
-        public double Distance { get; set; }
-        public Car() { }
-        public Car(string model, double fuelAmount, double fuelConsumptionPerKilometer, double distance) 
+        public Engine Engine { get; set; }
+        public Cargo Cargo { get; set; }
+        public Tire[] Tires { get; set; }        
+        public Car(string model, Engine engine, Cargo cargo, Tire[] tires) 
         {
             this.Model = model;
-            this.FuelAmount = fuelAmount;
-            this.FuelConsumptionPerKilometer = fuelConsumptionPerKilometer;
-            this.Distance = distance;
-        }
-        public void Drive(double km)
-        {
-            bool canMove = this.FuelAmount >= km * FuelConsumptionPerKilometer;
-            if (canMove)
-            {
-                this.FuelAmount = FuelAmount-  (km * FuelConsumptionPerKilometer);
-                this.Distance = Distance+  km;
-            }
-            else
-            {
-                Console.WriteLine("Insufficient fuel for the drive");
-            }
-        }
+            this.Engine = engine;
+            this.Cargo = cargo;
+            this.Tires = tires;
+        }        
         public override string ToString()
         {
-            return $"{this.Model} {this.FuelAmount:f2} {this.Distance}"; 
+            return $"{this.Model}"; 
         }
     }
 }
