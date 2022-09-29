@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 
 namespace _09PredicateParty
@@ -6,7 +8,7 @@ namespace _09PredicateParty
     internal class Program
     {
         static void Main(string[] args)
-        {
+        {             
             var names = Console.ReadLine().Split(' ', StringSplitOptions.RemoveEmptyEntries).ToList();
             while (true)
             {
@@ -44,9 +46,9 @@ namespace _09PredicateParty
             switch (criteria)
             {
                 case "StartsWith": return x => x.StartsWith(filter);
-                case "EndsWith": return x=>x.EndsWith(filter);
+                case "EndsWith": return x => x.EndsWith(filter);
                 case "Length": return x => x.Length == int.Parse(filter);
-                    default: return x => true;
+                default: return x => true;
             }
         }
 
@@ -57,8 +59,9 @@ namespace _09PredicateParty
                 case "StartsWith": return x => x.StartsWith(filter);
                 case "EndsWith": return x => x.EndsWith(filter);
                 case "Length": return x => x.Length == int.Parse(filter);
-                    default: return x => true;
+                default: return x => true;
             }
         }
+    }
     }
 }
