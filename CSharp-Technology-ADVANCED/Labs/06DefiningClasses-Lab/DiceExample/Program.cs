@@ -21,7 +21,7 @@ namespace DiceExample
             Random random = new Random();
             int side = random.Next(1, 7);
             Dice dice = new Dice() { Side = side, Color = "pink"}; //Side is a prop, Color is also a prop
-            return dice; // returning the Dice dice 
+            return dice; 
         }
     }
 }
