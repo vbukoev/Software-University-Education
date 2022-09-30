@@ -8,7 +8,7 @@ namespace _09PredicateParty
     internal class Program
     {
         static void Main(string[] args)
-        {             
+        {
             var names = Console.ReadLine().Split(' ', StringSplitOptions.RemoveEmptyEntries).ToList();
             while (true)
             {
@@ -20,17 +20,16 @@ namespace _09PredicateParty
                 var tokens = input.Split(" ", StringSplitOptions.RemoveEmptyEntries).ToArray();
                 string cmd = tokens[0];
                 string criteria = tokens[1];
-
+                string value = tokens[2];
                 switch (cmd)
                 {
                     case "Double":
-                        Func<string, bool> filter = GetFilter(criteria, tokens[2]);
+                        Func<string, bool> filter = GetFilter(criteria, value);
                         var filtered = names.Where(filter).ToList();
-
                         names.InsertRange(0, filtered);
                         break;
                     case "Remove":
-                        Predicate<string> predicate = GetPredicate(criteria, tokens[2]);
+                        Predicate<string> predicate = GetPredicate(criteria, value);
                         names.RemoveAll(predicate);
                         break;
                     default:
@@ -63,5 +62,5 @@ namespace _09PredicateParty
             }
         }
     }
-    }
 }
+
