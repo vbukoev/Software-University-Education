@@ -8,6 +8,5 @@ namespace DiceExample
     {
         public int Side { get; set; }
         public string Color { get; set; }
-
     }
 }
