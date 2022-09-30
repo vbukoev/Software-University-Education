@@ -7,9 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarManufacturer", "CarManuf
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SpecialCars", "SpecialCars\SpecialCars.csproj", "{89CDA8A3-A216-48A3-9C4E-C44ECC7E2704}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DEMO", "DEMO\DEMO.csproj", "{28729155-88A7-46A2-B35D-B33CC98DDE2E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DEMO", "DEMO\DEMO.csproj", "{28729155-88A7-46A2-B35D-B33CC98DDE2E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiceExample", "DiceExample\DiceExample.csproj", "{3ED4A123-B330-46B0-A37B-DB987D223FCA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DiceExample", "DiceExample\DiceExample.csproj", "{3ED4A123-B330-46B0-A37B-DB987D223FCA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clock", "Clock\Clock.csproj", "{6D9DE381-1F03-416D-8C79-C39BE565EFBA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{3ED4A123-B330-46B0-A37B-DB987D223FCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3ED4A123-B330-46B0-A37B-DB987D223FCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3ED4A123-B330-46B0-A37B-DB987D223FCA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D9DE381-1F03-416D-8C79-C39BE565EFBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D9DE381-1F03-416D-8C79-C39BE565EFBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D9DE381-1F03-416D-8C79-C39BE565EFBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D9DE381-1F03-416D-8C79-C39BE565EFBA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
