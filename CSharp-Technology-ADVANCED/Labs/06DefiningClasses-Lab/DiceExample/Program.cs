@@ -5,11 +5,13 @@ namespace DiceExample
 {
     public class Program
     {
+        
         static void Main(string[] args)
-        {
+        {            
             List<Dice> dices = new List<Dice>(); //adds the dices side which were thrown
             while (true)
             {
+                Console.Beep();
                 Console.ReadLine();
                 Dice dice = ThrowDice();
                 dices.Add(dice);
