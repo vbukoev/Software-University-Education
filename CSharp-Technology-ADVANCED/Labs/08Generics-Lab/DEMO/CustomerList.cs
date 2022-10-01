@@ -4,7 +4,11 @@ using System.Text;
 
 namespace DEMO
 {
-    internal class CustomerList
-    {
+    public class CustomerList
+    {          
+        public Customer Remove(Customer customer,string removedCustomer)
+        {
+            return removedCustomer;
+        }
     }
 }

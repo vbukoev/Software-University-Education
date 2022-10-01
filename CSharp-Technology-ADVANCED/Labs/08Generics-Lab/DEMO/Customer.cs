@@ -4,7 +4,16 @@ using System.Text;
 
 namespace DEMO
 {
-    internal class Customer
+    public class Customer
     {
+        public string Name { get; set; }
+        public string Address { get; set; }
+        public string removedCustomer { get; set; }
+        public Customer(string name, string address, string removedCustomer)
+        {
+            this.Name = name;
+            this.Address = address;
+            this.removedCustomer = removedCustomer;
+        }
     }
 }
