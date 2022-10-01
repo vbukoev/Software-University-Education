@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace BoxOfT
+﻿namespace BoxOfT
 {
+using System.Text;
+using System;
+using System.Collections.Generic;
+
     public class Box<T>
     {
-        private List<T> elements;
+        private List<T> elements; //list of elements
         public int Count => this.elements.Count;
         public Box()
         {
@@ -18,7 +18,7 @@ namespace BoxOfT
         }
         public T Remove()
         {
-            var last = this.elements[Count - 1];
+            T last = this.elements[this.Count - 1];
             this.elements.RemoveAt(this.Count - 1);
             return last;
         }
