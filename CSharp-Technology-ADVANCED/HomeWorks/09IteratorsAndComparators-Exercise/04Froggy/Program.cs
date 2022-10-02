@@ -11,7 +11,7 @@ using System;
         {
             var input = Console.ReadLine().Split(", ", StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToArray();
             var lake = new Lake(input);
-            foreach (var item in lake) Console.Write(item + ", ");
+            Console.WriteLine(string.Join(", ", lake));
         }
     }
 }
