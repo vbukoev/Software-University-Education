@@ -20,8 +20,8 @@ namespace DefiningClasses
 
         public Person(int age, string name)
         {
-            Age = age;
-            Name = name;
+            this.Age = age;
+            this.Name = name;
         }
     }
 }
