@@ -6,10 +6,10 @@ namespace SoftUniParking
 {
     public class Parking
     {
-        private Dictionary<string, Car> cars;
+        private Dictionary<string, Car> cars; //fields
         private int capacity;
-        public int Count => cars.Count; // prop
-        public Parking(int capacity) //ctor
+        public int Count => cars.Count; // prop - property
+        public Parking(int capacity) //ctor - constructor
         {
             this.capacity = capacity;
             this.cars = new Dictionary<string, Car>();
