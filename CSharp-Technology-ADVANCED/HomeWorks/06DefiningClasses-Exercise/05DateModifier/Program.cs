@@ -4,12 +4,11 @@ namespace _05DateModifier
 {
     public class StartUp
     {
-        static void Main(string[] args)
+        public static void Main()
         {
-            string first = Console.ReadLine();
-            string sec   = Console.ReadLine();
-            Console.WriteLine(DateModifier.GetDaysBetweenDates(first, sec));
-
+            string firstDay = Console.ReadLine();
+            string secondDay = Console.ReadLine();
+            Console.WriteLine(DateModifier.GetDaysBetweenDates(firstDay, secondDay));
         }
     }
 }

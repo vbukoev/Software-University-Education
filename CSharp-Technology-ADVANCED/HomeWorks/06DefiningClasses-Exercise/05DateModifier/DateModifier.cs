@@ -7,15 +7,24 @@ namespace _05DateModifier
 {
     public class DateModifier
     {
-        internal static double GetDaysBetweenDates(string one, string two)
+        public static double GetDaysBetweenDates(string one, string two)
         {
-            var first = DateTime.ParseExact(one, "yyyy MM dd", CultureInfo.InvariantCulture);
-            var sec = DateTime.ParseExact(two, "yyyy MM dd", CultureInfo.InvariantCulture);
+            var firstDay = DateTime.ParseExact(one, "yyyy MM dd", CultureInfo.InvariantCulture);
+            var secondDay = DateTime.ParseExact(two, "yyyy MM dd", CultureInfo.InvariantCulture);
 
-            if (first > sec) return GetDaysBetweenDates(two, one);
+            if (firstDay > secondDay) return GetDaysBetweenDates(two, one);
 
-            var diff = sec - first;
-            return diff.Days;
+            System.TimeSpan diff = secondDay - firstDay;
+            return Math.Abs(diff.Days);
+
+            // another solution
+            //var firstDay = DateTime.Parse(one);
+            //var secondDay = DateTime.Parse(two);
+
+            //if (firstDay > secondDay) return GetDaysBetweenDates(two, one);
+
+            //System.TimeSpan diff = secondDay - firstDay;
+            //return Math.Abs(diff.Days);
         }
     }
 }
