@@ -5,6 +5,8 @@ VisualStudioVersion = 17.3.32922.545
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01BaristaContest", "01BaristaContest\01BaristaContest.csproj", "{97ED92DE-E1A7-44C5-810D-7EC3B0813945}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02Help-A-Mole", "02Help-A-Mole\02Help-A-Mole.csproj", "{91AC84D4-39FC-43EC-970B-D9A9B74B82AF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{97ED92DE-E1A7-44C5-810D-7EC3B0813945}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{97ED92DE-E1A7-44C5-810D-7EC3B0813945}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{97ED92DE-E1A7-44C5-810D-7EC3B0813945}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91AC84D4-39FC-43EC-970B-D9A9B74B82AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91AC84D4-39FC-43EC-970B-D9A9B74B82AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91AC84D4-39FC-43EC-970B-D9A9B74B82AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91AC84D4-39FC-43EC-970B-D9A9B74B82AF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
