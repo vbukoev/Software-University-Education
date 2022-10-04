@@ -4,6 +4,7 @@ using System.Globalization;
 using System.Linq.Expressions;
 using System.Numerics;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Text;
 
 namespace _02Help_A_Mole
 {
@@ -104,15 +105,8 @@ namespace _02Help_A_Mole
             }
             matrix[currRow, currCol] = 'M';
             MatrixPrint(n, matrix);
-        }
 
-
-        public static bool FieldCheck(int row, int col, char[,] matrix)
-        {
-            return row >= 0 && row < matrix.GetLength(0) && col >= 0 && col < matrix.GetLength(1);
-        }
-
-       void Position(int currRow, int currCol, char v)
+         void Position(int currRow, int currCol, char v)
         {
             if (v == 'S')
             {
@@ -137,16 +131,26 @@ namespace _02Help_A_Mole
                 matrix[currRow, currCol] = '-';
             }
         }
+        }
+
+
+        public static bool FieldCheck(int row, int col, char[,] matrix)
+        {
+            return row >= 0 && row < matrix.GetLength(0) && col >= 0 && col < matrix.GetLength(1);
+        }
+
         public static void MatrixPrint(int n, char[,] matrix)
         {
+            StringBuilder sb = new StringBuilder();
             for (int row = 0; row < n; row++)
             {
                 for (int col = 0; col < n; col++)
                 {
-                    Console.Write(matrix[row, col]);
+                    sb.Append(matrix[row, col]);
                 }
-                Console.WriteLine();
+                sb.AppendLine(Environment.NewLine);
             }
+            Console.WriteLine(sb.ToString().TrimEnd());
         }
     }
 }

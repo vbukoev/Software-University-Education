@@ -9,8 +9,8 @@ namespace CustomStructeres
         private class LinkNode
         {
             public int Value { get; set; }
-            public LinkNode NextNode { get; set; }
-            public LinkNode PreviousNode { get; set; }
+            public LinkNode NextNode { get; set; }// it reffers itself (recursion)
+            public LinkNode PreviousNode { get; set; }// it reffers itself (recursion)
             public LinkNode(int value)
             {
                 this.Value = value;
