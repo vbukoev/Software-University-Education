@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32922.545
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01BaristaContest", "01BaristaContest\01BaristaContest.csproj", "{97ED92DE-E1A7-44C5-810D-7EC3B0813945}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01BaristaContest", "01BaristaContest\01BaristaContest.csproj", "{97ED92DE-E1A7-44C5-810D-7EC3B0813945}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02Help-A-Mole", "02Help-A-Mole\02Help-A-Mole.csproj", "{91AC84D4-39FC-43EC-970B-D9A9B74B82AF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02Help-A-Mole", "02Help-A-Mole\02Help-A-Mole.csproj", "{91AC84D4-39FC-43EC-970B-D9A9B74B82AF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Help-A-Mole Second sol", "Help-A-Mole Second sol\Help-A-Mole Second sol.csproj", "{4D2C0D79-F007-49B0-8803-A7AA8A3536FC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Basketball", "03. Basketball_Skeleton\Basketball.csproj", "{E96BB185-74E9-411B-90C5-AF60446D4E17}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{91AC84D4-39FC-43EC-970B-D9A9B74B82AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{91AC84D4-39FC-43EC-970B-D9A9B74B82AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{91AC84D4-39FC-43EC-970B-D9A9B74B82AF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4D2C0D79-F007-49B0-8803-A7AA8A3536FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4D2C0D79-F007-49B0-8803-A7AA8A3536FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4D2C0D79-F007-49B0-8803-A7AA8A3536FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4D2C0D79-F007-49B0-8803-A7AA8A3536FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E96BB185-74E9-411B-90C5-AF60446D4E17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E96BB185-74E9-411B-90C5-AF60446D4E17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E96BB185-74E9-411B-90C5-AF60446D4E17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E96BB185-74E9-411B-90C5-AF60446D4E17}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
