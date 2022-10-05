@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Data;
-using System.Globalization;
-using System.Linq.Expressions;
-using System.Numerics;
-using System.Runtime.InteropServices.WindowsRuntime;
-using System.Security.Cryptography;
-using System.Text;
+using System.Linq;
 
 namespace _02Help_A_Mole
 {
@@ -15,139 +9,107 @@ namespace _02Help_A_Mole
         static void Main(string[] args)
         {
             int points = 0;
-            int moleStartRow = -1;
-            int moleStartCol = -1;
-            int specialOneRow = -1;
-            int specialTwoRow = -1;
-            int specialOneCol = -1;
-            int specialTwoCol = -1;
-
             int n = int.Parse(Console.ReadLine());
             char[,] matrix = new char[n, n];
             for (int row = 0; row < n; row++)
             {
-                string currElement = Console.ReadLine();
+                string[] input = Console.ReadLine().Split().ToArray();
                 for (int col = 0; col < n; col++)
                 {
-                    matrix[row, col] = currElement[col];
-                    if (matrix[row, col] == 'M')
-                    {
-                        moleStartRow = row;
-                        moleStartCol = col;
-                        matrix[row, col] = '-';
-                    }
-                    if (matrix[row, col] == 'S') //special 
-                    {
-                        if (specialOneCol != -1 && specialOneRow != -1 )
-                        {
-                            specialTwoRow = row;
-                            specialTwoCol = col;
-                        }
-                        else
-                        {
-                            specialOneRow = row;
-                            specialOneCol = col;
-                        }
-                    }
+                    matrix[row, col] = input[0][col]; //input[0] gets the first input from the string array which is the row 
                 }
             }
-            int currRow = moleStartRow;
-            int currCol = moleStartCol;
-            string cmd = Console.ReadLine();
-
-            while (points < 25 && cmd != "End")
+            while (true)
             {
-                switch (cmd)
+                string cmd = Console.ReadLine();
+                if (cmd == "End")
                 {
-                    case "up":
-                        if (FieldCheck(currRow - 1, currCol, matrix))
-                        {
-                            currRow -= 1;
-                            Position(currRow, currCol, matrix[currRow, currCol]);
-                        }
-                        else Console.WriteLine("Don't try to escape the playing field!");
-
-                        break;
-                    case "down":
-                        if (FieldCheck(currRow + 1, currCol, matrix))
-                        {
-                            currRow += 1;
-                            Position(currRow, currCol, matrix[currRow, currCol]);
-                        }
-                        else Console.WriteLine("Don't try to escape the playing field!");
-                        break;
-                    case "left":
-                        if (FieldCheck(currRow, currCol - 1, matrix))
-                        {
-                            currCol -= 1;
-                            Position(currRow, currCol, matrix[currRow, currCol]);
-                        }
-                        else Console.WriteLine("Don't try to escape the playing field!");
-                        break;
-                    case "right":
-                        if (FieldCheck(currRow, currCol + 1, matrix))
-                        {
-                            currCol += 1;
-                            Position(currRow, currCol, matrix[currRow, currCol]);
-                        }
-                        else Console.WriteLine("Don't try to escape the playing field!");
-                        break;
+                    Console.WriteLine("Too bad! The Mole lost this battle!");
+                    Console.WriteLine($"The Mole lost the game with a total of {points} points.");
+                    break;
                 }
-                cmd = Console.ReadLine();
+                (int row, int col) = Position(matrix);
+                if ((row, col) == (69, 69)) break;
+
+                if (cmd == "up") points = points + Move(row, col, row - 1, col, matrix);
+
+                else if (cmd == "down") points = points + Move(row, col, row + 1, col, matrix);
+
+                if (cmd == "right") points = points + Move(row, col, row, col + 1, matrix);    
+
+                else if (cmd == "left") points = points + Move(row, col, row, col - 1, matrix);
+
+                if (points >= 25)
+                {
+                    Console.WriteLine("Yay! The Mole survived another game!");
+                    Console.WriteLine($"The Mole managed to survive with a total of {points} points.");
+                    break;
+                }
             }
-            if (points >= 25)//won the game
-            {
-                Console.WriteLine("Yay! The Mole survived another game!");
-                Console.WriteLine($"The Mole managed to survive with a total of {points} points.");
-            }
-            else
-            {
-                Console.WriteLine("Too bad! The Mole lost this battle!");
-                Console.WriteLine($"The Mole lost the game with a total of {points} points.");
-            }
-            matrix[currRow, currCol] = 'M';
-            StringBuilder sb = new StringBuilder();
             for (int row = 0; row < n; row++)
             {
                 for (int col = 0; col < n; col++)
                 {
-                    sb.Append(matrix[row, col]);
-                }
-                sb.AppendLine(Environment.NewLine);
-            }
-            Console.WriteLine(sb.ToString().TrimEnd());
+                    Console.Write(String.Join("", matrix[row, col]));
 
-            void Position(int currRow, int currCol, char v)
-            {
-                if (v == 'S')
-                {
-                    if (currRow == specialOneRow && currCol == specialOneCol)
-                    {
-                        currRow = specialTwoRow;
-                        currCol = specialTwoCol;
-                    }
-                    else
-                    {
-                        currRow = specialOneRow;
-                        currCol = specialOneCol;
-                    }
-                    points -= 3;
-                    matrix[specialOneRow, specialOneCol] = '-';
-                    matrix[specialTwoRow, specialTwoCol] = '-';
                 }
-                else if (char.IsDigit(v))
-                {
-                    int value = int.Parse(v.ToString());
-                    points = value + points;
-                    matrix[currRow, currCol] = '-';
-                }
+                Console.WriteLine();
             }
         }
 
-
-        public static bool FieldCheck(int row, int col, char[,] matrix)
+        public static int Move(int row, int col, int rowOne, int colOne, char[,] matrix)
         {
-            return row >= 0 && row < matrix.GetLength(0) && col >= 0 && col < matrix.GetLength(1);
+            if (rowOne < 0 || colOne < 0 || rowOne >= matrix.GetLength(0) || colOne >= matrix.GetLength(1))
+            {
+                Console.WriteLine("Don't try to escape the playing field!");
+                return 0;
+            }
+            matrix[row, col] = '-';
+            var add = matrix[rowOne, colOne];
+            matrix[rowOne, colOne] = 'M';
+            if (Char.IsDigit(add))
+            {
+                return add - 48;
+
+            }
+            else if (add == 'S')
+            {
+                matrix[rowOne, colOne] = '-';
+                (int SpecialRow, int TeleportedRow) = Teleport(matrix);
+                matrix[SpecialRow, TeleportedRow] = 'M';
+                return -3;
+            }
+            return 0;
+        }
+
+        public static (int SpecialRow, int TeleportedRow) Teleport(char[,] matrix)
+        {
+            for (int row = 0; row < matrix.GetLongLength(0); row++)
+            {
+                for (int col = 0; col < matrix.GetLongLength(1); col++)
+                {
+                    if (matrix[row, col] == 'S')
+                    {
+                        return (row, col);
+                    }
+                }
+            }
+            return (69, 69);
+        }
+
+        public static (int, int) Position(char[,] matrix)
+        {
+            for (int row = 0; row < matrix.GetLongLength(0); row++)
+            {
+                for (int col = 0; col < matrix.GetLongLength(1); col++)
+                {
+                    if (matrix[row, col] == 'M')
+                    {
+                        return (row, col);
+                    }
+                }
+            }
+            return (69, 69);
         }
     }
 }
