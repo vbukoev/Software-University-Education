@@ -1,150 +1,77 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Reflection.Metadata.Ecma335;
-using Basketball;
+using System.Linq;
+using System.Text;
 
 namespace Basketball
 {
-    public class Team : IEnumerable<Player>
+    public class Team
     {
-        private Player[] data = new Player[4];
-        public string Name { get; set; }
-        public int OpenPositions { get; set; }
-        public char Group { get; set; }
-        public int Count { get; private set; } = 0;
+        private List<Player> players;
         public Team(string name, int openPositions, char group)
         {
-            Name = name;
-            OpenPositions = openPositions;
-            Group = group;
+            this.Name = name;
+            this.OpenPositions = openPositions;
+            this.Group = group;
+            this.players = new List<Player>();
         }
-        public IEnumerator<Player> GetEnumerator()
-        {
-            foreach (var item in this)
-            {
-                yield return item;
-            }
-        }
-        IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+        public string Name { get; private set; }
+        public int OpenPositions { get; private set; }
+        public char Group { get; private set; }
+
+        public IReadOnlyCollection<Player> Players => this.players;
+        public int Count => this.Players.Count;
         public string AddPlayer(Player player)
         {
-            if (player.Name == null || player.Name == "") return InvalidException();
-            else if (player.Position == null || player.Position == "") return InvalidException();
-            else if (OpenPositions == 0) return NoMorePositions();
-            else if (player.Rating < 80) return InvalidRating();
+            if (string.IsNullOrEmpty(player.Name) || string.IsNullOrEmpty(player.Position)) return "Ivalid player's information.";
+            else if (this.OpenPositions == 0) return "There are no more positions.";
+            else if (player.Rating < 80) return "Invalid player's rating.";
             else
             {
-                if (data.Length == Count) ExtensionOfTheData();
-                data[Count] = player;
-                Count += 1;
-                OpenPositions -= 1;
-                return $"Successfully added {player.Name} to the team. Remaining open positions: {OpenPositions}.";
+                this.players.Add(player);
+                this.OpenPositions -= 1;
+                return $"Successfully added {player.Name} to the team. Remaining open positions: {this.OpenPositions}.";
             }
         }
         public bool RemovePlayer(string name)
         {
-            Player[] dataNew = new Player[data.Length];
-            int cnt = 0;
-            bool haveAPlayer = false;
-            for (int i = 0; i < Count; i++)
-            {
-                if (data[i].Name == name)
-                {
-                    haveAPlayer = true;
-                    continue;
-                }
-                dataNew[cnt] = data[i];
-                cnt += 1;
-            }
-            if (haveAPlayer)
-            {
-                cnt -= 1;
-                OpenPositions += 1;
-                data = dataNew;
-            }
-            return haveAPlayer;
+            Player target = this.Players.FirstOrDefault(x => x.Name == name);
+            if (target == null) return false;
+            this.OpenPositions += 1;
+            this.players.Remove(target);
+            return true;
         }
         public int RemovePlayerByPosition(string position)
         {
-            Player[] dataNew = new Player[data.Length];
             int cnt = 0;
-            int constant = 0;
-            for (int i = 0; i < Count; i++)
+            while (this.Players.FirstOrDefault(x => x.Position == position) != null)
             {
-                if (data[i].Position == position)
-                {
-                    cnt++;
-                    continue;
-                }
-                dataNew[constant] = data[i];
-                constant++;
+                Player target = this.Players.FirstOrDefault(x => x.Position == position);
+                this.OpenPositions += 1;
+                this.players.Remove(target);
+                cnt += 1;
             }
-            Count -= cnt;
-            OpenPositions += cnt;
-            data = dataNew;
             return cnt;
         }
         public Player RetirePlayer(string name)
         {
-            for (int i = 0; i < Count; i++)
-            {
-                if (data[i].Name== "name")
-                {
-                    data[i].Retired = true;
-                    return data[i];
-                }
-            }
-            return null;
+            Player target = this.Players.FirstOrDefault(x => x.Name == name);
+            if (target == null) return null;
+            target.Retired = true;
+            return target;
         }
         public List<Player> AwardPlayers(int games)
         {
             List<Player> newList = new List<Player>();
-            for (int i = 0; i < Count; i++)
-            {
-                if (data[i].Games>=games)
-                {
-                    newList.Add(data[i]);
-                }
-            }
+            foreach (var item in this.Players.Where(x => x.Games >= games)) newList.Add(item);
             return newList;
         }
         public string Report()
         {
-            string result = $"Active players competing for Team {Name} from Group {Group}:";
-            for (int i = 0; i < Count; i++)
-            {
-                if (!data[i].Retired)
-                {
-                    Console.WriteLine(result);
-                    Console.WriteLine(data[i].Name);
-                }
-            }
-            return result;
-        }
-        public void ExtensionOfTheData()
-        {
-            Player[] datNew = new Player[data.Length * 2];
-            for (int i = 0; i < data.Length; i++)
-            {
-                datNew[i] = data[i];
-            }
-            data = datNew;
-        }
-
-        public static string InvalidRating()
-        {
-            return "Invalid player's rating.";
-        }
-
-        public static string NoMorePositions()
-        {
-            return "There are no more positions.";
-        }
-
-        public static string InvalidException()
-        {
-            return "Ivalid player's information.";
+            StringBuilder result = new StringBuilder();
+            result.AppendLine($"Active players competing for Team {this.Name} from Group {this.Group}:");
+            foreach (var item in this.Players.Where(x => x.Retired != true)) result.AppendLine(item.ToString());
+            return result.ToString().TrimEnd();
         }
     }
 }
