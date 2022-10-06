@@ -59,7 +59,7 @@ namespace _01TilesMaster
             {
                 Console.WriteLine($"White tiles left: {string.Join(", ", whiteStack)}");
             }
-            if (!whiteStack.Any()) //if there are none tiles left in the sequence
+            if (!greyQueue.Any()) //if there are none tiles left in the sequence
             {
                 Console.WriteLine("Grey tiles left: none");
             }
