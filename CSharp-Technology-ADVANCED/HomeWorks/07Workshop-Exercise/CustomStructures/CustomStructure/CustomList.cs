@@ -21,7 +21,7 @@ namespace CustomStructure
         {
             this.elements = new int[initialSize];
         }
-        public int this[int index]
+        public int this[int index]//-> adding the INDEXER with an "index"
         {
             get
             {
@@ -30,7 +30,7 @@ namespace CustomStructure
             }
             set
             {
-                CheckIndexOutOfRange(index);
+                CheckIndexOutOfRange(index);//checks if the index is in the correct range
                 this.elements[index] = value;
 
             }
@@ -39,7 +39,6 @@ namespace CustomStructure
         {
             if (this.elements.Length == this.Count)
             {
-
                 Resize();
             }
             this.elements[this.Count] = element;
@@ -47,16 +46,16 @@ namespace CustomStructure
         }
         public int RemoveAt(int index)
         {
-            var element = elements[index];
-            CheckIndexOutOfRange(index);
-           
-            Shift(index);
-            this.Count--;
-            if (Count<elements.Length/4)
+            var element = elements[index];//the variable which is going to be removed and which is going to be returned at the end
+            CheckIndexOutOfRange(index);//checks if the index is valid
+
+            Shift(index);//shift the index to the left side
+            this.Count--;//count will going to be decreased by 1
+            if (Count < elements.Length / 4)
             {
                 Shrink();
             }
-            
+
             return element;
         }
         public void Insert(int index, int element)
@@ -66,7 +65,7 @@ namespace CustomStructure
             elements[index] = element;
             Count++;
         }
-        public bool Contains (int element)
+        public bool Contains(int element)
         {
             for (int i = 0; i < Count; i++)
             {
@@ -77,18 +76,18 @@ namespace CustomStructure
             }
             return false;
         }
-        public void Swap(int first, int sec)
+        public void Swap(int firstElement, int secondElement)
         {
-            CheckIndexOutOfRange(first);
-            CheckIndexOutOfRange(sec);
-            int temp = elements[first];
-            elements[first] = elements[sec];
-            elements[sec] = temp;
+            CheckIndexOutOfRange(firstElement);//checks the index of the first element if it is in the range
+            CheckIndexOutOfRange(secondElement);//checks the index of the second element if it is in the range
+            int temp = elements[firstElement];
+            elements[firstElement] = elements[secondElement];
+            elements[secondElement] = temp;
         }
         //private methods
         private void ShiftToRight(int index)
         {
-            if (elements.Length == Count)
+            if (elements.Length == Count) //checks if there is a need of resizing the elements int array
             {
                 Resize();
             }

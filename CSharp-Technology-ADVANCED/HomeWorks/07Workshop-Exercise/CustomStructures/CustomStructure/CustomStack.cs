@@ -1,15 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.Specialized;
-using System.Text;
+﻿using System; 
 
 namespace CustomStructure
 {
-    public class CustomStack
+    public class CustomStack // the stack is a LIFO(Last in-First out) so it means that the last added element will be popped from the stack (or we can say that it is an array with elements) 
     {
-        private const int defaultSize = 4;
-        private int[] items;
-        public int Count { get; private set; }
+        private const int defaultSize = 4;//the default size which is a constant only used in this class
+        private int[] items; // integer array which is a private which means it is only used in this class
+        public int Count { get; private set; } //property
 
         public CustomStack()
         {
@@ -18,7 +15,7 @@ namespace CustomStructure
         }
         public void Push(int element)
         {
-            if (items.Length == Count)
+            if (this.items.Length == this.Count)
             {
                 var next = new int[this.items.Length * 2];
                 for (int i = 0; i < this.items.Length; i++)
@@ -56,6 +53,19 @@ namespace CustomStructure
                 action(items[i]);
             }
         }
-
+        // adding the private methods
+        private void Resize()
+        {
+            Resize(this.items.Length * 2);
+        }
+        private void Resize(int newSize)
+        {
+            var newValues = new int[newSize];
+            for (int i = 0; i < items.Length; i++)
+            {
+                newValues[i] = this.items[i];
+            }
+            this.items = newValues;
+        }
     }
 }
