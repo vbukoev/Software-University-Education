@@ -36,7 +36,6 @@ namespace _02TruffleHunter
                     case "Collect":
                         if (rowInput >= 0 && rowInput < matrix.GetLength(0) && colInput >= 0 && colInput < matrix.GetLength(1))
                         {
-
                             switch (matrix[rowInput, colInput])
                             {
                                 case 'B':
@@ -77,7 +76,7 @@ namespace _02TruffleHunter
                             case "up":
                                 for (int row = rowInput; row >= 0; row -= 2)
                                 {
-                                    if (IsTruffle(matrix, rowInput, colInput))
+                                    if (IsTruffle(matrix, row, colInput))
                                     {
                                         BoarCnt++;
                                     }
@@ -87,7 +86,7 @@ namespace _02TruffleHunter
                             case "down":
                                 for (int row = rowInput; row < matrix.GetLength(0); row += 2)
                                 {
-                                    if (IsTruffle(matrix, rowInput, colInput))
+                                    if (IsTruffle(matrix, row, colInput))
                                     {
                                         BoarCnt++;
                                     }
@@ -97,7 +96,7 @@ namespace _02TruffleHunter
                             case "left":
                                 for (int col = colInput; col >= 0; col -= 2)
                                 {
-                                    if (IsTruffle(matrix, rowInput, colInput))
+                                    if (IsTruffle(matrix, rowInput, col))
                                     {
                                         BoarCnt++;
                                     }
@@ -107,7 +106,7 @@ namespace _02TruffleHunter
                             case "right":
                                 for (int col = colInput; col < matrix.GetLength(1); col += 2)
                                 {
-                                    if (IsTruffle(matrix, rowInput, colInput))
+                                    if (IsTruffle(matrix, rowInput, col))
                                     {
                                         BoarCnt++;
                                     }
