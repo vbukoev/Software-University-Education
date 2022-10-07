@@ -8,7 +8,7 @@ namespace GenericArrayCreator
     {
         public static T[] Create<T>(int length, T item)
         {
-            var array = new T[length];// sets the length of the array
+            T[] array = new T[length];// sets the length of the array
             for (int i = 0; i < length; i++) // loops through every index of the created array and adds the item
             {
                 array[i] = item;
