@@ -188,6 +188,7 @@ namespace _02BeaverAtWork
                     }
                 }
             }
+            else matrix[beaverRow, beaverCol] = 'B';
         }
 
         private static bool RangeFilter(int row, int col)
