@@ -126,9 +126,7 @@ namespace _02TruffleHunter
         private static bool IsTruffle(char[,] matrix, int rowInput, int colInput)
         {
             return matrix[rowInput, colInput] == 'B' || matrix[rowInput, colInput] == 'S' || matrix[rowInput, colInput] == 'W';
-        }
-
-        
+        }               
 
         private static void Printmatrix(char[,] matrix)
         {
