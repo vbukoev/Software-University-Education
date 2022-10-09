@@ -55,12 +55,8 @@ namespace _01Blacksmith
             else Console.WriteLine($"Carbon left: {string.Join(", ", carbon)}");
             if (swords.Count > 0)
             {
-                foreach (var kvp in swords.OrderBy(x=>x.Key))
-                {
-                    Console.WriteLine($"{kvp.Key}: {kvp.Value}");
-                }
-            } 
-               
+                foreach (var kvp in swords.OrderBy(x=>x.Key)) Console.WriteLine($"{kvp.Key}: {kvp.Value}");   
+            }                
         }
     }
 }

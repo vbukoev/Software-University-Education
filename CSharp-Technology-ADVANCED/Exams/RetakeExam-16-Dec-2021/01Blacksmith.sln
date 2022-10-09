@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32922.545
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01Blacksmith", "01Blacksmith\01Blacksmith.csproj", "{14DC2C6D-F531-4A76-A16F-C43135FB4842}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01Blacksmith", "01Blacksmith\01Blacksmith.csproj", "{14DC2C6D-F531-4A76-A16F-C43135FB4842}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02Armory", "02Armory\02Armory.csproj", "{43145CD9-31C2-4040-881D-5BBF2D073CF6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Drones", "03. Drones_Skeleton\Drones\Drones\Drones.csproj", "{6A62DB4E-D2C9-4EB9-9D88-A3EB5E710AA9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{14DC2C6D-F531-4A76-A16F-C43135FB4842}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{14DC2C6D-F531-4A76-A16F-C43135FB4842}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{14DC2C6D-F531-4A76-A16F-C43135FB4842}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43145CD9-31C2-4040-881D-5BBF2D073CF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43145CD9-31C2-4040-881D-5BBF2D073CF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43145CD9-31C2-4040-881D-5BBF2D073CF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43145CD9-31C2-4040-881D-5BBF2D073CF6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A62DB4E-D2C9-4EB9-9D88-A3EB5E710AA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A62DB4E-D2C9-4EB9-9D88-A3EB5E710AA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A62DB4E-D2C9-4EB9-9D88-A3EB5E710AA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A62DB4E-D2C9-4EB9-9D88-A3EB5E710AA9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
