@@ -21,7 +21,7 @@ namespace _02TheBattleOfTheFiveArmies
                 var cmd = input[0];
                 int row = int.Parse(input[1]);
                 int col = int.Parse(input[2]);
-                matrix[row][col] = '0';
+                matrix[row][col] = 'O';
                 army.Move(cmd, matrix);
             }
             if (army.Won) Console.WriteLine($"The army managed to free the Middle World! Armor left: {army.Armour}");
@@ -85,7 +85,7 @@ namespace _02TheBattleOfTheFiveArmies
             }
             char currChar = matrix[this.Row][this.Col];
             matrix[this.Row][this.Col] = '-';
-            if (currChar == '0') this.Armour = this.Armour - 2;
+            if (currChar == 'O') this.Armour = this.Armour - 2;
             if (this.Row == this.Mordor.Item1 && this.Col == this.Mordor.Item2)
             {
                 this.Won = true;

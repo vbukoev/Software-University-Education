@@ -5,8 +5,8 @@ using System.Text;
 
 namespace _01GenericBoxOfString
 {
-    public class Box<T> where T : IComparable // i had to add the constraints which use where T + : and the ref type, otherwise the task won't work
-    {
+    public class Box<T> where T : IComparable // i had to add the constraints which use "where T + :" and the ref type, otherwise the task won't work
+    {        
         private List<T> values;
         public Box()
         {
