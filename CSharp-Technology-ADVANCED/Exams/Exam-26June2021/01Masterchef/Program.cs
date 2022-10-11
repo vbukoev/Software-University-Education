@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Linq;
 
 namespace _01Masterchef
@@ -14,7 +12,7 @@ namespace _01Masterchef
             Stack<int> freshness = new Stack<int>(Console.ReadLine().Split().Select(int.Parse).ToArray());
             Dictionary<int, string> meals = new Dictionary<int, string>{
                 {150, "Dipping sauce" },
-                { 250, "Green Salad" },
+                { 250, "Green salad" },
                 { 300, "Chocolate cake" },
                 { 400, "Lobster"}
             };
