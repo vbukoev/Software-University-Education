@@ -19,12 +19,11 @@ namespace _02Survivor
             {
                 var inputCmd = Console.ReadLine();
                 if (inputCmd == "Gong") break;
-                if (inputCmd.Split().First() == "Find")
+                if (inputCmd.Split().First() == "Find") //player find
                 {
                     int row = int.Parse(inputCmd.Split().Skip(1).First());
                     int col = int.Parse(inputCmd.Split().Last());
-                    if (!ValidIndex(matrix, row, col))
-                        return;
+                    if (!ValidIndex(row, col, matrix)) continue;
                     if (matrix[row][col] == 'T')
                     {
                         matrix[row][col] = '-';
@@ -32,12 +31,12 @@ namespace _02Survivor
                     }
 
                 }
-                else
+                else //opponent find
                 {
                     int row = int.Parse(inputCmd.Split().Skip(1).First());
                     int col = int.Parse(inputCmd.Split().Skip(2).First());
                     string move = inputCmd.Split().Last();
-                    if (!ValidIndex(matrix, row, col)) return;
+                    if (!ValidIndex(row, col, matrix)) continue;
                     if (matrix[row][col] == 'T')
                     {
                         matrix[row][col] = '-';
@@ -52,7 +51,7 @@ namespace _02Survivor
                             case "left": col--; break;
                             case "right": col++; break;
                         }
-                        if (!ValidIndex(matrix, row, col)) continue;
+                        if (!ValidIndex(row, col,matrix)) continue;
                         if (matrix[row][col] == 'T')
                         {
                             matrix[row][col] = '-';
@@ -67,7 +66,7 @@ namespace _02Survivor
             Console.WriteLine($"Opponent's tokens: {opponentScoreCnt}");
         }
 
-        private static bool ValidIndex(char[][] matrix, int row, int col)
+        public static bool ValidIndex(int row, int col, char[][] matrix)
         {
             return (row >= 0 && row < matrix.Length && col >= 0 && col < matrix[row].Length);
         }
