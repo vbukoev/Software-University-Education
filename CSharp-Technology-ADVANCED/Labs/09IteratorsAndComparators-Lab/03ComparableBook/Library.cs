@@ -23,7 +23,7 @@ using System.Collections.Generic;
             }
         }
         IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
-
+        
     }
 }
 
