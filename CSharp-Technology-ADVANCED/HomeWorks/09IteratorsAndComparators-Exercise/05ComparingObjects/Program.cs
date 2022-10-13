@@ -32,7 +32,8 @@ using System;
                 if (person.CompareTo(targetPerson)==0) equalCnt += 1; 
                 else notEqualCnt += 1;
             }
-            if (equalCnt > 1) Console.WriteLine($"{equalCnt} {notEqualCnt} {people.Count}");
+            if (equalCnt > 1) // there were coincidence in the names
+                Console.WriteLine($"{equalCnt} {notEqualCnt} {people.Count}");
             else Console.WriteLine("No matches");
         }
     }
