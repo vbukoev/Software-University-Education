@@ -13,20 +13,20 @@ using System;
             var people = new List<Person>();
             while (true)
             {
-                var input = Console.ReadLine();
+                string input = Console.ReadLine();
                 if (input == "END") break;
-                var tokens = input.Split();
-                var name = tokens[0];
-                var age = int.Parse(tokens[1]);
-                var town = tokens[2];
-                var person = new Person(name, age, town);
+                string[] tokens = input.Split();
+                string name = tokens[0];
+                int age = int.Parse(tokens[1]);
+                string town = tokens[2];
+                Person person = new Person(name, age, town);
                 people.Add(person);
             }
-            var index = int.Parse(Console.ReadLine());
+            int index = int.Parse(Console.ReadLine());
             index -= 1;
-            var equalCnt = 0;
-            var notEqualCnt = 0;
-            var targetPerson = people[index];
+            int equalCnt = 0;
+            int notEqualCnt = 0;
+            Person targetPerson = people[index];
             foreach (var person in people)
             {
                 if (person.CompareTo(targetPerson)==0) equalCnt += 1; 
