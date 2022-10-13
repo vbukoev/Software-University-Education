@@ -22,7 +22,7 @@
         }
         public override int GetHashCode()
         {
-            return Name.GetHashCode() +  Age.GetHashCode() + (257 * 53);
+            return Name.GetHashCode() + Age.GetHashCode() + (257 * 53);
         }
     }
     }
