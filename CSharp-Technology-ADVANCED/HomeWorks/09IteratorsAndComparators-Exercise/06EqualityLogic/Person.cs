@@ -1,8 +1,6 @@
 ﻿namespace IteratorsAndComparators
 {
     using System;
-    using System.Collections;
-    using System.Collections.Generic;
     public class Person : IComparable<Person>
     {
         public string Name { get; set; }
