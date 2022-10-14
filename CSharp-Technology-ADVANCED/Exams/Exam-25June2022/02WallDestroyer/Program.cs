@@ -11,7 +11,7 @@
 
 using System;
 
-namespace _02._Wall_Destroyer
+namespace _02WallDestroyer
 {
     internal class Program
     {

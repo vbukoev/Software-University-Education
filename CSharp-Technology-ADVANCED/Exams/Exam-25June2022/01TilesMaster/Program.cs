@@ -15,8 +15,9 @@ namespace _01TilesMaster
             Stack<int> whiteStack = new Stack<int>(listWithTheWhite);
             Queue<int> greyQueue = new Queue<int>(listWithTheGrey);
             Dictionary<string, int> location = new Dictionary<string, int>();
-            while (whiteStack.Any() && greyQueue.Any())
+            while (true)
             {
+                if (!whiteStack.Any() || !greyQueue.Any()) break;
                 int whiteArea = whiteStack.Pop();
                 int greyArea = greyQueue.Dequeue();
                 string partOfTheHouse = "";
