@@ -48,23 +48,23 @@ namespace _01TilesMaster
                     greys.Enqueue(greyArea);
                 }
             }
-            if (!whites.Any()) //if there are none tiles left in the sequence
+            if (!whites.Any()) //if there are none white tiles left in the sequence
             {
                 Console.WriteLine("White tiles left: none");
             }
-            else //if there are tiles left
+            else //if there are white tiles left
             {
                 Console.WriteLine($"White tiles left: {string.Join(", ", whites)}");
             }
-            if (!greys.Any()) //if there are none tiles left in the sequence
+            if (!greys.Any()) //if there are none grey tiles left in the sequence
             {
                 Console.WriteLine("Grey tiles left: none");
             }
-            else //if there are tiles left
+            else //if there are grey tiles left
             {
                 Console.WriteLine($"Grey tiles left: {string.Join(", ", greys)}");
             }
-            foreach (var kvp in location.OrderByDescending(x=>x.Value).ThenBy(x=>x.Key))
+            foreach (var kvp in location.OrderByDescending(x=>x.Value).ThenBy(x=>x.Key)) 
             {
                 Console.WriteLine($"{kvp.Key}: {kvp.Value}");
             }
