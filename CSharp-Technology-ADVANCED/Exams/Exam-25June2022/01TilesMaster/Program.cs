@@ -8,12 +8,8 @@ namespace _01TilesMaster
     {
         static void Main(string[] args)
         {
-            List<int> listWithTheWhite = new List<int>();
-            List<int> listWithTheGrey = new List<int>();
-            listWithTheWhite = Console.ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToList();
-            listWithTheGrey = Console.ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToList();
-            Stack<int> whiteStack = new Stack<int>(listWithTheWhite);
-            Queue<int> greyQueue = new Queue<int>(listWithTheGrey);
+            Stack<int> whiteStack = new Stack<int>(Console.ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToList());
+            Queue<int> greyQueue = new Queue<int>(Console.ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToList());
             Dictionary<string, int> location = new Dictionary<string, int>();
             while (true)
             {
