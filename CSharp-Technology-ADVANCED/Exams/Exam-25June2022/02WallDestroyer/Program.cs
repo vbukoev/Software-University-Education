@@ -1,15 +1,4 @@
-﻿//using System;
-//using System.Runtime.CompilerServices;
-//using System.Security.Cryptography;
-
-//namespace _02WallDestroyer
-//{
-//    internal class Program
-//    {
-//        static void Main(string[] args)
-//        {
-
-using System;
+﻿using System;
 
 namespace _02WallDestroyer
 {
