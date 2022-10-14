@@ -44,10 +44,7 @@ namespace Renovators
         public bool RemoveRenovator(string name)
         {
             Renovator toBeRemoved = this.renovators.FirstOrDefault(x => x.Name == name);
-            if (toBeRemoved == null)
-            {
-                return false;
-            }
+            if (toBeRemoved == null) return false; 
             this.renovators.Remove(toBeRemoved);  
             return true;
         }

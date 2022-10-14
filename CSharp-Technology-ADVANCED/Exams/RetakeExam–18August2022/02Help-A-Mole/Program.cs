@@ -3,9 +3,8 @@ using System.Linq;
 
 namespace _02Help_A_Mole
 {
-    internal class Program
+    public class Program
     {
-
         static void Main(string[] args)
         {
             int points = 0;

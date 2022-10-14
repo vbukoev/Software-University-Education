@@ -64,7 +64,7 @@ namespace _01TilesMaster
             {
                 Console.WriteLine($"Grey tiles left: {string.Join(", ", greys)}");
             }
-            foreach (var kvp in location.OrderByDescending(x=>x.Value).ThenBy(x=>x.Key)) 
+            foreach (var kvp in location.OrderByDescending(x=>x.Value).ThenBy(x=>x.Key)) //locations ordered descending by number (count of new tiles per location) and then sorted ascending alphabetically
             {
                 Console.WriteLine($"{kvp.Key}: {kvp.Value}");
             }
