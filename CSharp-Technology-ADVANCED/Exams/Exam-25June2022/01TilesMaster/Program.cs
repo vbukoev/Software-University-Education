@@ -8,14 +8,14 @@ namespace _01TilesMaster
     {
         static void Main(string[] args)
         {
-            Stack<int> whiteStack = new Stack<int>(Console.ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToList());
-            Queue<int> greyQueue = new Queue<int>(Console.ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToList());
+            Stack<int> whites = new Stack<int>(Console.ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToList());
+            Queue<int> greys = new Queue<int>(Console.ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToList());
             Dictionary<string, int> location = new Dictionary<string, int>();
             while (true)
             {
-                if (!whiteStack.Any() || !greyQueue.Any()) break;
-                int whiteArea = whiteStack.Pop();
-                int greyArea = greyQueue.Dequeue();
+                if (!whites.Any() || !greys.Any()) break;
+                int whiteArea = whites.Pop();
+                int greyArea = greys.Dequeue();
                 string partOfTheHouse = "";
                 if (whiteArea == greyArea)
                 {
@@ -44,25 +44,25 @@ namespace _01TilesMaster
                 else
                 {
                     whiteArea = whiteArea / 2;
-                    whiteStack.Push(whiteArea);
-                    greyQueue.Enqueue(greyArea);
+                    whites.Push(whiteArea);
+                    greys.Enqueue(greyArea);
                 }
             }
-            if (!whiteStack.Any()) //if there are none tiles left in the sequence
+            if (!whites.Any()) //if there are none tiles left in the sequence
             {
                 Console.WriteLine("White tiles left: none");
             }
             else //if there are tiles left
             {
-                Console.WriteLine($"White tiles left: {string.Join(", ", whiteStack)}");
+                Console.WriteLine($"White tiles left: {string.Join(", ", whites)}");
             }
-            if (!greyQueue.Any()) //if there are none tiles left in the sequence
+            if (!greys.Any()) //if there are none tiles left in the sequence
             {
                 Console.WriteLine("Grey tiles left: none");
             }
             else //if there are tiles left
             {
-                Console.WriteLine($"Grey tiles left: {string.Join(", ", greyQueue)}");
+                Console.WriteLine($"Grey tiles left: {string.Join(", ", greys)}");
             }
             foreach (var kvp in location.OrderByDescending(x=>x.Value).ThenBy(x=>x.Key))
             {
