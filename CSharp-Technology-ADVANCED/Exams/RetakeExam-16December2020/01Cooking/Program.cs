@@ -42,7 +42,7 @@ namespace _01Cooking
             else Console.WriteLine($"Liquids left: {string.Join(", ",  liquids)}");
             if (!ingredients.Any()) Console.WriteLine("Ingredients left: none");
             else Console.WriteLine($"Ingredients left: {string.Join(", ", ingredients)}");
-            foreach (var item in cooked) Console.WriteLine($"{item.Key} {item.Value}");
+            foreach (var item in cooked) Console.WriteLine($"{item.Key}: {item.Value}");
         }
     }
 }
