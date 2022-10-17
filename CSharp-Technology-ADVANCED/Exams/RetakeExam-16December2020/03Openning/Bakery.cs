@@ -8,8 +8,6 @@ namespace BakeryOpenning
 {
     public class Bakery
     {
-        //Name: string
-        //Capacity: int
         private readonly List<Employee> data;
         public string Name { get; set; }
         public int Capacity { get; set; }
