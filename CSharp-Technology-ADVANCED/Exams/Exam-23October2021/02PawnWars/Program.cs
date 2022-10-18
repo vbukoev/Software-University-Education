@@ -18,7 +18,7 @@ namespace _02PawnWars
                 }
                 else if (--w.Row == 0)
                 {
-                    PrintMatrix(w, true);
+                    Print(w, true);
                     break;
                 }
                 if (ChecksBlack(w, b))
@@ -28,7 +28,7 @@ namespace _02PawnWars
                 }
                 else if (++b.Row == 7)
                 {
-                    PrintMatrix(b, true);
+                    Print(b, true);
                     break;
                 }
             }
@@ -38,14 +38,14 @@ namespace _02PawnWars
         {
             b.Row = w.Row;
             b.Col = w.Col;
-            PrintMatrix(b, false);
+            Print (b, false);
         }
 
         public static void WhiteTurn(Pawn w, Pawn b)
         {
             w.Row = b.Row;
             w.Col = b.Col;
-            PrintMatrix(w, false);
+            Print(w, false);
         }
 
         public static bool ChecksBlack(Pawn w, Pawn b)
@@ -53,7 +53,7 @@ namespace _02PawnWars
             return w.Row == b.Row + 1 && (w.Col == b.Col - 1 || w.Col == b.Col + 1);
         }
 
-        public static void PrintMatrix(Pawn w, bool isValid)
+        public static void Print(Pawn w, bool isValid)
         {
             string coords = (char)('a' + w.Col) + (8 - w.Row).ToString();
 
