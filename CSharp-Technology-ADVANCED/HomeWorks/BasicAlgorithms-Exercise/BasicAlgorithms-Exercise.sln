@@ -5,6 +5,10 @@ VisualStudioVersion = 17.3.32922.545
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01RecursiveArraySum", "01RecursiveArraySum\01RecursiveArraySum.csproj", "{04C97C9A-3D40-4F69-ACF1-6E95DCCCA339}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02RecursiveFactorial", "02RecursiveFactorial\02RecursiveFactorial.csproj", "{EE86C6DA-31D8-4F2B-B4BD-E35224ECEFE9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fibonacci", "Fibonacci\Fibonacci.csproj", "{FDAD9450-3002-4E69-AB99-F4CE464D7BD2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{04C97C9A-3D40-4F69-ACF1-6E95DCCCA339}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{04C97C9A-3D40-4F69-ACF1-6E95DCCCA339}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{04C97C9A-3D40-4F69-ACF1-6E95DCCCA339}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE86C6DA-31D8-4F2B-B4BD-E35224ECEFE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE86C6DA-31D8-4F2B-B4BD-E35224ECEFE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE86C6DA-31D8-4F2B-B4BD-E35224ECEFE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE86C6DA-31D8-4F2B-B4BD-E35224ECEFE9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDAD9450-3002-4E69-AB99-F4CE464D7BD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDAD9450-3002-4E69-AB99-F4CE464D7BD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDAD9450-3002-4E69-AB99-F4CE464D7BD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDAD9450-3002-4E69-AB99-F4CE464D7BD2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
