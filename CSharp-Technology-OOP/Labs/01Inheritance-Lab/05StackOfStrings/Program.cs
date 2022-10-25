@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace _01SingleInheritance
+namespace _05StackOfStrings
 {
     public class Program
     {

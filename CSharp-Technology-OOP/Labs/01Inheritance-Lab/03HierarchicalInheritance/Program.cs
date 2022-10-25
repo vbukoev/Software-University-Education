@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace _01SingleInheritance
+namespace _03HierarchicalInheritance
 {
     public class Program
     {

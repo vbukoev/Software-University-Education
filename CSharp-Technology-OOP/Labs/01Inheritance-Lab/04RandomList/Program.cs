@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace _01SingleInheritance
+namespace _04RandomList
 {
     public class Program
     {
