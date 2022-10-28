@@ -2,10 +2,10 @@
 {
     public class Person
     {
-        //  •	FirstName: string
-        //  •	LastName: string
-        //  •	Age: int
-        //  •	ToString(): string - override
+        //FirstName: string
+        //LastName: string
+        //Age: int
+        //ToString(): string - override
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public int Age { get; set; }
