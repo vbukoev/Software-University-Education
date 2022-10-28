@@ -6,8 +6,8 @@
         //LastName: string
         //Age: int
         //ToString(): string - override
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
+        public string FirstName { get; private set; }
+        public string LastName { get; private set; }
         public int Age { get; set; }
         public Person(string firstName, string lastName, int age)
         {
