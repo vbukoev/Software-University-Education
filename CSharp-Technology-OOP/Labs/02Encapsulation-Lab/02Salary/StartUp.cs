@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace _02Salary
+namespace PersonsInfo
 {
-    public class Program : Person
+    public class StartUp 
     {
         static void Main(string[] args)
         {
@@ -22,6 +22,7 @@ namespace _02Salary
             var parcentage = decimal.Parse(Console.ReadLine());
             persons.ForEach(p => p.IncreaseSalary(parcentage));
             persons.ForEach(p => Console.WriteLine(p.ToString()));
+
         }
     }
 }
