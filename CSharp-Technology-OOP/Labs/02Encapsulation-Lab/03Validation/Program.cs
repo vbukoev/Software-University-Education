@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace _01Persons
+namespace _03Validation
 {
     internal class Program
     {
