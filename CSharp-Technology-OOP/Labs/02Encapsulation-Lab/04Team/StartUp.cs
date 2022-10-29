@@ -24,17 +24,6 @@ namespace PersonsInfo
             persons.ForEach(p => Console.WriteLine(p.ToString()));
             Team team = new Team("SoftUni");
 
-            //foreach (Person person in persons)
-            //{
-            //    if (person.Age < 40)
-            //    {
-            //        team.FirstTeam.Add(person);
-            //    }
-            //    else
-            //    {
-            //        team.ReserveTeam.Add(person);
-            //    }
-            //}
             Console.WriteLine(team);
         }
     }
