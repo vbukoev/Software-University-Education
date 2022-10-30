@@ -3,12 +3,12 @@ namespace AnimalFarm.Models
 {
     public class Validator
     {
-        public const int MinAge = 0;
-        public const int MaxAge = 15;
+        private const int MinAge = 0;
+        private const int MaxAge = 15;
         private const string NameCannotBeEmptyException = "Name cannot be empty.";
         public static void ValidateName(string name)
         {
-            if (string.IsNullOrEmpty(name) || string.IsNullOrEmpty(name))
+            if (string.IsNullOrEmpty(name) || string.IsNullOrWhiteSpace(name))
             {
                 throw new ArgumentException(NameCannotBeEmptyException);
             }
