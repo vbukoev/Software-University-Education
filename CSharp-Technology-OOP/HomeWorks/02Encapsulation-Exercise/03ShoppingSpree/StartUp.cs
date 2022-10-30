@@ -33,10 +33,10 @@ namespace _03ShoppingSpree
                     currPerson.BuyProduct(currProduct);
                 }
             }
-            foreach (var item in people)
+            foreach (var person in people)
             {
-                if (item.Bag.Any()) Console.WriteLine($"{item.Name} - {string.Join(", ", item.Bag)}");
-                else Console.WriteLine($"{item.Name} - Nothing bought");
+                if (person.Bag.Any()) Console.WriteLine($"{person.Name} - {string.Join(", ", person.Bag)}");
+                else Console.WriteLine($"{person.Name} - Nothing bought");
             }
         }
 

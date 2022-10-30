@@ -9,15 +9,11 @@ namespace _03ShoppingSpree
     {
         private string name;
         private decimal cost;
-        public Product(string name, decimal cost)
-        {
-            this.Name = name;
-            this.Cost = cost;
-        }
+        
         public string Name
         {
             get => this.name;
-                private set
+               set
             {
                 this.ValidateName(value);
                     name = value;
@@ -26,28 +22,33 @@ namespace _03ShoppingSpree
         public decimal Cost
         {
             get => this.cost;
-            private set
+             set
             {
                 this.ValidateMoney(value);
                 cost = value;
             }
         }
+        public Product(string name, decimal cost)
+        {
+            this.Name = name;
+            this.Cost = cost;
+        }
         public override string ToString()
         {
             return Name;
         }
-        private void ValidateName(string value)
+        public void ValidateName(string value)
         {
             if (string.IsNullOrEmpty(value) || string.IsNullOrWhiteSpace(value))
             {
-                throw new ArgumentException(ExceptionMessages.NullOrEmptyNameException);
+                throw new ArgumentException("Name cannot be empty");
             }
         }
-        private void ValidateMoney(decimal value)
+        public void ValidateMoney(decimal value)
         {
             if (value < 0)
             {
-                throw new ArgumentException(ExceptionMessages.NegativeMoneyException);
+                throw new ArgumentException("Money cannot be negative");
             }
         }
     }
