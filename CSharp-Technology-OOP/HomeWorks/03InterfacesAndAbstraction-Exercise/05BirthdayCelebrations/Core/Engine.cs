@@ -17,7 +17,7 @@
         private CommandParser commandParser;
         public Engine(CommandParser commandParser)
         {
-            this.commandParser= commandParser;
+            this.commandParser = commandParser;
             mammals = new List<IMammal>();
             identifiables = new List<IIdentifiable>();
         }
@@ -44,7 +44,7 @@
                     IMammal citizen = new Citizen(name, age, id, birthdate);
                     mammals.Add(citizen);
                 }
-                else if (command.Name == "Pet")//pet
+                else if (command.Name == "Pet") // pet
                 {
                     string petName = command.Args[0];
                     string birthdate = command.Args[1];
@@ -58,13 +58,13 @@
 
         private void PrintMammals(string specificYear)
         {
-            if (mammals.Any(x=>x.Birthdate.EndsWith(specificYear)))
+            if (mammals.Any(x => x.Birthdate.EndsWith(specificYear)))
             {
                 foreach (var mammal in mammals.Where(x => x.Birthdate.EndsWith(specificYear)))
                 {
                     Console.WriteLine(mammal);
                 }
-            }            
+            }
         }
     }
 }
