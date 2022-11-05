@@ -1,6 +1,6 @@
 ﻿namespace Vehicles.Contracts
 {
-    public interface Vehicle
+    public interface IVehicle
     {
         double FuelQuantity { get; }
         double FuelConsumption { get; }
