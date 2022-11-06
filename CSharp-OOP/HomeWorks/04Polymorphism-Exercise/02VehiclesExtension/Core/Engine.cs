@@ -6,7 +6,7 @@
     using System.Collections.Generic;
     using System.Linq;
     using System.Text;
-
+    using Vehicles.Contracts;
 
     public class Engine
     {
@@ -14,14 +14,22 @@
         {
             string[] carInfo = Console.ReadLine().Split();
             string[] truckInfo = Console.ReadLine().Split();
+            string[] busInfo = Console.ReadLine().Split();
 
             double carFuelQuantity = double.Parse(carInfo[1]); // creating the car
             double carLitersPerKm = double.Parse(carInfo[2]);
-            Car car = new Car(carFuelQuantity, carLitersPerKm);
+            int carTankCapacity = int.Parse(carInfo[3]);
+            IVehicle car = new Car(carFuelQuantity, carLitersPerKm, carTankCapacity);
 
             double truckFuelQuantity = double.Parse(truckInfo[1]); // creating the truck
             double truckLitersPerKm = double.Parse(truckInfo[2]);
-            Truck truck = new Truck(truckFuelQuantity, truckLitersPerKm);
+            int truckTankCapacity = int.Parse(truckInfo[3]);
+            IVehicle truck = new Truck(truckFuelQuantity, truckLitersPerKm, truckTankCapacity);
+
+            double busFuelQuantity = double.Parse(busInfo[1]); // creating the truck
+            double busLitersPerKm = double.Parse(busInfo[2]);
+            int busTankCapacity = int.Parse(busInfo[3]);
+            IBus bus = new Bus(busFuelQuantity, busLitersPerKm, busTankCapacity);
 
             int commandCnt = int.Parse(Console.ReadLine());
 
@@ -44,6 +52,10 @@
                         {
                             Console.WriteLine(truck.Drive(distance));
                         }
+                        else if (type == "Bus")
+                        {
+                            Console.WriteLine(bus.Drive(distance));
+                        }
                     }
                     else if (command == "Refuel")
                     {
@@ -56,6 +68,18 @@
                         {
                             truck.Refuel(litters);
                         }
+                        else if (type == "Bus")
+                        {
+                            bus.Refuel(litters);
+                        }
+                    }
+                    else if (command == "DriveEmpty")
+                    {
+                        double distance = double.Parse(cmdArgs[3]);
+                        if (type == "Bus")
+                        {
+                            Console.WriteLine(bus.DriveEmpty(distance));
+                        }
                     }
                 }
                 catch (LowFuelException lfe)
@@ -63,9 +87,20 @@
                     Console.WriteLine(lfe.Message);
                     continue;
                 }
+                catch (MoreFuelException mfe)
+                {
+                    Console.WriteLine(mfe.Message);
+                    continue;
+                }
+                catch (NegativeFuelException nfe)
+                {
+                    Console.WriteLine(nfe.Message);
+                    continue;
+                }
             }
             Console.WriteLine(car);
             Console.WriteLine(truck);
+            Console.WriteLine(bus);
         }
     }
 }

@@ -4,15 +4,28 @@
     using Exceptions;
     public abstract class Vehicle : IVehicle
     {
-        protected Vehicle(double fuelQuantity, double fuelConsumption)
+        private double fuelQuantity;
+        protected Vehicle(double fuelQuantity, double fuelConsumption, int tankCapacity)
         {
             FuelQuantity = fuelQuantity;
             FuelConsumption = fuelConsumption;
+            TankCapacity = tankCapacity;
+        }
+        public int TankCapacity { get; protected set; }
+        public double FuelQuantity 
+        { 
+            get => fuelQuantity;
+            protected set
+            {
+                if (value > TankCapacity)
+                {
+                    fuelQuantity = 0;
+                }
+                fuelQuantity = value;
+            }
         }
 
-        public double FuelQuantity { get; protected set; }
-
-        public double FuelConsumption { get; private set; }
+        public double FuelConsumption { get; protected set; }
 
         public string Drive(double distance)
         {
@@ -27,6 +40,10 @@
 
         public virtual void Refuel(double fuel)
         {
+            if (fuel <= 0) throw new NegativeFuelException();
+
+            if (fuel + FuelQuantity > TankCapacity) throw new MoreFuelException($"Cannot fit {fuel} fuel in the tank");
+
             FuelQuantity = FuelQuantity + fuel;
         }
         public override string ToString()
