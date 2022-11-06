@@ -6,9 +6,4 @@
     <RootNamespace>WildFarm</RootNamespace>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="Core\" />
-    <Folder Include="Exceptions\" />
-  </ItemGroup>
-
 </Project>
