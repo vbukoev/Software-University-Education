@@ -14,9 +14,9 @@ namespace Vehicles.Models
         {
             if (fuel <= 0) throw new NegativeFuelException();
 
-            if (fuel + FuelQuantity > TankCapacity) throw new MoreFuelException($"Cannot fit {fuel} fuel in the tank");
+            if (fuel + this.FuelQuantity > this.TankCapacity) throw new MoreFuelException($"Cannot fit {fuel} fuel in the tank");
 
-            FuelQuantity = FuelQuantity + fuel * FUEL_WASTE;
+            this.FuelQuantity = FuelQuantity + fuel * FUEL_WASTE;
         }
     }
 }

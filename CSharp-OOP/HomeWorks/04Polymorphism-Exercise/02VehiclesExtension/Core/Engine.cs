@@ -19,17 +19,17 @@
             double carFuelQuantity = double.Parse(carInfo[1]); // creating the car
             double carLitersPerKm = double.Parse(carInfo[2]);
             int carTankCapacity = int.Parse(carInfo[3]);
-            IVehicle car = new Car(carFuelQuantity, carLitersPerKm, carTankCapacity);
+            Car car = new Car(carFuelQuantity, carLitersPerKm, carTankCapacity);
 
             double truckFuelQuantity = double.Parse(truckInfo[1]); // creating the truck
             double truckLitersPerKm = double.Parse(truckInfo[2]);
             int truckTankCapacity = int.Parse(truckInfo[3]);
-            IVehicle truck = new Truck(truckFuelQuantity, truckLitersPerKm, truckTankCapacity);
+            Truck truck = new Truck(truckFuelQuantity, truckLitersPerKm, truckTankCapacity);
 
-            double busFuelQuantity = double.Parse(busInfo[1]); // creating the truck
+            double busFuelQuantity = double.Parse(busInfo[1]); // creating the bus
             double busLitersPerKm = double.Parse(busInfo[2]);
             int busTankCapacity = int.Parse(busInfo[3]);
-            IBus bus = new Bus(busFuelQuantity, busLitersPerKm, busTankCapacity);
+            Bus bus = new Bus(busFuelQuantity, busLitersPerKm, busTankCapacity);
 
             int commandCnt = int.Parse(Console.ReadLine());
 
@@ -75,7 +75,7 @@
                     }
                     else if (command == "DriveEmpty")
                     {
-                        double distance = double.Parse(cmdArgs[3]);
+                        double distance = double.Parse(cmdArgs[2]);
                         if (type == "Bus")
                         {
                             Console.WriteLine(bus.DriveEmpty(distance));

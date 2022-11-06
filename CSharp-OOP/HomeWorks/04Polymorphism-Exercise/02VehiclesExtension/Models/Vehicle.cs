@@ -7,21 +7,25 @@
         private double fuelQuantity;
         protected Vehicle(double fuelQuantity, double fuelConsumption, int tankCapacity)
         {
+            TankCapacity = tankCapacity;
             FuelQuantity = fuelQuantity;
             FuelConsumption = fuelConsumption;
-            TankCapacity = tankCapacity;
         }
         public int TankCapacity { get; protected set; }
         public double FuelQuantity 
         { 
-            get => fuelQuantity;
+            get => this.fuelQuantity;
             protected set
             {
                 if (value > TankCapacity)
                 {
                     fuelQuantity = 0;
                 }
-                fuelQuantity = value;
+                else
+                {
+                    this.fuelQuantity = value;
+                }
+                
             }
         }
 
