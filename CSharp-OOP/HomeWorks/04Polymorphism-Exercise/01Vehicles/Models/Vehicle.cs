@@ -25,7 +25,7 @@
             return $"{GetType().Name} travelled {distance} km";
         }
 
-        public virtual void Refuel(double fuel)
+        public virtual void Refuel(double fuel)// virtual method because of the different refuel logic of the truck, the truck will ovveride the method (Run-Time polymorphism)
         {
             FuelQuantity = FuelQuantity + fuel;
         }
