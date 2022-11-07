@@ -1,7 +1,8 @@
-﻿namespace _01Vehicles
+﻿namespace Vehicles
 {
-    using _01Vehicles.Core;
     using System;
+    using Vehicles.Core;
+
     public class StartUp
     {
         static void Main(string[] args)

@@ -1,4 +1,4 @@
-﻿namespace _01Vehicles.Contracts
+﻿namespace Vehicles.Contracts
 {
     public interface IVehicle
     {

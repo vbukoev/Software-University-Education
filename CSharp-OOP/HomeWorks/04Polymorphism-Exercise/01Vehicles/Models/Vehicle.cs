@@ -1,4 +1,4 @@
-﻿namespace _01Vehicles.Models
+﻿namespace Vehicles.Models
 {
     using Contracts;
     using Exceptions;
@@ -16,12 +16,12 @@
 
         public string Drive(double distance)
         {
-            bool canDrive = FuelQuantity>= FuelConsumption * distance;
+            bool canDrive = FuelQuantity >= FuelConsumption * distance;
             if (!canDrive)
             {
                 throw new LowFuelException($"{GetType().Name} needs refueling");
             }
-            FuelQuantity = FuelQuantity - (FuelConsumption * distance);
+            FuelQuantity = FuelQuantity - FuelConsumption * distance;
             return $"{GetType().Name} travelled {distance} km";
         }
 

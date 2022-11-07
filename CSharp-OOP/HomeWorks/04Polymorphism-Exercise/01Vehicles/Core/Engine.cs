@@ -1,12 +1,9 @@
-﻿namespace _01Vehicles.Core
+﻿namespace Vehicles.Core
 {
-    using _01Vehicles.Exceptions;
-    using _01Vehicles.Models;
+    using Vehicles.Models;
     using System;
-    using System.Collections.Generic;
     using System.Linq;
-    using System.Text;
-
+    using Vehicles.Exceptions;
 
     public class Engine
     {
@@ -40,7 +37,7 @@
                         {
                             Console.WriteLine(car.Drive(distance));
                         }
-                        else if (type=="Truck")
+                        else if (type == "Truck")
                         {
                             Console.WriteLine(truck.Drive(distance));
                         }

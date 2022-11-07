@@ -1,4 +1,4 @@
-﻿namespace _01Vehicles.Models
+﻿namespace Vehicles.Models
 {
     public class Car : Vehicle
     {

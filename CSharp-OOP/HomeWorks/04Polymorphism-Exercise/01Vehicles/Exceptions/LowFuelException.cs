@@ -1,4 +1,4 @@
-﻿namespace _01Vehicles.Exceptions
+﻿namespace Vehicles.Exceptions
 {
     using System;
     public class LowFuelException : Exception

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace _01Vehicles.Models
+﻿namespace Vehicles.Models
 {
     public class Truck : Vehicle
     {
