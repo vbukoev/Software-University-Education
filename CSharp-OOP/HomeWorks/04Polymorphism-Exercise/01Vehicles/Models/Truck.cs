@@ -8,9 +8,9 @@
         public Truck(double fuelQuantity, double fuelConsumption) : base(fuelQuantity, fuelConsumption + CONSUMPTION_FROM_THE_AIR_CONDITIONER)
         {
         }
-        public override void Refuel(double fuel)
+        public override void Refuel(double fuel)//overriding the refuel method of the vehicle class
         {
-            FuelQuantity = FuelQuantity + fuel * FUEL_WASTE;
+            base.Refuel(fuel * FUEL_WASTE);
         }
     }
 }
