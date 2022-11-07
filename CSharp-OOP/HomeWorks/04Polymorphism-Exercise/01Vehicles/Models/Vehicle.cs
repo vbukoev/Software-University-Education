@@ -19,7 +19,7 @@
             bool canDrive = FuelQuantity >= FuelConsumption * distance;
             if (!canDrive)
             {
-                throw new LowFuelException($"{GetType().Name} needs refueling");
+                throw new LowFuelException($"{this.GetType().Name} needs refueling"); //data type of the current instance 
             }
             FuelQuantity = FuelQuantity - FuelConsumption * distance;
             return $"{GetType().Name} travelled {distance} km";
