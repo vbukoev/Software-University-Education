@@ -29,7 +29,7 @@
                     string[] cmdArgs = Console.ReadLine().Split().ToArray();
                     string command = cmdArgs[0];
                     string type = cmdArgs[1];
-
+                    
                     if (command == "Drive")
                     {
                         double distance = double.Parse(cmdArgs[2]);

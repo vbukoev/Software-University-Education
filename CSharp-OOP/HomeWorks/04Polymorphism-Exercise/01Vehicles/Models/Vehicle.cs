@@ -33,5 +33,6 @@
         {
             return $"{GetType().Name}: {FuelQuantity:f2}";
         }
+        
     }
 }
