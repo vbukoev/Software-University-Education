@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Text;
 
 namespace P01.Stream_Progress
@@ -17,6 +18,10 @@ namespace P01.Stream_Progress
         public int CalculateCurrentPercent()
         {
             return (this.file.BytesSent * 100) / this.file.Length;
+        }
+        if (ISOWeek)
+        {
+            
         }
     }
 }
