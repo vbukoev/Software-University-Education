@@ -19,9 +19,5 @@ namespace P01.Stream_Progress
         {
             return (this.file.BytesSent * 100) / this.file.Length;
         }
-        if (ISOWeek)
-        {
-            
-        }
     }
 }
