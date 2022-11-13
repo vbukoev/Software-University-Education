@@ -1,5 +1,4 @@
-﻿using System.Globalization;
-using SoftUniLogger.Exceptions;
+﻿
 
 namespace SoftUniLogger.Messages
 {
@@ -7,13 +6,23 @@ namespace SoftUniLogger.Messages
 
     using Enums;
     using Interfaces;
+    using System.Globalization;
+    using SoftUniLogger.Exceptions;
+    using SoftUniLogger.Validators.Interfaces;
     internal class Message : IMessage
     {
         private const string EmptyArgumentMessage = "Argument cannot be null or empty string!";
         private string logTime;
         private string messageText;
+
+        private readonly IValidator dateTimeValidator;
+
+        public Message()
+        {
+            this.dateTimeValidator = new DateTimeValidator();
+        }
         
-        public Message(string logTime, string messageText, ReportLevel level)
+        public Message(string logTime, string messageText, ReportLevel level) : this()
         { 
             this.LogTime = logTime;
             this.MessageText = messageText;
@@ -25,7 +34,7 @@ namespace SoftUniLogger.Messages
             get => this.logTime;
             private set
             {
-                if (!IsValidDateTime(value))
+                if (!this.dateTimeValidator.isValid(value))
                 {
                     new InvalidDateTimeException();
                 }
@@ -50,7 +59,6 @@ namespace SoftUniLogger.Messages
         }
         public ReportLevel Level { get; }
 
-        private bool IsValidDateTime(string text)
-            => DateTime.TryParse(text, out DateTime date);
+        
     }
 }

@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SoftUniLogger.Formatters.Interfaces
+﻿namespace SoftUniLogger.Formatters.Interfaces
 {
+    
+    using SoftUniLogger.Layouts.Interfaces;
+    using SoftUniLogger.Messages.Interfaces; 
     internal interface IFormatter
     {
+        ILayout Layout { get; }
+        string FormatMessage(IMessage message);
     }
 }
