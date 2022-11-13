@@ -1,16 +1,13 @@
-﻿
-
-using SoftUniLogger.Messages;
-using SoftUniLogger.Messages.Interfaces;
-
-namespace SoftUniLogger.Loggers
+﻿namespace SoftUniLogger.Loggers
 {
-    using System;
     using System.Collections.Generic;
     using SoftUniLogger.Appenders.Interfaces;
     using Common;
     using Enums;
     using Interfaces;
+
+    using Messages;
+    using SoftUniLogger.Messages.Interfaces;
     public class Logger : IAppenderCollection, ILogger
     {
         private readonly ICollection<IAppender> appenders;
@@ -43,6 +40,7 @@ namespace SoftUniLogger.Loggers
         {
             LogMessage(logTime, message, ReportLevel.Info);
         }
+        
 
         public void Warning(string logTime, string message)
         {
@@ -64,7 +62,7 @@ namespace SoftUniLogger.Loggers
             LogMessage(logTime, message, ReportLevel.Fatal);
         }
 
-        private void LogMessage(string logTime, string messageText, ReportLevel level = ReportLevel.Fatal)
+        private void LogMessage(string logTime, string messageText, ReportLevel level)
         {
             IMessage message = new Message(logTime, messageText, level);
             foreach (var appender in appenders)

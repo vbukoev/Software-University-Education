@@ -58,7 +58,5 @@ namespace SoftUniLogger.Messages
             }
         }
         public ReportLevel Level { get; }
-
-        
     }
 }
