@@ -1,12 +1,10 @@
-﻿
-
-using System.Drawing;
-using SoftUniLogger.IO;
-
-namespace ConsoleLogger.Factories
+﻿namespace ConsoleLogger.Factories
 {
+    
     using System;
-    using ConsoleLogger.Factories.Interfaces;
+    
+    using SoftUniLogger.IO;
+    using Interfaces;
     using SoftUniLogger.Appenders;
     using SoftUniLogger.Appenders.Interfaces;
     using SoftUniLogger.Enums;
