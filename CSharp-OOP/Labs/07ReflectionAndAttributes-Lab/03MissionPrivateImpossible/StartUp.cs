@@ -5,7 +5,9 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Spy spy = new Spy();
+            var  result = spy.RevealPrivateMethods("Stealer.Hacker");
+            Console.WriteLine(result);
         }
-    }
+    }  
 }
