@@ -12,7 +12,8 @@ namespace ValidationAttributes
 
             foreach (PropertyInfo property in propertyArgs)
             {
-                MyValidationAttribute[] attributes = property.GetCustomAttributes(true)
+                MyValidationAttribute[] attributes = property
+                    .GetCustomAttributes(true)
                     .Where(x => x is MyValidationAttribute)
                     .Cast<MyValidationAttribute>()
                     .ToArray();
