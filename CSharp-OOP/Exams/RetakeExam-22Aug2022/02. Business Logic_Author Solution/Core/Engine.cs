@@ -12,7 +12,6 @@
         private IReader reader;
         private IController controller;
 
-        
         public Engine()
         {
             this.writer = new Writer();
