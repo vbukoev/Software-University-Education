@@ -11,7 +11,10 @@ public class Dummy
         this.experience = experience;
     }
 
-    public int Health => this.health;
+    public int Health 
+    {
+        get { return this.health; }
+    }
 
     public void TakeAttack(int attackPoints)
     {
