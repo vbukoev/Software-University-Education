@@ -10,49 +10,63 @@ namespace DatabaseExtended.Tests
     public class ExtendedDatabaseTests
     {
         private Database db;
+
         [SetUp]
         public void SetUp()
         {
-            Person[] persons = new Person[]
+            Person[] persons = new Person[14];
+            for (int i = 0; i < persons.Length; i++)
             {
-                new Person(1, "Pesho"),
-                new Person(2, "Gosho"),
-                new Person(3, "Gogi"),
-                new Person(4, "Metodi"),
-                new Person(5, "Stojan"),
-                new Person(6, "Anatoli"),
-                new Person(7, "Petar"),
-                new Person(8, "Emo"),
-                new Person(9, "Chichi"),
-                new Person(10, "Lyuval"),
-                new Person(11, "Panayot"),
-            };
+                persons[i] = new Person(i, ((char)('A' + i)).ToString());
+            }
+            //Person[] persons = new Person[14]
+            //{
+            //    new Person(1, "Pesho"),
+            //    new Person(2, "Gosho"),
+            //    new Person(3, "Gogi"),
+            //    new Person(4, "Metodi"),
+            //    new Person(5, "Stojan"),
+            //    new Person(6, "Anatoli"),
+            //    new Person(7, "Petar"),
+            //    new Person(8, "Emo"),
+            //    new Person(9, "Chichi"),
+            //    new Person(10, "Lyuval"),
+            //    new Person(11, "Panayot"),
+            //    new Person(12, "Lada"),
+            //    new Person(13, "aerw"),
+            //    new Person(14, "gsd"),
+            //};
             this.db = new Database(persons);
         }
 
         [Test]
         public void ConstructorShouldNotTakeMoreThan16Persons()
         {
-            Person[] persons = new Person[]
+            Person[] persons = new Person[17];
+            for (int i = 0; i < persons.Length; i++)
             {
-                new Person(1, "Pesho"),
-                new Person(2, "Gosho"),
-                new Person(3, "Gogi"),
-                new Person(4, "Metodi"),
-                new Person(5, "Stojan"),
-                new Person(6, "Anatoli"),
-                new Person(7, "Petar"),
-                new Person(8, "Emo"),
-                new Person(9, "Chichi"),
-                new Person(10, "Lyuval"),
-                new Person(11, "Panayot"),
-                new Person(12, "Lada"),
-                new Person(13, "aerw"),
-                new Person(14, "gsd"),
-                new Person(15, "asht"),
-                new Person(16, "opi"),
-                new Person(17, "kka"),
-            };
+                persons[i] = new Person(i, ((char)('A' + i)).ToString());
+            }
+            //    Person[] persons = new Person[]
+            //    {
+            //        new Person(1, "Pesho"),
+            //        new Person(2, "Gosho"),
+            //        new Person(3, "Gogi"),
+            //        new Person(4, "Metodi"),
+            //        new Person(5, "Stojan"),
+            //        new Person(6, "Anatoli"),
+            //        new Person(7, "Petar"),
+            //        new Person(8, "Emo"),
+            //        new Person(9, "Chichi"),
+            //        new Person(10, "Lyuval"),
+            //        new Person(11, "Panayot"),
+            //        new Person(12, "Lada"),
+            //        new Person(13, "aerw"),
+            //        new Person(14, "gsd"),
+            //        new Person(15, "asht"),
+            //        new Person(16, "opi"),
+            //        new Person(17, "kka"),
+            //    };
             Assert.Throws<ArgumentException>(() =>
             {
                 db = new Database(persons);
@@ -62,44 +76,44 @@ namespace DatabaseExtended.Tests
         [Test]
         public void AddShouldIncreaseTheCollectionCount()
         {
-            db.Add(new Person(14, "Joe"));
+            db.Add(new Person(14, "Jack"));
 
-            Assert.AreEqual(db.Count, 12);
+            Assert.AreEqual(db.Count, 15);
         }
 
         [Test]
         public void AddCannotAddPersonWhichAlreadyExistsWithThisId()
         {
-            Assert.That(()=>db.Add(new Person(10, "A")), Throws.InvalidOperationException);
+            Assert.That(()=>db.Add(new Person(100, "A")), Throws.InvalidOperationException);
         }
 
         [Test]
         public void AddCannotAddPersonWithTheSameName()
         {
-            Assert.That(() => db.Add(new Person(1, "A")), Throws.InvalidOperationException);
+            Assert.That(() => db.Add(new Person(1, "Jason")), Throws.InvalidOperationException);
         }
 
-        //[Test]
-        //public void AddShouldNotExceedMaxArrayCount()
-        //{
-        //    db.Add(new Person(14, "Fourteen"));
-        //    db.Add(new Person(15, "Fifteen"));
-        //    Assert.That(()=>db.Add(new Person(16, "Error")), Throws.InvalidOperationException);
-        //}
+        [Test]
+        public void AddShouldNotExceedMaxArrayCount()
+        {
+            db.Add(new Person(14, "Eighteen"));
+            db.Add(new Person(15, "Seventeen"));
+            Assert.That(() => db.Add(new Person(16, "Error")), Throws.InvalidOperationException);
+        }
 
         [Test]
         public void AddAddsPersonToTheCollection()
         {
-            Person person = new Person(16, "Niki");
+            Person person = new Person(14, "Jimmy");
             db.Add(person);
-            Person expectedPerson = db.FindById(16);
+            Person expectedPerson = db.FindById(14);
             Assert.AreEqual(person, expectedPerson);
         }
 
         [Test]
         public void RemoveLastPersonFromOurCollection()
         {
-            Person person = new Person(16, "Niki");
+            Person person = new Person(14, "Jason");
             db.Add(person);
             db.Remove();
             Assert.That(()=>db.FindByUsername("Niki"), Throws.InvalidOperationException);
@@ -136,21 +150,21 @@ namespace DatabaseExtended.Tests
         [Test]
         public void FindByUsernameReturnsTheCorrectResultAsAPerson()
         {
-            Person person = db.FindByUsername("Pesho");
-            Assert.AreEqual(person.UserName, "Pesho");
+            Person person = db.FindByUsername("A");
+            Assert.AreEqual(person.UserName, "A");
         }
 
         [Test]
         public void FindByIdReturnsTheCorrectResultAsAPerson()
         {
-            Person person = db.FindById(1);
-            Assert.AreEqual(person.Id, 1);
+            Person person = db.FindById(4);
+            Assert.AreEqual(person.Id, 4);
         }
 
         [Test]
         public void FindByIdPositiveNumber()
         {
-            Assert.Throws<ArgumentOutOfRangeException>(() => db.FindById(-3));
+            Assert.Throws<ArgumentOutOfRangeException>(() => db.FindById(-1));
         }
 
         [Test]
