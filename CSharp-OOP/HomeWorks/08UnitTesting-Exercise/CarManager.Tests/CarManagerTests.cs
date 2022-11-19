@@ -16,7 +16,7 @@ namespace CarManager.Tests
         [SetUp]
         public void SetUp()
         {
-            car = new Car(DefaultMake, DefaultModel, DefaultFuelConsumption, DefaultFuelConsumption);
+            car = new Car(DefaultMake, DefaultModel, DefaultFuelConsumption, DefaultFuelTank);
         }
 
         [Test]
@@ -31,7 +31,15 @@ namespace CarManager.Tests
 
         [TestCase(null)]
         [TestCase("")]
-        public void PropertyMakeCannotBeNullOrEmpty(string model)
+        public void PropertyMakeCannotBeNullOrEmpty(string make)
+        {
+            Assert.Throws<ArgumentException>(() =>
+                car = new Car(make, DefaultModel, DefaultFuelConsumption, DefaultFuelTank));
+        }
+
+        [TestCase(null)]
+        [TestCase("")]
+        public void PropertyModelCannotBeNullOrEmpty(string model)
         {
             Assert.Throws<ArgumentException>(() =>
                 car = new Car(DefaultMake, model, DefaultFuelConsumption, DefaultFuelTank));
@@ -60,7 +68,7 @@ namespace CarManager.Tests
         }
 
         [TestCase(0)]
-        [TestCase(-8.1232)]
+        [TestCase(-8.1)]
         public void FuelCannotBeZeroOrNegative(double value)
         {
             Assert.Throws<ArgumentException>(() => car.Refuel(value));
@@ -68,6 +76,7 @@ namespace CarManager.Tests
 
         [TestCase(1.0)]
         [TestCase(15.8)]
+        [TestCase(40.99)]
         public void RefuelShouldIncreaseTheFuel(double value)
         {
             double expectedRefuel = car.FuelAmount + value;
@@ -77,11 +86,23 @@ namespace CarManager.Tests
         }
 
         [Test]
-        public void RefuelFuelShouldBeHigherThanCapacity()
+        public void RefuelFuelShouldNotBeHigherThanCapacity()
         {
-            double fuel = DefaultFuelTank + ;
+            double fuel = DefaultFuelTank + 10;
             car.Refuel(fuel);
             Assert.AreEqual(car.FuelAmount, DefaultFuelTank);
+        }
+
+        [TestCase(1)] 
+        [TestCase(24.5)] 
+        [TestCase(31.375)] 
+
+        public void DriveDecreasesFuelAmount(double distance)
+        {
+            car.Refuel(50);
+            double expectedAmount = car.FuelAmount - distance/100 * car.FuelConsumption;
+            car.Drive(distance);
+            Assert.AreEqual(expectedAmount, car.FuelAmount);
         }
     }
 }
