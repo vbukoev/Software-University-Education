@@ -61,6 +61,7 @@ namespace CarManager.Tests
                 car = new Car(DefaultMake, DefaultModel, DefaultFuelConsumption, fuelTankCapacity));
         }
 
+        
         [Test]
         public void PropertyFuelAmountCannotBeANegativeNumber()
         {
