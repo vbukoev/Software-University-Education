@@ -29,10 +29,11 @@ namespace Heroes.Models.Map
                 {
                     MakeTheRoundFight(barbariansHeroes, knightsHeroes);
                 }
+                knigthsTurn = !knigthsTurn;
             }
 
             int AliveKnigths = knightsHeroes.Where(x => !x.IsAlive).Count();
-            int AliveBarbarians = knightsHeroes.Where(x => !x.IsAlive).Count();
+            int AliveBarbarians = barbariansHeroes.Where(x => !x.IsAlive).Count();
             if (knightsHeroes.Any(x => x.IsAlive))
                 return $"The knights took {AliveKnigths} casualties but won the battle.";
             else return $"The barbarians took {AliveBarbarians} casualties but won the battle.";
@@ -40,9 +41,9 @@ namespace Heroes.Models.Map
 
         private void MakeTheRoundFight(List<IHero> attackers, List<IHero> defenders)
         {
-            foreach (var attacker in attackers)
+            foreach (var attacker in attackers.Where(x=>x.IsAlive))
             {
-                foreach (var defender in defenders)
+                foreach (var defender in defenders.Where(x=>x.IsAlive))
                 {
                     defender.TakeDamage(attacker.Weapon.DoDamage());
                 }

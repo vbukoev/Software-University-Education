@@ -9,8 +9,17 @@
 
         public override int DoDamage()
         {
-            Durability--;
-            return Durability == 0 ? 0 : damage;
+            if (Durability > 0)
+            {
+                Durability--;
+            }
+
+            if (Durability == 0)
+            {
+                return 0;
+            }
+
+            return damage;
         }
     }
 }

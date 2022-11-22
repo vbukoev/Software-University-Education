@@ -3,7 +3,7 @@ using Heroes.Models.Contracts;
 
 namespace Heroes.Models.Heroes
 {
-    public class Hero : IHero
+    public abstract class Hero: IHero
     {
         private string name;
         private int health;
@@ -21,7 +21,7 @@ namespace Heroes.Models.Heroes
             get => name;
             private set
             {
-                if (string.IsNullOrEmpty(value))
+                if (string.IsNullOrWhiteSpace(value))
                 {
                     throw new ArgumentException("Hero name cannot be null or empty.");
                 }
@@ -60,7 +60,7 @@ namespace Heroes.Models.Heroes
             get=> weapon;
             private set
             {
-                if (value==null)
+                if (value == null)
                 {
                     throw new ArgumentException("Weapon cannot be null.");
                 }

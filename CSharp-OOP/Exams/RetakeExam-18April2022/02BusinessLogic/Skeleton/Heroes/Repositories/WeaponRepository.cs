@@ -7,6 +7,11 @@ namespace Heroes.Repositories
     public class WeaponRepository :IRepository<IWeapon>
     {
         private List<IWeapon> weapons;
+
+        public WeaponRepository()
+        {
+            weapons = new List<IWeapon>();
+        }
         public IReadOnlyCollection<IWeapon> Models => weapons.AsReadOnly();
         public void Add(IWeapon model)
         {

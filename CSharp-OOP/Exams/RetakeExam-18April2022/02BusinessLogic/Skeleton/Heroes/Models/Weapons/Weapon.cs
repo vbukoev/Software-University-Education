@@ -29,7 +29,7 @@ namespace Heroes.Models.Weapons
             get => durability;
             protected set
             {
-                if (durability<0)
+                if (value<0)
                 {
                     throw new ArgumentException("Durability cannot be below 0.");
                 }
