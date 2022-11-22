@@ -55,14 +55,14 @@ namespace RepairShop
 
         public int CarsInGarage => this.cars.Count;
 
-        public void AddCar(Car car)
+        public void AddCar(Car car)//increases count
         {
-            if (this.cars.Count == this.mechanicsAvailable)
+            if (this.cars.Count == this.mechanicsAvailable) 
             {
                 throw new InvalidOperationException("No mechanic available.");
             }
 
-            this.cars.Add(car);
+            this.cars.Add(car); 
         }
 
         public Car FixCar(string carModel)
