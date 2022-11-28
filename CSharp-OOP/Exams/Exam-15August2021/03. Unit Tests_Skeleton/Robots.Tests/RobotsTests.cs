@@ -85,7 +85,7 @@ namespace Robots.Tests
         [Test]
         public void WorkThrowsForNoRobot()
         {
-            Assert.Throws<InvalidOperationException>(()=> manager.Work("name", "working on myself", 10));
+            Assert.Throws<InvalidOperationException>(()=> manager.Work("name2", "working on myself", 10));
         }
 
         [Test]
