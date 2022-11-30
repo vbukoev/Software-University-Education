@@ -104,7 +104,7 @@ namespace Formula1.Core
             }
 
             IPilot pilot = pilotRepository.Models.First(x => x.FullName == pilotFullName);
-            if ((!pilot.CanRace) || race.Pilots.Any(x => x.FullName == pilotFullName))
+            if (!pilot.CanRace || race.Pilots.Any(x => x.FullName == pilotFullName))
             {
                 throw new InvalidOperationException(string.Format(ExceptionMessages.PilotDoesNotExistErrorMessage,
                     pilotFullName));
@@ -134,15 +134,15 @@ namespace Formula1.Core
             }
 
             race.TookPlace = true;
-            var pilot1 = (IPilot)race.Pilots
+            IPilot pilot1 = race.Pilots
                 .OrderByDescending(x => x.Car.RaceScoreCalculator(race.NumberOfLaps))
                 .FirstOrDefault();
 
-            var pilot2 = (IPilot)race.Pilots
+            IPilot pilot2 = race.Pilots
                 .OrderByDescending(x => x.Car.RaceScoreCalculator(race.NumberOfLaps))
                 .Skip(1).FirstOrDefault();
-
-            var pilot3 = (IPilot)race.Pilots
+            
+            IPilot pilot3 = race.Pilots
                 .OrderByDescending(x => x.Car.RaceScoreCalculator(race.NumberOfLaps))
                 .Skip(2).FirstOrDefault();
 
