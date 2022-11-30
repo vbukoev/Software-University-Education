@@ -13,7 +13,7 @@ namespace AquaShop.Models.Aquariums
     public abstract class Aquarium : IAquarium
     {
         private string name;
-        private int capacity;
+        public int capacity;
         private List<IDecoration> decorations;
         private List<IFish> fishes;
 
@@ -73,8 +73,8 @@ namespace AquaShop.Models.Aquariums
         {
             StringBuilder sb = new StringBuilder();
 
-            sb.AppendLine($"{Name} ({GetType().Name})");
-            sb.AppendLine($"Fish: " + (fishes.Any() ? String.Join(", ", fishes) : "none"));
+            sb.AppendLine($"{Name} ({GetType().Name}):");
+            sb.AppendLine($"Fish: " + (fishes.Any() ? String.Join(", ", fishes.Select(x=>x.Name)) : "none"));
             sb.AppendLine($"Decorations: {decorations.Count}");
             sb.Append($"Comfort: {Comfort}");
 
