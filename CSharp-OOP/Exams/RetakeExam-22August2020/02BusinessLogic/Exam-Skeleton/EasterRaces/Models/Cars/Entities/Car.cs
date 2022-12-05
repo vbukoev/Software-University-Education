@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using EasterRaces.Models.Cars.Contracts;
 using EasterRaces.Utilities.Messages;
 
@@ -17,10 +15,10 @@ namespace EasterRaces.Models.Cars.Entities
         public Car(string model, int horsePower, double cubicCentimeters, int minHorsePower, int maxHorsePower)
         {
             Model = model;
-            HorsePower = horsePower;
+            CubicCentimeters = cubicCentimeters;
             this.minHorsePower = minHorsePower;
             this.maxHorsePower = maxHorsePower;
-            CubicCentimeters = cubicCentimeters;
+            HorsePower = horsePower;
         }
 
         public string Model
@@ -36,7 +34,7 @@ namespace EasterRaces.Models.Cars.Entities
             }
         }
 
-        public int HorsePower
+        public virtual int HorsePower
         {
             get => horsePower;
             private set

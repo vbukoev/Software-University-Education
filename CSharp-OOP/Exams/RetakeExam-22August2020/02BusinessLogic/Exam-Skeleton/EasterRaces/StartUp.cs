@@ -9,7 +9,7 @@ namespace EasterRaces
     {
         public static void Main()
         {
-            IChampionshipController controller = null; //new ChampionshipController();
+            IChampionshipController controller = new ChampionshipController();
             IReader reader = new ConsoleReader();
             IWriter writer = new ConsoleWriter();
 

@@ -64,6 +64,7 @@ namespace EasterRaces.Models.Races.Entities
             {
                 throw new ArgumentNullException(string.Format(ExceptionMessages.DriverAlreadyAdded, driver.Name, Name));
             }
+            drivers.Add(driver);
         }
     }
 }

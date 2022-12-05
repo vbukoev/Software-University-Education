@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using EasterRaces.Models.Races.Contracts;
 
-namespace EasterRaces.Repositories.Entities
+using EasterRaces.Models.Races.Contracts; 
+using EasterRaces.Repositories.Entities;
+
+namespace EasterRaces.Repositories
 {
     public class RaceRepository : Repository<IRace>
     {
