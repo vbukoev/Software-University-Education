@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using OnlineShop.Models.Products.Components;
 
 namespace OnlineShop.Models.Products.Components.ChildComponents
 {

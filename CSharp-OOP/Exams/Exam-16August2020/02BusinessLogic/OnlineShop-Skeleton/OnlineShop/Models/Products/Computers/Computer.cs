@@ -62,7 +62,7 @@ namespace OnlineShop.Models.Products.Computers
 
         public void AddPeripheral(IPeripheral peripheral)
         {
-            if (!peripherals.Any(x=>x.GetType().Name == peripheral.GetType().Name))
+            if (peripherals.Any(x=>x.GetType().Name == peripheral.GetType().Name))
             {
                 throw new ArgumentException(string.Format(ExceptionMessages.ExistingPeripheral,
                     peripheral.GetType().Name, GetType().Name, Id));
@@ -94,7 +94,7 @@ namespace OnlineShop.Models.Products.Computers
             }
 
             sb.AppendLine(
-                $"Peripherals ({peripherals.Count}); Average Overall Performance ({(peripherals.Count > 0 ? peripherals.Average(x => x.OverallPerformance) : 0)}):");
+                $" Peripherals ({peripherals.Count}); Average Overall Performance ({(peripherals.Count > 0 ? peripherals.Average(x => x.OverallPerformance) : 0):f2}):");
 
             if (peripherals.Any())
             {

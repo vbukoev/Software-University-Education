@@ -89,6 +89,6 @@ namespace OnlineShop.Models.Products
 
         public override string ToString()
         => string.Format(SuccessMessages.ProductToString,
-            $"{OverallPerformance:f2}", $"{Price:f2}" , GetType().Name, Manufacturer, Model, Id);
+            $"{OverallPerformance:f2}", $"{Price:f2}", GetType().Name, Manufacturer, Model, Id);
     }
 }
