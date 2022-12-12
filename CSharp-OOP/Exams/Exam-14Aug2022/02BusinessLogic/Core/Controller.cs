@@ -24,10 +24,10 @@ namespace PlanetWars.Core
         {
             IPlanet planet = new Planet(name, budget);
             if (planets.FindByName(name) != default) return string.Format(OutputMessages.ExistingPlanet, name);
-            
-                planets.AddItem(planet);
-                return string.Format(OutputMessages.NewPlanet, name);
-            
+
+            planets.AddItem(planet);
+            return string.Format(OutputMessages.NewPlanet, name);
+
         }
 
         public string AddUnit(string unitTypeName, string planetName)
@@ -45,7 +45,7 @@ namespace PlanetWars.Core
                 throw new InvalidOperationException(string.Format(ExceptionMessages.ItemNotAvailable, unitTypeName));
             }
 
-            if (planet.Army.Any(x=>x.GetType().Name == unitTypeName))
+            if (planet.Army.Any(x => x.GetType().Name == unitTypeName))
             {
                 throw new InvalidOperationException(string.Format(ExceptionMessages.UnitAlreadyAdded, unitTypeName, planetName));
             }
@@ -53,11 +53,14 @@ namespace PlanetWars.Core
             IMilitaryUnit unit = null;
 
             if (unitTypeName == nameof(SpaceForces)) unit = new SpaceForces();
+
             else if (unitTypeName == nameof(AnonymousImpactUnit)) unit = new AnonymousImpactUnit();
+
             else unit = new StormTroopers();
 
             planet.Spend(unit.Cost);
             planet.AddUnit(unit);
+
             return string.Format(OutputMessages.UnitAdded, unitTypeName, planetName);
         }
 
@@ -74,7 +77,7 @@ namespace PlanetWars.Core
                 throw new InvalidOperationException(string.Format(ExceptionMessages.ItemNotAvailable, weaponTypeName));
             }
 
-            if (planet.Weapons.Any(x=>x.GetType().Name == weaponTypeName))
+            if (planet.Weapons.Any(x => x.GetType().Name == weaponTypeName))
             {
                 throw new InvalidOperationException(string.Format(ExceptionMessages.WeaponAlreadyAdded,
                     weaponTypeName, planetName));
@@ -118,7 +121,7 @@ namespace PlanetWars.Core
             double firstPlanetHalfBudget = firstPlanet.Budget / 2;
             double secondPlanetHalfBudget = secondPlanet.Budget / 2;
 
-            double firstCalcValue = firstPlanet.Army.Sum(x => x.Cost) + 
+            double firstCalcValue = firstPlanet.Army.Sum(x => x.Cost) +
                                     firstPlanet.Weapons.Sum(y => y.Price);
 
             double secondCalcValue = secondPlanet.Army.Sum(x => x.Cost) +
@@ -132,56 +135,56 @@ namespace PlanetWars.Core
 
             var firstNuclearWeapon = firstPlanet.Weapons
                 .FirstOrDefault(x => x.GetType().Name == nameof(NuclearWeapon));
-             var secondNuclearWeapon = secondPlanet.Weapons.FirstOrDefault(x => x.GetType().Name == nameof(NuclearWeapon));
+            var secondNuclearWeapon = secondPlanet.Weapons.FirstOrDefault(x => x.GetType().Name == nameof(NuclearWeapon));
 
-             if (firstPower > secondPower)
-             {
-                 firstPlanet.Spend(firstPlanetHalfBudget);
-                 firstPlanet.Profit(secondPlanetHalfBudget);
-                 firstPlanet.Profit(secondCalcValue);
-                 planets.RemoveItem(secondPlanet.Name);
-                 return string.Format(OutputMessages.WinnigTheWar, planetOne, planetTwo);
-             }
-             else if (firstPower < secondPower)
-             {
-                 secondPlanet.Spend(secondPlanetHalfBudget);
-                 secondPlanet.Profit(firstPlanetHalfBudget);
-                 secondPlanet.Profit(firstCalcValue);
-                 planets.RemoveItem(firstPlanet.Name);
-                 return string.Format(OutputMessages.WinnigTheWar, planetTwo, planetOne);
-             }
-             else
-             {
-                 if (firstNuclearWeapon!=null && secondNuclearWeapon != null)
-                 {
-                     firstPlanet.Spend(firstPlanetHalfBudget);
-                     secondPlanet.Spend(secondPlanetHalfBudget);
-                     return string.Format(OutputMessages.NoWinner);
-                 }
-                 else if (firstNuclearWeapon!=null)
-                 {
-                     firstPlanet.Spend(firstPlanetHalfBudget);
-                     firstPlanet.Profit(secondPlanetHalfBudget);
-                     firstPlanet.Profit(secondCalcValue);
+            if (firstPower > secondPower)
+            {
+                firstPlanet.Spend(firstPlanetHalfBudget);
+                firstPlanet.Profit(secondPlanetHalfBudget);
+                firstPlanet.Profit(secondCalcValue);
+                planets.RemoveItem(secondPlanet.Name);
+                return string.Format(OutputMessages.WinnigTheWar, planetOne, planetTwo);
+            }
+            else if (firstPower < secondPower)
+            {
+                secondPlanet.Spend(secondPlanetHalfBudget);
+                secondPlanet.Profit(firstPlanetHalfBudget);
+                secondPlanet.Profit(firstCalcValue);
+                planets.RemoveItem(firstPlanet.Name);
+                return string.Format(OutputMessages.WinnigTheWar, planetTwo, planetOne);
+            }
+            else
+            {
+                if (firstNuclearWeapon != null && secondNuclearWeapon != null)
+                {
+                    firstPlanet.Spend(firstPlanetHalfBudget);
+                    secondPlanet.Spend(secondPlanetHalfBudget);
+                    return string.Format(OutputMessages.NoWinner);
+                }
+                else if (firstNuclearWeapon != null)
+                {
+                    firstPlanet.Spend(firstPlanetHalfBudget);
+                    firstPlanet.Profit(secondPlanetHalfBudget);
+                    firstPlanet.Profit(secondCalcValue);
 
-                     planets.RemoveItem(secondPlanet.Name);
-                     return string.Format(OutputMessages.WinnigTheWar, planetOne, planetTwo);
-                 }
-                 else if (secondNuclearWeapon != null)
-                 {
-                     secondPlanet.Spend(secondPlanetHalfBudget);
-                     secondPlanet.Profit(firstPlanetHalfBudget);
-                     secondPlanet.Profit(firstCalcValue);
+                    planets.RemoveItem(secondPlanet.Name);
+                    return string.Format(OutputMessages.WinnigTheWar, planetOne, planetTwo);
+                }
+                else if (secondNuclearWeapon != null)
+                {
+                    secondPlanet.Spend(secondPlanetHalfBudget);
+                    secondPlanet.Profit(firstPlanetHalfBudget);
+                    secondPlanet.Profit(firstCalcValue);
 
-                     planets.RemoveItem(firstPlanet.Name);
-                     return string.Format(OutputMessages.WinnigTheWar, planetTwo, planetOne);
-                 }
-                 else
-                 {
-                     firstPlanet.Spend(firstPlanetHalfBudget);
-                     secondPlanet.Spend(secondPlanetHalfBudget);
-                     return string.Format(OutputMessages.NoWinner);
-                 }
+                    planets.RemoveItem(firstPlanet.Name);
+                    return string.Format(OutputMessages.WinnigTheWar, planetTwo, planetOne);
+                }
+                else
+                {
+                    firstPlanet.Spend(firstPlanetHalfBudget);
+                    secondPlanet.Spend(secondPlanetHalfBudget);
+                    return string.Format(OutputMessages.NoWinner);
+                }
             }
         }
 
@@ -190,8 +193,8 @@ namespace PlanetWars.Core
             StringBuilder sb = new StringBuilder();
             sb.AppendLine("***UNIVERSE PLANET MILITARY REPORT***");
             foreach (var planet in planets.Models
-                         .OrderByDescending(x=>x.MilitaryPower)
-                         .ThenBy(x=>x.Name))
+                         .OrderByDescending(x => x.MilitaryPower)
+                         .ThenBy(x => x.Name))
             {
                 sb.AppendLine(planet.PlanetInfo());
             }

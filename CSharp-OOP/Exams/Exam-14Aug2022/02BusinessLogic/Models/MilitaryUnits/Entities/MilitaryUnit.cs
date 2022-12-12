@@ -25,7 +25,9 @@ namespace PlanetWars.Models.MilitaryUnits.Entities
         public void IncreaseEndurance()
         {
             if (enduranceLevel == 20)
+            {
                 throw new Exception(string.Format(ExceptionMessages.EnduranceLevelExceeded));
+            }
             enduranceLevel++;
         }
     }

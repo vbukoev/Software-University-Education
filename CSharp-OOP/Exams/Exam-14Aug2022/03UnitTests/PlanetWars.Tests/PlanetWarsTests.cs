@@ -8,6 +8,16 @@ namespace PlanetWars.Tests
         [TestFixture]
         public class PlanetWarsTests
         {
+            private Weapon weapon;
+            private Planet planet;
+
+            [SetUp]
+            public void SetUp()
+            {
+                weapon = new Weapon("Weapon", 250, 5);
+                planet = new Planet("Name", 250);
+            }
+
             [Test]
             public void ConstructorShouldSetTheCorrectNames()
             {
