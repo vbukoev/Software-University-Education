@@ -1,0 +1,5 @@
+CREATE DATABASE [Minions2023]
+
+USE [Minions2023]
+
+GO
