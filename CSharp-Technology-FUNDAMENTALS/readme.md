@@ -1,4 +1,4 @@
-# Csharp-Education
+# Csharp-Education - Fundamentals
 The “Programming Fundamentals” course extends the previously gained basic coding skills from the “Programming Basics” course at the Software University and adds
 additional knowledge and practical programming skills. The course covers source control systems, Git and GitHub for team collaboration, understanding the basic data
 types in programming, extracting pieces of code into methods with parameters and return value, using the debugger to trace the program execution and find bugs,
