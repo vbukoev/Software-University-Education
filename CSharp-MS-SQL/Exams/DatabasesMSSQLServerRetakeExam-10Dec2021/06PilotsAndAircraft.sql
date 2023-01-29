@@ -1,4 +1,4 @@
-SELECT p.FirstName, p.LastName, p.Manufacturer, p.Model, p.FlightHours
+SELECT p.FirstName, p.LastName, a.Manufacturer, a.Model, a.FlightHours
 	FROM Pilots AS p
 
 FULL JOIN PilotsAircraft AS pa 
