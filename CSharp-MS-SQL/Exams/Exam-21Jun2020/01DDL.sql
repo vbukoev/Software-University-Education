@@ -30,7 +30,7 @@ CREATE TABLE Trips
 	BookDate DATE NOT NULL,
 	ArrivalDate DATE NOT NULL,
 	ReturnDate DATE NOT NULL,
-	CancelDate DATE
+	CancelDate DATE,
 	CHECK(BookDate<ArrivalDate),
 	CHECK(ArrivalDate<ReturnDate)
 )
