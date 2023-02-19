@@ -1,4 +1,4 @@
-SELECT i.Id, u.Username + ' : ' + i.Title
+SELECT i.Id, u.Username + ' : ' + i.Title AS IssueAssignee
 	FROM Issues AS i
 JOIN Users AS u 
 	ON i.AssigneeId = u.Id

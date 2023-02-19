@@ -17,18 +17,22 @@
 
 --03.
 UPDATE PlayersRanges
-SET PlayersMax = (SELECT Id FROM PlayersRanges WHERE PlayersMin = 2 AND PlayersMax = 2) + 1;
+SET PlayersMax += 1 WHERE PlayersMax = 2 AND PlayersMin = 2
 
 UPDATE Boardgames
-SET [Name] = CONCAT( (SELECT TOP 1 [Name] FROM Boardgames WHERE YearPublished >= 2020) ,'v2')
-
+SET [Name] = CONCAT( Name ,'V2')
+WHERE YearPublished >= 2020
 
 --04.
-DELETE FROM Boardgames
-	WHERE PublisherId IN (SELECT Id FROM Addresses WHERE Town LIKE 'L%')
+SELECT * FROM Publishers WHERE AddressId = 5
+SELECT * FROM Addresses WHERE LEFT(Town,1) = 'L'
+SELECT * FROM Boardgames WHERE PublisherId IN (1, 16)
+DELETE FROM CreatorsBoardgames WHERE BoardgameId IN (1, 16, 31, 47)
+DELETE FROM Boardgames WHERE PublisherId IN (1, 16)
+DELETE FROM Publishers WHERE AddressId = 5
+DELETE FROM Addresses WHERE LEFT(Town, 1) = 'L'
 
-DELETE FROM Addresses
-	WHERE Town LIKE 'L%'
+DELETE FROM Addresses WHERE Town LIKE 'L%'
 ----05.
 --SELECT [Name], [Rating] FROM Boardgames
 --ORDER BY YearPublished, [Name] DESC
@@ -57,13 +61,55 @@ ORDER BY bg.[Name], bg.Rating DESC
 
 --09.
 
-SELECT CONCAT (FirstName, ' ', LastName) AS FullName, c.Email, b.Rating FROM Creators AS c
-JOIN Boardgames AS b 
-	ON b.PublisherId = c.Id
+SELECT CONCAT (c.FirstName, ' ', c.LastName) AS FullName, c.Email, Max(b.Rating) AS Rating 
+	FROM Creators AS c
+JOIN CreatorsBoardgames AS cbg
+	ON c.Id = cbg.CreatorId
+JOIN Boardgames AS b
+	ON cbg.BoardGameId = b.Id
 WHERE c.Email LIKE '%.com'
-ORDER BY b.Rating DESC, FullName
+GROUP BY c.FirstName, c.LastName, c.Email
+
 --10.
-
+SELECT c.LastName, CEILING(AVG(b.Rating)) AS AverageRating, p.[Name] FROM Creators AS c
+JOIN CreatorsBoardgames AS cbg
+	ON c.Id = cbg.CreatorId 
+JOIN Boardgames AS b
+	ON cbg.BoardgameId = b.Id
+JOIN Publishers AS p 
+	ON b.PublisherId = p.Id
+WHERE p.[Name] = 'Stonemaier Games'
+GROUP BY c.LastName, p.[Name]
+ORDER BY AVG(b.Rating) DESC
 --11.
+CREATE FUNCTION udf_CreatorWithBoardgames(@name VARCHAR(30))
+RETURNS INT 
+AS
+BEGIN
+DECLARE @cnt INT 
+SET @cnt = (SELECT COUNT(*) FROM Creators AS c 
+			JOIN CreatorsBoardgames AS cbg
+				ON c.Id = cbg.CreatorId
+			JOIN Boardgames AS b
+				ON cbg.BoardgameId = b.Id
+			WHERE FirstName = @name)
+RETURN @cnt
+END
 
+SELECT dbo.udf_CreatorWithBoardgames('Bruno')
 --12.
+
+CREATE PROC usp_SearchByCategory(@category VARCHAR(30))
+AS 
+BEGIN 
+SELECT b.[Name], b.YearPublished, b.Rating, c.[Name] AS CategoryName, p.[Name] AS PublisherName, CONCAT(plr.PlayersMin, ' people') AS MinPlayers, CONCAT(plr.PlayersMax, ' people') AS MaxPlayers
+	FROM Categories AS c
+JOIN Boardgames AS b
+	ON c.Id = b.CategoryId
+JOIN Publishers AS p
+	ON b.PublisherId = p.Id
+JOIN PlayersRanges AS plr
+	ON b.PlayersRangeId = plr.Id
+WHERE c.[Name] = @category
+ORDER BY p.[Name], b.YearPublished DESC
+END

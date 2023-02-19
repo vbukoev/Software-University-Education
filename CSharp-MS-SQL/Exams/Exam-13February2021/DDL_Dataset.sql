@@ -1,4 +1,5 @@
 USE Bitbucket
+CREATE DATABASE Bitbucket
 GO
 
 -- Disable referential integrity
