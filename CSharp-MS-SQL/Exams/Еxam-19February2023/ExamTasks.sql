@@ -41,18 +41,19 @@ WHERE c.[Name] IN('Wargames','Strategy Games')
 ORDER BY b.YearPublished DESC
 --07.
 
-SELECT Id, CONCAT(c.FirstName, ' ', c.LastName) AS CreatorName, Email FROM Creators AS c
-JOIN CreatorsBoardgames AS cbg 
-	ON c.Id = cbg.CreatorId
-WHERE cbg.BoardgameId IS NULL
-ORDER BY CreatorName 
+SELECT Id, CONCAT(c.FirstName, ' ', c.LastName) AS CreatorName, c.Email
+FROM Creators AS c
+LEFT JOIN CreatorsBoardgames AS cb ON c.Id = cb.CreatorId
+WHERE cb.BoardgameId IS NULL
+ORDER BY CreatorName
 --08.
 
-SELECT TOP 5 b.[Name], b.Rating, c.[Name] AS CategoryName FROM Boardgames AS b
-JOIN Categories AS c	
-	ON b.CategoryId = c.Id 
-WHERE b.Rating > 7.00 AND b.[Name] LIKE '%a%' OR b.Rating > 7.50 AND PlayersRangeId IN (2,5)
-ORDER BY b.[Name], b.Rating DESC
+SELECT TOP(5) BG.[Name], bg.Rating, c.[Name]
+FROM Boardgames AS bg
+LEFT JOIN PlayersRanges AS pr ON bg.PlayersRangeId = pr.Id
+LEFT JOIN Categories AS c ON bg.CategoryId = c.Id
+WHERE bg.Rating > 7 AND bg.[Name] LIKE '%a%' OR bg.Rating > 7.50 AND pr.PlayersMin = 2 AND pr.PlayersMax = 5
+ORDER BY bg.[Name], bg.Rating DESC
 
 --09.
 
