@@ -1,6 +1,9 @@
-﻿namespace SoftUni.Models
+﻿using System;
+using System.Collections.Generic;
+
+namespace SoftUni.Models
 {
-    public class EmployeesProject
+    public partial class EmployeeProject
     {
         public int EmployeeId { get; set; }
         public int ProjectId { get; set; }

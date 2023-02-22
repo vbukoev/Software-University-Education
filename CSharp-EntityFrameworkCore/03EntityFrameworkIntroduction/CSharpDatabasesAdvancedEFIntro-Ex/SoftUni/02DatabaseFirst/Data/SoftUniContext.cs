@@ -1,5 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using System;
 using SoftUni.Models;
+using Microsoft.EntityFrameworkCore;
+
 
 namespace SoftUni.Data
 {
@@ -17,7 +19,7 @@ namespace SoftUni.Data
         public virtual DbSet<Address> Addresses { get; set; }
         public virtual DbSet<Department> Departments { get; set; }
         public virtual DbSet<Employee> Employees { get; set; }
-        public virtual DbSet<EmployeesProject> EmployeesProjects { get; set; }
+        public virtual DbSet<EmployeeProject> EmployeesProjects { get; set; }
         public virtual DbSet<Project> Projects { get; set; }
         public virtual DbSet<Town> Towns { get; set; }
 
@@ -25,8 +27,7 @@ namespace SoftUni.Data
         {
             if (!optionsBuilder.IsConfigured)
             {
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseSqlServer("Server=DESKTOP-9BA0UH0;Database=SoftUni;Integrated Security=True;");
+                optionsBuilder.UseSqlServer("Server=.;Database=SoftUni;Integrated Security=True;");
             }
         }
 
@@ -123,7 +124,7 @@ namespace SoftUni.Data
                     .HasConstraintName("FK_Employees_Employees");
             });
 
-            modelBuilder.Entity<EmployeesProject>(entity =>
+            modelBuilder.Entity<EmployeeProject>(entity =>
             {
                 entity.HasKey(e => new { e.EmployeeId, e.ProjectId });
 
