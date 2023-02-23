@@ -17,25 +17,20 @@ namespace SoftUni
 
         public static string GetEmployee147(SoftUniContext context)
         {
-            StringBuilder sb = new StringBuilder();
-
-            var employee = context.Employees
+            var employee147Info = context.Employees
                 .Where(e => e.EmployeeId == 147)
-                .Select(a => new
+                .Select(x => new
                 {
-                    FirstName = a.FirstName,
-                    LastName = a.LastName,
-                    JobTitle = a.JobTitle,
-                    Projects = a.Projects
+                    x.FirstName,
+                    x.LastName,
+                    x.JobTitle,
+                    Projects = x.EmployeesProjects.Select(p => new { p.Project.Name }).OrderBy(p => p.Name).ToArray()
                 })
                 .FirstOrDefault();
 
-            sb.AppendLine($"{employee.FirstName} {employee.LastName} - {employee.JobTitle}");
-
-            foreach (var project in employee.Projects.OrderBy(a => a.Name))
-            {
-                sb.AppendLine($"{project.Name}");
-            }
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine($"{employee147Info.FirstName} {employee147Info.LastName} - {employee147Info.JobTitle}");
+            sb.Append(string.Join(Environment.NewLine, employee147Info.Projects.Select(p => p.Name)));
 
             return sb.ToString().TrimEnd();
         }

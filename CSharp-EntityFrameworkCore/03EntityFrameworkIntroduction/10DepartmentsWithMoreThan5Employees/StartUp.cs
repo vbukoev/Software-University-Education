@@ -11,35 +11,36 @@ namespace SoftUni
         static void Main()
         {
             var context = new SoftUniContext();
-            string output = GetDepartmentsWthMoreThan5Employees(context);
+            string output = GetDepartmentsWithMoreThan5Employees(context);
             Console.WriteLine(output);
         }
 
-        public static string GetDepartmentsWthMoreThan5Employees(SoftUniContext context)
+        public static string GetDepartmentsWithMoreThan5Employees(SoftUniContext context)
         {
-            StringBuilder sb = new StringBuilder();
-
-            var departments = context.Departments
+            var departmentsInfo = context.Departments
                 .Where(d => d.Employees.Count > 5)
                 .OrderBy(d => d.Employees.Count)
                 .ThenBy(d => d.Name)
                 .Select(d => new
                 {
                     DepartmentName = d.Name,
-                    ManagerFirstName = d.Manager.FirstName,
-                    ManagerLastName = d.Manager.LastName,
+                    ManagerName = d.Manager.FirstName + " " + d.Manager.LastName,
                     Employees = d.Employees
-                        .Select(e => new { e.FirstName, e.LastName, e.JobTitle })
                         .OrderBy(e => e.FirstName)
                         .ThenBy(e => e.LastName)
-                        .ToList()
-                }).ToList();
+                        .Select(e => new
+                        {
+                            EmployeeData = $"{e.FirstName} {e.LastName} - {e.JobTitle}"
+                        })
+                        .ToArray()
+                })
+                .ToArray();
 
-            foreach (var department in departments)
+            StringBuilder sb = new StringBuilder();
+            foreach (var d in departmentsInfo)
             {
-                sb.AppendLine($"{department.DepartmentName} - {department.ManagerFirstName} {department.ManagerLastName}");
-                sb.Append(string.Join(Environment.NewLine,
-                    department.Employees.Select(x => $"{x.FirstName} {x.LastName} - {x.JobTitle}")));
+                sb.AppendLine($"{d.DepartmentName} - {d.ManagerName}");
+                sb.Append(string.Join(Environment.NewLine, d.Employees.Select(e => e.EmployeeData)));
             }
 
             return sb.ToString().TrimEnd();

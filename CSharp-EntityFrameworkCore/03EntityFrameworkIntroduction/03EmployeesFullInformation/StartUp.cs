@@ -27,7 +27,7 @@ public class StartUp
                 e.JobTitle,
                 e.Salary
             })
-            .ToList();
+            .ToList();      //<- materializing the query and detach data from the tracker
         foreach (var employee in allEmployees)
         {
             output.AppendLine(
