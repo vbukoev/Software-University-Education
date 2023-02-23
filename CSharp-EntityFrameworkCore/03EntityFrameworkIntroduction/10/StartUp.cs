@@ -35,8 +35,6 @@ namespace SoftUni
                         .ToList()
                 }).ToList();
 
-           
-
             foreach (var department in departments)
             {
                 sb.AppendLine($"{department.DepartmentName} - {department.ManagerFirstName} {department.ManagerLastName}");
