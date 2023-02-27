@@ -1,21 +1,16 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
 using P02_FootballBetting.Data.Models;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Numerics;
-using System.Reflection.Emit;
 
 namespace P02_FootballBetting.Data
 {
     public class FootballBettingContext : DbContext
     {
-        public FootballBettingContext() //for us to use it when developing the app and when we test it locally on our
-                                        //machine 
+        public FootballBettingContext()
         {
         }
 
-        public FootballBettingContext(DbContextOptions options) //use this ctor for judge 
+        public FootballBettingContext(DbContextOptions options)
             : base(options)
         {
         }
@@ -35,7 +30,7 @@ namespace P02_FootballBetting.Data
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Server=INTEL\\SQLEXPRESS;Database=FootballBetting;Integrated Security=True;TrustServerCertificate=true");
+                optionsBuilder.UseSqlServer("Server=.\\SQLEXPRESS;Database=FootballBetting;Integrated Security=True;TrustServerCertificate=true");
             }
         }
 

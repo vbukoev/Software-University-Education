@@ -1,17 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.1.32210.238
+VisualStudioVersion = 17.4.33110.190
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P02_FootballBetting", "P02_FootballBetting\P02_FootballBetting.csproj", "{4C268043-803E-4043-8E2D-CA71C999FADD}"
-	ProjectSection(ProjectDependencies) = postProject
-		{CBBFDBCD-3F79-4F74-9EE2-B10A5BB026B0} = {CBBFDBCD-3F79-4F74-9EE2-B10A5BB026B0}
-		{64F80BD9-BCA3-4536-9BA6-98FA67550BFE} = {64F80BD9-BCA3-4536-9BA6-98FA67550BFE}
-	EndProjectSection
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P02_FootballBetting", "P02_FootballBetting\P02_FootballBetting.csproj", "{3B5C5E1A-0133-4356-8488-43F322D345DE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P02_FootballBetting.Data", "P02_FootballBetting.Data\P02_FootballBetting.Data.csproj", "{CBBFDBCD-3F79-4F74-9EE2-B10A5BB026B0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P02_FootballBetting.Data.Models", "P02_FootballBetting.Data.Models\P02_FootballBetting.Data.Models.csproj", "{E34C2F87-D897-4ED0-AFDB-5E4A27C72DF3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P02_FootballBetting.Data.Models", "P02_FootballBetting.Data.Models\P02_FootballBetting.Data.Models.csproj", "{64F80BD9-BCA3-4536-9BA6-98FA67550BFE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P02_FootballBetting.Data", "P02_FootballBetting.Data\P02_FootballBetting.Data.csproj", "{0D940689-67D6-466A-B495-56EA73F1D126}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,23 +15,23 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{4C268043-803E-4043-8E2D-CA71C999FADD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4C268043-803E-4043-8E2D-CA71C999FADD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4C268043-803E-4043-8E2D-CA71C999FADD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4C268043-803E-4043-8E2D-CA71C999FADD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CBBFDBCD-3F79-4F74-9EE2-B10A5BB026B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CBBFDBCD-3F79-4F74-9EE2-B10A5BB026B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CBBFDBCD-3F79-4F74-9EE2-B10A5BB026B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CBBFDBCD-3F79-4F74-9EE2-B10A5BB026B0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{64F80BD9-BCA3-4536-9BA6-98FA67550BFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{64F80BD9-BCA3-4536-9BA6-98FA67550BFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{64F80BD9-BCA3-4536-9BA6-98FA67550BFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{64F80BD9-BCA3-4536-9BA6-98FA67550BFE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B5C5E1A-0133-4356-8488-43F322D345DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B5C5E1A-0133-4356-8488-43F322D345DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B5C5E1A-0133-4356-8488-43F322D345DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B5C5E1A-0133-4356-8488-43F322D345DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E34C2F87-D897-4ED0-AFDB-5E4A27C72DF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E34C2F87-D897-4ED0-AFDB-5E4A27C72DF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E34C2F87-D897-4ED0-AFDB-5E4A27C72DF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E34C2F87-D897-4ED0-AFDB-5E4A27C72DF3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D940689-67D6-466A-B495-56EA73F1D126}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D940689-67D6-466A-B495-56EA73F1D126}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D940689-67D6-466A-B495-56EA73F1D126}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D940689-67D6-466A-B495-56EA73F1D126}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {7EC4FFDD-9998-41E5-B90A-A492A7DDE184}
+		SolutionGuid = {1FE83DEA-A595-453F-8545-034B0741B9C5}
 	EndGlobalSection
 EndGlobal
