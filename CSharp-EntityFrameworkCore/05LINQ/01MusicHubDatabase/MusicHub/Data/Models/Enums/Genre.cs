@@ -1,17 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace MusicHub.Data.Models.Enums;
 
-namespace MusicHub.Data.Models.Enums
+public enum Genre
 {
-    public enum Genre
-    {
-        Blues, 
-        Rap, 
-        PopMusic, 
-        Rock, 
-        Jazz
-    }
+    Blues,
+    Rap,
+    PopMusic,
+    Rock,
+    Jazz
 }
