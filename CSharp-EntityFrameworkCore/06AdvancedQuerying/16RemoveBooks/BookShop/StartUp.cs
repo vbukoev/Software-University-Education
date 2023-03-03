@@ -1,10 +1,6 @@
-﻿using System.Text;
-using BookShop.Models.Enums;
-
-namespace BookShop
+﻿namespace BookShop
 {
     using Data;
-    using Initializer;
 
     public class StartUp
     {
@@ -15,7 +11,6 @@ namespace BookShop
             //if the upper line is not commented it will print these unused lines :
             //    "BookShop database created successfully."
             //    "Sample data inserted successfully."
-
             Console.WriteLine(RemoveBooks(db));
         }
 
@@ -27,9 +22,7 @@ namespace BookShop
                 .ToArray();
 
             context.RemoveRange(books);
-
             context.SaveChanges();
-
             return books.Count();
         }
     }
