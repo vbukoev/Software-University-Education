@@ -15,7 +15,6 @@ namespace BookShop
             //if the upper line is not commented it will print these unused lines :
             //    "BookShop database created successfully."
             //    "Sample data inserted successfully."
-
             IncreasePrices(db);
         }
 
@@ -26,9 +25,7 @@ namespace BookShop
                 .Where(x => x.ReleaseDate.Value.Year < 2010);
 
             foreach (var book in books)
-            {
                 book.Price += 5;
-            }
 
             context.SaveChanges();
         }
