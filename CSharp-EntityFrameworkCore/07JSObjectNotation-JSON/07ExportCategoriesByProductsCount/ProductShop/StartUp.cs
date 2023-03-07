@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using System.Reflection.Metadata;
+using Newtonsoft.Json;
 using ProductShop.Data;
 using ProductShop.Models;
 
@@ -14,7 +15,7 @@ namespace ProductShop
             context.Database.EnsureCreated();
             ImportData(context);
 
-            string output = GetProductsInRange(context);
+            string output = GetCategoriesByProductsCount(context);
 
             Console.WriteLine(output);
         }
@@ -45,20 +46,20 @@ namespace ProductShop
             context.SaveChanges();
         }
 
-        public static string GetProductsInRange(ProductShopContext context)
+        public static string GetCategoriesByProductsCount(ProductShopContext context)
         {
-            var productsInRange = context.Products
-                .Where(x => x.Price >= 500 && x.Price <= 1000)
-                .OrderBy(x => x.Price)
+            var categoriesByProducts = context.Categories
+                .OrderByDescending(x=>x.CategoriesProducts.Count)
                 .Select(x => new
                 {
-                    name = x.Name,
-                    price = x.Price,
-                    seller = x.Seller.FirstName + " " + x.Seller.LastName,
+                    category = x.Name,
+                    productsCount = x.CategoriesProducts.Count,
+                    averagePrice = Math.Round((double)x.CategoriesProducts.Average(p=>p.Product.Price),2),
+                    totalRevenue = Math.Round((double)x.CategoriesProducts.Sum(p => p.Product.Price), 2),
                 })
                 .ToArray();
 
-            return JsonConvert.SerializeObject(productsInRange, Formatting.Indented);
+            return JsonConvert.SerializeObject(categoriesByProducts, Formatting.Indented);
         }
     }
 }

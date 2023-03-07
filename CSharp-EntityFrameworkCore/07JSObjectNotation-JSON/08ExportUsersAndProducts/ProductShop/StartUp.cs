@@ -1,4 +1,6 @@
-﻿using Newtonsoft.Json;
+﻿using System.Reflection.Metadata;
+using System.Security.Cryptography.X509Certificates;
+using Newtonsoft.Json;
 using ProductShop.Data;
 using ProductShop.Models;
 
@@ -14,7 +16,7 @@ namespace ProductShop
             context.Database.EnsureCreated();
             ImportData(context);
 
-            string output = GetProductsInRange(context);
+            string output = GetUsersWithProducts(context);
 
             Console.WriteLine(output);
         }
@@ -45,20 +47,41 @@ namespace ProductShop
             context.SaveChanges();
         }
 
-        public static string GetProductsInRange(ProductShopContext context)
+        public static string GetUsersWithProducts(ProductShopContext context)
         {
-            var productsInRange = context.Products
-                .Where(x => x.Price >= 500 && x.Price <= 1000)
-                .OrderBy(x => x.Price)
+            var usersWithProducts = context.Users
+                .Where(x => x.ProductsSold.Any(p => p.Buyer != null))
+                .OrderByDescending(x => x.ProductsSold
+                    .Count(p => p.Buyer != null))
                 .Select(x => new
                 {
-                    name = x.Name,
-                    price = x.Price,
-                    seller = x.Seller.FirstName + " " + x.Seller.LastName,
-                })
-                .ToArray();
+                    firstName = x.FirstName,
+                    lastName = x.LastName,
+                    age = x.Age,
+                    soldProducts = new
+                    {
+                        count = x.ProductsSold.Count(p => p.Buyer != null),
+                        products = x.ProductsSold
+                            .Where(p => p.Buyer != null)
+                            .Select(p => new
+                            {
+                                name = p.Name,
+                                price = p.Price
+                            })
+                    }
+                }).ToArray();
 
-            return JsonConvert.SerializeObject(productsInRange, Formatting.Indented);
+            return 
+                JsonConvert.SerializeObject(new
+            {
+                usersCount = usersWithProducts.Count(),
+                users = usersWithProducts
+            }, 
+                new JsonSerializerSettings
+            {
+                Formatting = Formatting.Indented,
+                NullValueHandling = NullValueHandling.Ignore,
+            });
         }
     }
 }
