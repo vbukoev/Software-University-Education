@@ -17,7 +17,11 @@ namespace CarDealer
 
             string suppliersPath = @"../../../Datasets/suppliers.xml";
             string suppliersXml = File.ReadAllText(suppliersPath);
-            string output = ImportSuppliers(context, suppliersXml);
+            ImportSuppliers(context, suppliersXml);
+
+            string partsPath = @"../../../Datasets/parts.xml";
+            string partsXml = File.ReadAllText(partsPath);
+            string output = ImportParts(context, partsXml);
 
             Console.WriteLine(output);
         }
@@ -48,6 +52,27 @@ namespace CarDealer
             context.SaveChanges();
 
             return $"Successfully imported {suppliers.Count()}";
-        } 
+        }
+
+        public static string ImportParts(CarDealerContext context, string inputXml)
+        {
+            ImportPartsDto[] partsDto = Deserializer<ImportPartsDto[]>(inputXml, "Parts");
+            int[] supplierIds = context.Suppliers.Select(x => x.Id).ToArray();
+
+            Part[] parts = partsDto
+                .Where(x=>supplierIds.Contains(x.SupplierId))
+                .Select(x=>new Part()
+                {
+                    Name = x.Name,
+                    Price = x.Price,
+                    Quantity = x.Quantity,
+                    SupplierId = x.SupplierId 
+                }).ToArray();
+
+            context.Parts.AddRange(parts);
+            context.SaveChanges();
+
+            return $"Successfully imported {parts.Count()}";
+        }
     }
 }
