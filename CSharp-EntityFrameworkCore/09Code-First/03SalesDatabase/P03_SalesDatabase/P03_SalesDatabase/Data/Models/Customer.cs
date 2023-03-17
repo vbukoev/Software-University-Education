@@ -16,7 +16,7 @@ namespace P03_SalesDatabase.Data.Models
         public string Email { get; set; }
 
         [Required] 
-        public string CardNumber { get; set; }
+        public string CreditCardNumber { get; set; }
 
         public ICollection<Sale> Sales { get; set; }
     }

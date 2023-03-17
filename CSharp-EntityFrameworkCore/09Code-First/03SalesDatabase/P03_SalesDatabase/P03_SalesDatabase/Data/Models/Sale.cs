@@ -6,7 +6,7 @@ namespace P03_SalesDatabase.Data.Models
     public class Sale
     {
         [Key] 
-        public int KeyId { get; set; }
+        public int SaleId { get; set; }
 
         [Required] 
         public DateTime Date { get; set; }
@@ -14,7 +14,6 @@ namespace P03_SalesDatabase.Data.Models
         [Required]
         [ForeignKey(nameof(Product))]
         public int ProductId { get;set; }
-
         public Product Product { get; set; }
 
         [Required]
