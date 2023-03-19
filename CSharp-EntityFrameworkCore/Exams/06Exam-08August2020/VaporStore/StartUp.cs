@@ -30,8 +30,8 @@
 
         private static void ExportEntities(VaporStoreDbContext context, string exportDir)
         {
-            //var jsonOutput = Serializer.ExportGamesByGenres(context, new[] { "Nudity", "Violent" });
-            //PrintAndExportEntityToFile(jsonOutput, exportDir + "GamesByGenres.json");
+            var jsonOutput = Serializer.ExportGamesByGenres(context, new[] { "Nudity", "Violent" });
+            PrintAndExportEntityToFile(jsonOutput, exportDir + "GamesByGenres.json");
 
             //var xmlOutput = Serializer.ExportUserPurchasesByType(context, "Digital");
             //PrintAndExportEntityToFile(xmlOutput, exportDir + "UserPurchases.xml");
@@ -39,11 +39,11 @@
 
         private static void ImportEntities(VaporStoreDbContext context, string baseDir, string exportDir)
         {
-            //var games = Deserializer.ImportGames(context, File.ReadAllText(baseDir + "games.json"));
-            //PrintAndExportEntityToFile(games, exportDir + "ImportGames.txt");
+            var games = Deserializer.ImportGames(context, File.ReadAllText(baseDir + "games.json"));
+            PrintAndExportEntityToFile(games, exportDir + "ImportGames.txt");
 
-            //var users = Deserializer.ImportUsers(context, File.ReadAllText(baseDir + "users.json"));
-            //PrintAndExportEntityToFile(users, exportDir + "ImportUsers.txt");
+            var users = Deserializer.ImportUsers(context, File.ReadAllText(baseDir + "users.json"));
+            PrintAndExportEntityToFile(users, exportDir + "ImportUsers.txt");
 
             var purchases = Deserializer.ImportPurchases(context, File.ReadAllText(baseDir + "purchases.xml"));
             PrintAndExportEntityToFile(purchases, exportDir + "ImportPurchases.txt");
