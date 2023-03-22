@@ -21,7 +21,7 @@
         public DbSet<Manufacturer> Manufacturers { get; set; }
         public DbSet<Shell> Shells { get; set; }
 
-         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {

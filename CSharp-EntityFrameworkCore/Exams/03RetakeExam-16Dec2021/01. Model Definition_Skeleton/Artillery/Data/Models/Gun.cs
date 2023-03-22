@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Artillery.Data.Models.Enums;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Artillery.Data.Models.Enums;
 
 namespace Artillery.Data.Models
 {
@@ -19,8 +14,7 @@ namespace Artillery.Data.Models
         [Key]
         public int Id { get; set; }
 
-        [Required]
-        [ForeignKey(nameof(Manufacturer))]
+        [Required, ForeignKey(nameof(Manufacturer))]
         public int ManufacturerId { get; set; }
         public Manufacturer Manufacturer { get; set; }
 
@@ -38,8 +32,7 @@ namespace Artillery.Data.Models
         [Required]
         public GunType GunType { get; set; }
 
-        [Required]
-        [ForeignKey(nameof(Shell))]
+        [Required, ForeignKey(nameof(Shell))]
         public int ShellId { get; set; }
         public Shell Shell { get; set; }
 

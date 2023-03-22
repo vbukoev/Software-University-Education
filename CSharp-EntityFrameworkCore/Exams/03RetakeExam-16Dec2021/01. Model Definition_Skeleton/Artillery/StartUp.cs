@@ -48,7 +48,6 @@
                 DataProcessor.Deserializer.ImportGuns(context,
                     File.ReadAllText(baseDir + "guns.json"));
             PrintAndExportEntityToFile(importGuns, exportDir + "Actual Result - ImportGuns.txt");
-
         }
 
         private static void ExportEntities(ArtilleryContext context, string exportDir)
