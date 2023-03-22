@@ -10,7 +10,7 @@
 
     public class StartUp
     {
-        public static void Main()
+        public static void Main(string[] args)
         {
             var context = new ArtilleryContext();
 
@@ -48,6 +48,7 @@
                 DataProcessor.Deserializer.ImportGuns(context,
                     File.ReadAllText(baseDir + "guns.json"));
             PrintAndExportEntityToFile(importGuns, exportDir + "Actual Result - ImportGuns.txt");
+
         }
 
         private static void ExportEntities(ArtilleryContext context, string exportDir)
