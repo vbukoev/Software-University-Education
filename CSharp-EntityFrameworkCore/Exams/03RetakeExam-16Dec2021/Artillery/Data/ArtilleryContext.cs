@@ -13,10 +13,15 @@
             : base(options) { }
 
         public DbSet<Country> Countries { get; set; }
+
         public DbSet<CountryGun> CountriesGuns { get; set; }
+
         public DbSet<Gun> Guns { get; set; }
+
         public DbSet<Manufacturer> Manufacturers { get; set; }
+
         public DbSet<Shell> Shells { get; set; }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
