@@ -50,7 +50,7 @@ namespace Trucks.DataProcessor
                             VinNumber = ct.Truck.VinNumber,
                             TankCapacity = ct.Truck.TankCapacity,
                             CargoCapacity = ct.Truck.CargoCapacity,
-                            CargoType = ct.Truck.CategoryType.ToString(),
+                            CategoryType = ct.Truck.CategoryType.ToString(),
                             MakeType = ct.Truck.MakeType.ToString()
                         })
                         .OrderBy(t => t.MakeType)
