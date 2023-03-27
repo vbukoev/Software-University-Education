@@ -65,7 +65,7 @@ namespace Theatre.DataProcessor
             return Serialize<ExportPlayDto[]>(playDtos, "Plays");
         }
 
-        private static string Serialize<T>(T dataTransferObjects, string xmlRootAttributeName)
+        private static string Serialize<T>(T dataTransferObjects, string xmlRootAttributeName)//serialize method 
         {
             XmlSerializer serializer = new XmlSerializer(typeof(T), new XmlRootAttribute(xmlRootAttributeName));
 
