@@ -5,14 +5,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Trucks.Data.Models
+namespace Footballers.Data.Models
 {
-    public class Client
+    public class Team
     {
-        public Client()
+        public Team()
         {
-            ClientsTrucks = new HashSet<ClientTruck>();
+            TeamsFootballers = new HashSet<TeamFootballer>();
         }
+
         [Key]
         public int Id { get; set; }
 
@@ -23,8 +24,8 @@ namespace Trucks.Data.Models
         public string Nationality { get; set; }
 
         [Required]
-        public string Type { get; set; }
+        public int Trophies { get; set; }
 
-        public ICollection<ClientTruck> ClientsTrucks { get; set; }
+        public ICollection<TeamFootballer> TeamsFootballers { get; set; }
     }
 }
