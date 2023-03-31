@@ -1,7 +1,6 @@
-﻿using System.Globalization;
-using Footballers.Data.Models.Enums;
-using Footballers.DataProcessor.ExportDto;
+﻿using Footballers.DataProcessor.ExportDto;
 using Newtonsoft.Json;
+using System.Globalization;
 
 namespace Footballers.DataProcessor
 {
