@@ -7,7 +7,7 @@ using Newtonsoft.Json;
 
 namespace Footballers.DataProcessor
 {
-    using Footballers.Data;
+    using Data;
     using System.ComponentModel.DataAnnotations;
     using System.Xml.Serialization;
 
