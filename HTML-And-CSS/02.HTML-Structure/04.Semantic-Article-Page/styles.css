@@ -1,0 +1,25 @@
+body {
+    background-color: #e4e978;
+}
+
+article {
+    padding: 5px 15px;
+    background-color: #f2f4c0;
+    width: 700px;
+    border: 1px solid #b2ad7d;
+    margin: 15px 10px;
+}
+
+.secondaryClass {
+    padding: 5px 15px;
+    font-style: italic;
+    background-color: #f2f4c0;
+    color: #5c6e91;
+    width:700px;
+    border: 1px solid #b2ad7d;
+    margin: 15px 10px;
+}
+
+.commentsHeader {
+    font-size: 28px
+}
