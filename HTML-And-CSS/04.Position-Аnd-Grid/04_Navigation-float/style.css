@@ -70,4 +70,33 @@ section > nav > ul{
     font-weight: bold;
 }
 
-header
+header > nav > ul > li{
+    display: inline-block;
+    list-style-type: none;
+}
+
+nav ul li a{
+    text-decoration: none;
+}
+
+.paragraph-blockquote{
+    display: grid;
+    grid-template-areas: "paragraph blockquote";
+}
+
+.paragraph-left{
+    grid-area: paragraph;
+}
+
+.blockquote-right{
+    grid-area: blockquote;
+    font-family: Georgia, serif;
+    font-style: italic;
+    color: gray;
+    border-left: 2px solid lightgrey;
+    padding-left: 20px;
+}
+
+.blockquote-right > p:nth-child(2){
+    text-align: right;
+}
