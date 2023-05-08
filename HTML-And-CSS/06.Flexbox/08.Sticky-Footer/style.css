@@ -1,0 +1,22 @@
+*{
+    box-sizing: border-box;
+    font-family: Helvetica, sans-serif;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(238,238,238);
+    height: 100vh;
+    padding: 20px;
+}
+
+header{
+    text-transform: uppercase;
+    border-bottom: 3px solid black;
+}
+
+footer{
+    background-color: rgb(102, 102, 102);
+    color: rgb(255, 255, 255);
+}
