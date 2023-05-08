@@ -1,0 +1,23 @@
+html{
+    box-sizing: border-box;
+    background: lightgray;
+}
+
+body, ul, li{
+    display: flex;
+}
+
+.gallery ul{
+    list-style-type: none;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.gallery li{
+    border: 10px solid black;
+    padding: 20px;
+    background-color: white;
+    align-items: center;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
+}

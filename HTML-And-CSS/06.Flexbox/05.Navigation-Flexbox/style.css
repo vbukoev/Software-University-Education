@@ -1,0 +1,23 @@
+html{
+    padding: 50px;
+}
+header{
+    border-bottom: 2px rgb(0,0,0) solid;
+    display:flex;
+    justify-content: space-between;
+}
+header h1{
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+header nav ul{
+    display: flex;
+    list-style-type: none;
+    gap: 20px;
+    
+}
+header nav ul li a{
+    color: rgb(0,153,0);
+    text-decoration: none;
+}
