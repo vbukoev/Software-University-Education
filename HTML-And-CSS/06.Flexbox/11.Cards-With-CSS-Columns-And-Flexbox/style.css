@@ -1,0 +1,45 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(238,238,238);
+}
+
+.card{
+    width:30%;
+    background-color: white;
+    border: 2px solid lightgray;
+    border-radius: 10px;
+}
+
+img{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 100%
+}
+
+.card > section, .card footer{
+    padding: 20px;
+}
+
+.card footer{
+    margin-top: auto; 
+    border-top: 2px solid lightgray;
+}
+
+.masonry{
+    display: flex;
+    flex-direction: column;
+    flex-flow: column wrap;
+    max-height: 100vh;
+    flex-wrap: wrap;
+    gap: 16px;
+    width: 100vh;
+}
+
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px; 
+}
