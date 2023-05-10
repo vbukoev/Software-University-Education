@@ -1,0 +1,96 @@
+*{
+    box-sizing: border-box;
+    font-size: 23px;
+}
+
+body{
+    background-color: rgb(238, 238, 238);
+}
+
+.page{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10%;
+    margin: 3% 5%;
+}
+
+header{
+    width: 100%;
+    border-bottom: 2px solid black;
+    text-transform: uppercase;
+}
+
+main{
+    width: 100%;
+}
+
+h1,h2,h3{
+    font-family: Georgia, serif;
+}
+
+img{
+    background-color: rgb(255,255,255);
+    padding: 10px;
+    border: 3px solid black;
+    box-shadow: rgba(0,0,0,0.5);
+}
+
+image1{
+    float: right;
+    margin-left: 15px
+}
+
+.image2{
+    float: left;
+    margin-left: 0px 15px 15px 0px
+}
+
+.secondparagraph{
+    display: inline-block;
+    width: 45%;
+}
+
+blockquote{
+    display: inline-block;
+    width: 45%;
+    font-family: Georgia, serif;
+    padding-top: 0px;
+    border-left: 3px solid lightgray;
+    padding-left: 10px;
+    font-style: italic;
+}
+
+.authorparagraph{
+    text-align: end;
+}
+
+@media(max-width: 1800px){
+    body{ 
+        font-size: 21px;
+    }
+}
+
+@media(max-width: 1300px){
+    body{ 
+        font-size: 18px;
+    }
+}
+
+@media(max-width: 800px){
+    body{ 
+        font-size: 16px;
+    }
+}
+
+@media(max-width: 600px) and (min-width:500px){
+    body{ 
+        font-size: 14px;
+    }
+
+    .secondparagraph{
+        width:100%;
+    }
+    blockquote{
+        width: 100%;
+    }
+}
