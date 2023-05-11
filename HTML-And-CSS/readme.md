@@ -1,4 +1,5 @@
 HTML & CSS
+
 Course Description
 The aim of the course "HTML&CSS" is to pass basic knowledge of web technologies and in particular introduction to HTML5 and CSS. Gain basic knowledge in web development , web browsers, HTML / CSS / DOM development tools and develop practical skills in using the language for describing web content ( HTML ) and the language for styling web content ( CSS ).
 
