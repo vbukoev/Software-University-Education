@@ -21,7 +21,7 @@ Acquired skills:
 -Creating responsive web design
 
 -Ability to create static web pages
-
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Course content:
 
 -HTML Structure
