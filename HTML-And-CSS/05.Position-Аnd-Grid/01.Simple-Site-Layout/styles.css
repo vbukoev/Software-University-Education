@@ -1,46 +1,45 @@
 body{
     display:grid;
-    grid-template-areas: 
-    "head head"
+    grid-template-areas:
+    "header header"
     "aside main"
-    "foot foot";
+    "footer footer";
     grid-template-columns: 100px auto;
     gap: 10px;
 }
-
 header{
-    grid-area: head;
-}
-aside{
-    grid-area: aside;
+    grid-area: header;
 }
 main{
     grid-area: main;
 }
-footer{
-    grid-area: foot;
+main a{
+    text-decoration: none;
 }
-
+aside{
+    grid-area: aside;
+}
+footer{
+    grid-area: footer;
+}
 header, aside, main, footer {
     border-radius: 3px;
-    background-color: rgb(181, 216, 255);
+    background-color: RGB(181, 216, 255);
     padding: 5px 10px;
 }
-
 header h1{
-    display: inline-block;
+    display:inline-block;
     vertical-align: middle;
 }
-
-.unordered{
-    list-style: none;
+aside ul{
+    list-style-type: none;
     margin: 0px;
     padding: 5px;
 }
 
-ul li a{
+aside ul li a{
     display: block;
     padding: 5px 0px;
-    color: rgb(86, 40, 129);
+    color: RGB(86, 40, 129);
     text-decoration: none;
 }
