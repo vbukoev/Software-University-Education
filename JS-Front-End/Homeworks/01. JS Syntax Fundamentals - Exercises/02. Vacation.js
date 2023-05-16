@@ -49,5 +49,5 @@ function solve(group, type, day){
     console.log(`Total price: ${((price * group - discountAdd) * discount).toFixed(2)}`);
 }
 
-solve(30, "Students", "Sunday")
+//solve(30, "Students", "Sunday")
 //solve(40, "Regular", "Saturday")
