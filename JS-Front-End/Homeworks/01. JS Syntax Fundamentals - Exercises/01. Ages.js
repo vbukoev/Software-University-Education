@@ -18,4 +18,4 @@ function solve(age){
     console.log(output);
 }
 
-solve(20)
+//solve(20)
