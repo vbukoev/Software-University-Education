@@ -1,0 +1,45 @@
+*{
+    box-sizing: border-box;
+    font-family: Helvetica, sans-serif;
+}
+
+body{
+    margin: 50px;
+    background-color: rgb(238, 238, 238);
+}
+
+.card{
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+    width: 25%;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.55);
+}
+
+section > div > img{
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    width: 100%;
+}
+
+.info_section{
+    position: relative;
+    padding-left: 20px;
+    height: 10rem;
+}
+
+h1{
+    font-family: Georgia, serif;
+    size: 1em;
+}
+
+.info_section_btn{
+    background-color: rgb(0, 153, 0);
+    border-color: rgb(0, 153, 0);
+    border-radius: 4px;
+    color: white;
+    width: 25%;
+    height: 1.8rem;
+    position: absolute;
+    right: 20px;
+    bottom: 25px;
+}
