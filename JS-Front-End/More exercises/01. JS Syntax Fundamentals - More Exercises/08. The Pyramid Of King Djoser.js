@@ -30,8 +30,8 @@ function pyramid(base, increment){
     console.log(`Final pyramid height: ${Math.floor(currRow * increment)}`);
 }
 
-pyramid(11, 1);
-console.log('////////////////////////');
-pyramid(11, 0.75);
-console.log('////////////////////////');
-pyramid(12, 1);
+//pyramid(11, 1);
+//console.log('////////////////////////');
+//pyramid(11, 0.75);
+//console.log('////////////////////////');
+//pyramid(12, 1);
