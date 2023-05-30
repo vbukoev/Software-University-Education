@@ -1,0 +1,52 @@
+@media (max-width: 600px){
+    .navigation-nav, .home-text{
+        display: none;
+    }
+    .navigation-header{
+        position: static;
+    }
+    .Heading2{
+        font-size: 60px;
+        line-height: 1.4;
+    }
+    .home-text02{
+        font-size: 19px;
+    }
+    .button-lg{
+        font-weight: 800;
+        margin-bottom: 20px;
+    }
+    .home-tab-selector-cards-container{
+        display: flex;
+        flex-direction: column;
+    }
+    .home-image{
+        display: none;
+    }
+    .home-text04{
+        font-size: 19px;
+    }
+    .home-text10{
+        margin-right: 40px;
+    }
+    .section-container{
+        padding-top: 38px;
+        padding-bottom: 20px;
+    }
+    .home-top-part{
+        flex-direction: column;
+    }
+    .home-navigate-container, .home-contact-container, .home-subscribe-container{
+        margin-top: 38px;
+    }
+    .home-subscribe-container{
+        width: 250px;
+    }
+    .home-links-container{
+        flex-direction: column;
+    }
+    body > div > div > div > div > div > div.home-subscribe-container > button{
+        width: 120px;
+        height: 60px;
+    }
+}
