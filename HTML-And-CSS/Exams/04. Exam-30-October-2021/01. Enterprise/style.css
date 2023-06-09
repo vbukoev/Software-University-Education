@@ -1,0 +1,55 @@
+body{
+    font-family: "Helvetica", sans-serif;
+    color: #273240;
+}
+
+.enterprise{
+    background-color: #f6f8f9;
+    padding: 0 24px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    max-width: 950px;
+    margin: 60px auto;
+}
+
+.enterprise .info{
+    width: 40%;
+}
+
+.enterprise .subtitle{
+    font-size: 14px;
+    margin-bottom: 16px;
+    font-weight: normal;
+}
+
+.enterprise .title{
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-weight: normal;
+}
+
+.enterprise .description{
+    margin-bottom: 20px;
+    color: #646f79;
+}
+
+.enterprise .btn{
+    all: unset;
+    border: 1px solid #273240;
+    padding: 12px 18px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.enterprise .btn.btn-primary{
+    border-color: #786eff;
+    background-color: #786eff;
+    color: white;
+    margin-right: 10px;
+}
+
+.enterprise .img{
+    width: 30%;
+}
