@@ -1,0 +1,45 @@
+/* TODO: Add responsive styles here... */
+@media(max-width:600px){
+    .navbar{
+        justify-content: center;
+    }
+    .navbar-light .navbar-brand{
+        margin-right: 0px;
+    }
+    .hero img{
+        display: none;
+    }
+    .container {
+        text-align: center;
+        max-width: 500px;
+    }
+    .hero-btns{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 200px;
+    }
+    .hero-btns a:first-child{
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+    .col-sm-6{
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: 50px;
+    }
+    .side2-img img{
+        top: 2000px;
+    }
+    .about .row{
+        gap: 80px
+    }
+    .contact-nav{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    footer h6{
+        padding-bottom: 0px;
+    }
+}
