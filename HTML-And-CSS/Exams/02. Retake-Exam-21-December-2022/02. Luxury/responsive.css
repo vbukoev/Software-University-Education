@@ -1,0 +1,84 @@
+@media screen and (max-width: 600px) {
+    body > header > div > ul,
+    body > header > div > div,
+    body > header > section > article > a,
+    body > main > section.blog > div > h4 > span,
+    body > main > section.blog > div > a,
+    body > main > section.gallery > article > div > a,
+    body > main > section.blog > article > img,
+    body > main > section.magazine > div > a{
+        display: none;
+    }
+    
+    body > header > h3 {
+        font-size: x-small
+    }
+
+    body > header > h1 {
+        margin-top: 5px;
+        font-size: large;
+    }
+
+    body > header > section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    body > header > section > article {
+        width: 100%;
+        text-align: center; 
+    }
+
+    body > main > section.galery{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #about-blog {
+        width: 90%;
+    }
+
+    body > main > section.blog > div > h4 {
+        font-size: medium;
+        margin-bottom: 5px;
+    }
+
+    body > main > section.magazine > article {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    body > main > section.magazine > article > div {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    body > main > section.magazine > article > div > img{
+        width: 500px;
+    }
+
+    body > main > section.magazine > article > div > h2 {
+        margin-top: 30px;
+    }
+
+    body > main > section.magazine > article > div > p{
+        margin: 40px 50px;
+    }
+
+    body > main > section.magazine > div > h4 {
+        font-size: small;
+    }
+
+    body > main > footer{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    body > main > footer > div {
+        display: flex;
+        flex-direction: column;
+    }
+}
