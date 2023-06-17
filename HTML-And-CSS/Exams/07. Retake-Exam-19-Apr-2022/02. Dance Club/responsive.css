@@ -1,0 +1,82 @@
+/*TODO:*/
+
+@media(max-width: 800px){
+    nav{
+        display: block;
+        text-align: center;
+        width: 100%;
+    }
+
+    body > header > div{
+        background-image: url(./image/dancing-girl.png) no-repeat 0px -100px;/*importing the background image-but there is some problem with it*/
+    }
+
+    nav ul{
+        display: block;
+        text-align: center;
+        width: 100%;
+        padding: 1em 0 0 0;
+    }
+
+    nav ul li{
+        display: block;
+    }
+
+    .trainings{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .trainings div{
+        flex-basis: 55%;
+    }
+
+    .instructors-pic li{
+        flex-basis: 45%;
+        justify-content: center;
+    }
+
+    body > main > section.instructors{
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-left: 40px;
+    }
+
+    body > header > div > h1{
+        display: flex;
+    }
+
+    .classes li {
+        flex-basis: 45%;
+    }
+
+    .getInTouch{
+        flex-wrap: wrap;
+    }
+
+    .getInTouch div{
+        flex-basis: 55%;
+        margin-left: 25px;
+    }
+
+    .getInTouch .map{
+        margin-bottom: 20px;
+    }
+
+    .site-footer .wrapper{
+        flex-wrap: wrap;
+    }
+
+    body > footer > div > section.about{
+        flex-basis: 100%;
+    }
+
+    body > footer > div > section.sitemap{
+        flex-basis: 60%;
+    }
+
+    .site-footer .contacts{
+        flex-basis: 35%;
+        margin-left: auto;
+    }
+}
