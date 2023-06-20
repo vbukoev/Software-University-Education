@@ -19,4 +19,4 @@ function solve(input){
     console.log(out.join(', '));
 }
 
-solve('Hi, how are you?');
+//solve('Hi, how are you?');
