@@ -12,7 +12,7 @@ h2{
   color: rgb(51, 51, 51);
 }
 
-div{
+#kg{
     font-weight: 600;
     font-size: 20px;
 }
@@ -28,7 +28,7 @@ button{
     letter-spacing: 1px;
     text-align: center;
     padding: 8px 16px;
-    margin-top: 20px;
+    margin-top: -5px;
     margin-bottom: 20px;
 }
 
