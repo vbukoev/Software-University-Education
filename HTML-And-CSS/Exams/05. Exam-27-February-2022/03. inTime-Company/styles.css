@@ -1,0 +1,224 @@
+@import url(https://use.fontawesome.com/releases/v6.1.2/css/all.css);
+
+html, body{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: "Helvetica", sans-serif;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 0 30px;
+}
+
+nav span{
+    color: rgb(62, 178, 216);
+}
+
+.logo{
+    font-size: 1.5rem;
+    margin-left: 30px;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+}
+
+nav ul li{
+    font-weight: bold;
+    color: rgb(80, 80, 80);
+    margin-left: 30px;
+    border-bottom: 4px solid transparent;
+}
+
+nav ul li:hover{
+    border-bottom: 4px solid rgb(62, 178, 216);
+    cursor: pointer;
+}
+
+#landing-page{
+    position: relative;
+    height: 400px;
+    background: url(images/slide2.jpg);
+    background-size: cover;
+}
+
+#anounce{
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    width: 270px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+}
+
+#anounce h1{
+    font-weight: 400;
+    color: white;
+    padding: 0;
+    margin: 0;
+}
+
+#anounce button{
+    margin-top: 10px;
+    padding: 7px 20px;
+    color: rgb(227, 227, 227);
+    background-color: rgb(62, 178, 216);
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+#welcome{
+    text-align: center;
+    padding: 0 100px;
+}
+
+.line{
+    width: 10%;
+    height: 4px;
+    margin: -10px auto 0 auto;
+}
+
+#welcome .line{
+    background-color: rgb(62, 178, 216);
+}
+
+#welcome button{
+    padding: 7px 15px;
+    color: white;
+    background-color: rgb(80, 80, 80);
+    border: none;
+    border-radius: 10px;
+}
+
+#services{
+    text-align: center;
+    padding: 0 100px;
+    background-color: lightgray;
+}
+
+#services h2{
+    padding-top: 20px;
+}
+
+#services .line{
+    background-color: rgb(80, 80, 80);
+}
+
+#services article{
+    display: inline-block;
+    margin: 20px 5px;
+    width: 200px;
+    background-color: white;
+}
+
+#services article img{
+    width: 100%;
+}
+
+#services article h3{
+    margin: 7px 15px;
+    font-size: 0.8rem;
+}
+
+#services article p{
+    margin: 10px 15px;
+    font-size: 0.7rem;
+}
+
+#services article button{
+    padding: 7px 15px;
+    margin: 7px auto 20px auto;
+    color: white;
+    background-color: rgb(80, 80, 80);
+    border: none;
+    border-radius: 5px;
+}
+
+#newsletter{
+    color: white;
+    background-color: rgb(80, 80, 80);
+    text-align: center;
+}
+
+#newsletter .line{
+    margin: 10px auto 0 auto;
+    background-color: white;
+}
+
+#newsletter > h2{
+    margin: 0;
+    padding-top: 20px;
+}
+
+#newsletter > p{
+    font-size: 0.8rem;;
+}
+
+#newsletter > input[type=text]{
+    box-sizing: border-box;
+    width: 280px;
+    height: 30px;
+    padding-left: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+#newsletter > button{
+    box-sizing: border-box;
+    height: 30px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    background-color:  rgb(62, 178, 216);
+    padding: 0px 20px;
+}
+
+#summary{
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(34, 34, 34);
+    padding: 20px;
+    color: white;
+}
+
+#summary h4{
+    font-size: 0.8rem;
+}
+
+#summary ul{
+    list-style: none;
+    padding: 0;
+}
+
+#summary li{
+    font-size: 0.7rem;
+    margin-top: 10px;
+}
+
+a{
+    text-decoration: none;
+    color:white;
+}
+
+.copyright{
+    text-align: center;
+    font-size: 0.8rem;
+    background-color: rgb(5, 5, 5);
+    padding: 10px;
+    color: white;
+}
+
+.copyright span{
+    color:rgb(62, 178, 216);
+}
