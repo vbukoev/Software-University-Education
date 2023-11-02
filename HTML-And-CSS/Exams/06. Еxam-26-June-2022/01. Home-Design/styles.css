@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+@import url(https://use.fontawesome.com/releases/v6.1.2/css/all.css);
+
+body, html{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family:'Courgette', cursive;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(249, 239, 239);
+}
+
+h1{
+    font-size: 45px;
+}
+
+header p{
+    font-size: 20px;
+    color: rgb(176, 11, 11);
+    text-align: right;
+    margin-top: -30px;
+}
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+article{
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+    width: 300px;
+    height: 400px;
+    margin: 1rem;
+    text-align: center;
+    background-color: white;
+    border-radius: 15px;
+}
+
+.wrapper{
+    padding: 0 1rem;
+}
+
+article img{
+    width: 100%;
+}
+
+h2{
+    margin-top: 0rem;
+    padding: 0.5rem;
+    border-bottom: 1px solid rgb(176, 11, 11);
+}
+
+.main-text .continue{
+    font-size: 12px;
+}
+
+.continue{
+    position: absolute;
+    left: 5rem;
+    bottom: 1rem;
+    text-decoration: none;
+    color: black;
+}
+
+i{
+    /* border: 1px solid rgb(176, 11, 11); */
+    border-radius: 100%;
+    background-color: rgb(176, 11, 11);
+    color:white;
+    padding: 2.5px;
+    font-size: x-small;
+    font-weight: bold;
+    margin-left: 5px;
+}

@@ -1,0 +1,187 @@
+@import url(https://use.fontawesome.com/releases/v6.1.2/css/all.css);
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap');
+
+
+html, body{
+    margin: 0;
+    padding: 0;
+    font-family: 'PT Sans', sans-serif;
+}
+
+main{
+    margin: 0 auto;
+    width: 800px;
+}
+
+a{
+    text-decoration: none;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 3rem;
+    text-align: center;
+    color:white;
+    background: linear-gradient(180deg, rgba(0,0,0,0.7), rgba(0,0,0,0)), url(./image/computer-main.jpg) no-repeat 0px -100px;
+    background-size: cover;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    height: 40px;
+}
+
+nav a{
+    color: white;
+    font-size: 1rem;
+}
+
+header h1{
+    margin-top: 3rem;
+}
+
+header h1, header p, header a{
+    text-shadow: 2px 2px 4px black;
+    color: white;
+}
+
+header button{
+    margin-top: 2rem;
+    padding: 0.5rem 1rem;
+    background-color: aquamarine;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+header button:hover{
+    background-color: rgba(0, 255, 255, 0);
+    border: 2px solid white;
+    cursor: pointer;
+    opacity: 50;
+}
+
+header>a{
+    margin-top: 3rem;
+}
+
+body > main > header > a > i{
+    margin-left: 10px;
+}
+
+.hustle{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.hustle img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+h2{
+    font-size: 1.6rem;
+    margin-top: 0;
+}
+
+.text-container{
+    height: 310px;
+}
+
+.what{
+    box-sizing: border-box;
+    padding: 1rem 2rem;
+}
+
+ul{
+    list-style-type: none;
+}
+
+ul li{
+    padding-left:2em;
+    text-indent: -2em;
+    margin-top: 0.5rem;
+}
+
+.fa-circle-check{
+    color: rgb(4, 189, 78);
+}
+
+.case{
+    text-align: center;
+}
+
+.item img{
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.item p{
+    margin-top: 0;
+    color: rgb(4, 189, 78);
+}
+
+.item{
+    width: 80px;
+}
+
+.case ul{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 25px;
+    margin-top: 2rem;
+}
+
+.case ul li{
+    padding-left: 0em;
+    text-indent: 0em;
+    margin-left: 1rem;
+    padding-left: 0px;
+}
+
+.questions{
+    box-sizing: border-box;
+    background-color:rgb(75, 202, 160, 0.5);
+    width: 100%;
+    text-align: center;
+    border: 1px solid rgb(75, 202, 160, 0);
+}
+
+.questions ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0 10px;
+}
+
+.questions ul li{
+    width: 30%;
+    text-overflow: ellipsis;
+    text-indent: 0em;
+    padding: 0;
+    margin: 0;
+}
+
+h3{
+    font-size: 1rem;
+}
+
+.questions ul li p{
+    font-size: 0.9rem;
+}
+
+.questions h2 {
+    margin-top: 10px;
+    margin-bottom: -10px;
+}
+
+.questions a{
+    color: black;
+}
