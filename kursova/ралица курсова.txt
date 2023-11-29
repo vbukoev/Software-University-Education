@@ -1,0 +1,87 @@
+#include <stdio.h>
+
+#define N 3 // Тази стойност се променя спрямо нуждите на изпитването
+
+void printCondition() {
+    printf("Условие на задачата:\n");
+    printf("Да се състави програма за обработка на масива A[N,N], където данните са реални числа в интервала [-1000;1000].\n");
+}
+
+void printAuthor() {
+    printf("Автор на програмата: [Ралица Кръстева]\n");
+}
+
+void inputArray(float A[N][N]) {
+    printf("Въведете елементите на масива A[%d][%d]:\n", N, N);
+    for (int i = 0; i < N; i++) {
+        for (int j = 0; j < N; j++) {
+            scanf("%f", &A[i][j]);
+        }
+    }
+}
+
+void printArray(float A[N][N]) { // отпечатване на входните данни 
+    printf("Входни данни - масив A[%d][%d]:\n", N, N);
+    for (int i = 0; i < N; i++) {
+        for (int j = 0; j < N; j++) {
+            printf("%.2f\t", A[i][j]);
+        }
+        printf("\n");
+    }
+}
+
+void processArray(float A[N][N], float C[], float K, float L) { 
+    int count = 0;
+
+    // Образуване на едномерен масив C
+    for (int i = 0; i < N; i++) {
+        for (int j = 0; j < N; j++) {
+            if (A[i][j] >= K && A[i][j] <= L) {
+                C[count++] = A[i][j];
+            }
+        }
+    }
+
+    // Сортиране на масив C по големина 
+    for (int i = 0; i < count - 1; i++) {
+        for (int j = 0; j < count - i - 1; j++) {
+            if (C[j] > C[j + 1]) {
+                float temp = C[j]; //правим си временна променлива, коята да помни стойността на C [j+1], но първоначално взима стойнноста C[j]
+                C[j] = C[j + 1];
+                C[j + 1] = temp;
+            }
+        }
+    }
+}
+
+void printResults(float C[], int size) {
+    printf("Резултати след обработка:\n");
+
+    // Печат на масив C
+    printf("Масив C:\n");
+    for (int i = 0; i < size; i++) {
+        printf("%.2f\t", C[i]);
+    }
+    printf("\n");
+}
+
+int main() { // main функцията, в която се извършват основните действия и се извикват методите, които са инициализирани по-горе
+    float A[N][N]; // А -> матрица с N*N
+    float K, L; //инициализация на 2 реални числа, които се ползват за начална и крайна стойност на интервал
+
+    printCondition();//условие на задачата
+    printAuthor();// отпечва се името на автора
+
+    inputArray(A);//входните данни
+    printArray(A);//извеждаме на конзолата входните данни 
+
+    printf("Въведете интервала [К - L]: ");
+    scanf("%f %f", &K, &L);
+
+    float C[N * N]; // Предполагаме, че C няма да съдържа повече елементи от N*N
+
+    processArray(A, C, K, L);
+    printResults(C, N * N);// принтираме резултатите
+
+    return 0;
+}
