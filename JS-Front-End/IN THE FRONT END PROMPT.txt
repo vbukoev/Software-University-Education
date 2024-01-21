@@ -1,0 +1,4 @@
+IN THE FRONT END PROMPT -> |npm install| to install the packages 
+			   |npm start| to start the server in the server cmd prompt to start it locally 
+
+IN THE SERVER PROMPT -> |node server|
