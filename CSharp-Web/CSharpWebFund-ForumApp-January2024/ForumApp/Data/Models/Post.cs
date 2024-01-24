@@ -4,7 +4,12 @@ namespace Forum.App.Data.Models
 {
     public class Post
     {
-        public int Id { get; init; }
+        public Post()
+        {
+            this.Id = Guid.NewGuid();
+        }
+        [Key]
+        public Guid Id { get; set; }
         [Required]
         [MaxLength(TitleMaxLength)]
         public string Title { get; set; } = null!;
