@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForumApp.Data", "ForumApp.D
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForumApp.Data.Models", "ForumApp.Data.Models\ForumApp.Data.Models.csproj", "{AEC34D2E-C906-4BF3-BAC9-987A92F04B67}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForumApp.Common", "ForumApp.Common\ForumApp.Common.csproj", "{19316D3D-41B2-4D16-9C98-565924A7AF0F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForumApp.ViewModels", "ForumApp.ViewModels\ForumApp.ViewModels.csproj", "{83FD20C6-E3D4-4096-9B35-5BDF23628199}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{AEC34D2E-C906-4BF3-BAC9-987A92F04B67}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AEC34D2E-C906-4BF3-BAC9-987A92F04B67}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AEC34D2E-C906-4BF3-BAC9-987A92F04B67}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19316D3D-41B2-4D16-9C98-565924A7AF0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19316D3D-41B2-4D16-9C98-565924A7AF0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19316D3D-41B2-4D16-9C98-565924A7AF0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19316D3D-41B2-4D16-9C98-565924A7AF0F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83FD20C6-E3D4-4096-9B35-5BDF23628199}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83FD20C6-E3D4-4096-9B35-5BDF23628199}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83FD20C6-E3D4-4096-9B35-5BDF23628199}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83FD20C6-E3D4-4096-9B35-5BDF23628199}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
