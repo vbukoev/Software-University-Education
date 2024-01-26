@@ -1,16 +1,14 @@
-﻿using ForumApp.Data;
+﻿using Forum.App.Data.Configuration;
 using ForumApp.Data.Models;
+using Microsoft.EntityFrameworkCore;
 
-namespace Forum.App.Data
+namespace ForumApp.Data
 {
-    using Microsoft.EntityFrameworkCore;
-    using Configuration;
-
     public class ForumAppDbContext : DbContext
     {
         public ForumAppDbContext(DbContextOptions<ForumAppDbContext> options) : base(options)
         {
-            Database.Migrate();
+            //Database.Migrate();
         }
         public DbSet<Post> Posts { get; set; } = null!;
 
