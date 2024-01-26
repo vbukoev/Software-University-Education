@@ -38,7 +38,41 @@ namespace ForumApp.Services
                 Title = postViewModel.Title,
                 Content = postViewModel.Content,
             };
-            await this.dbContext.Posts.AddAsync(new Post());
+            await this.dbContext.Posts.AddAsync(newPost);
+            await this.dbContext.SaveChangesAsync();
+        }
+
+        public async Task<PostAddFormModel> GetForEditOrDeleteByIdAsync(string id)
+        {
+            Post postToEdit = await this.dbContext
+                .Posts
+                .FirstAsync(p => p.Id.ToString() == id);
+            
+            return new PostAddFormModel()
+            {
+                Title = postToEdit.Title,
+                Content = postToEdit.Content,
+            };
+        }
+
+        public async Task EditByIdAsync(string id, PostAddFormModel postEditedModel)
+        {
+            Post postToEdit = await this.dbContext
+                .Posts
+                .FirstAsync(p => p.Id.ToString()== id);
+            postToEdit.Title = postEditedModel.Title;
+            postToEdit.Content = postEditedModel.Content;
+
+            await this.dbContext.SaveChangesAsync();
+        }
+
+        public async Task DeleteByIdAsync(string id)
+        {
+            Post postToDelete = await this.dbContext
+                .Posts
+                .FirstAsync(p=>p.Id.ToString() == id);
+
+            this.dbContext.Posts.Remove(postToDelete);
             await this.dbContext.SaveChangesAsync();
         }
     }
