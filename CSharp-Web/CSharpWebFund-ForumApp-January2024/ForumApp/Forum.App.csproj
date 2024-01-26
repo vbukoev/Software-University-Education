@@ -21,6 +21,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ForumApp.Data\ForumApp.Data.csproj" />
+    <ProjectReference Include="..\ForumApp.Services\ForumApp.Services.csproj" />
     <ProjectReference Include="..\ForumApp.ViewModels\ForumApp.ViewModels.csproj" />
   </ItemGroup>
 
