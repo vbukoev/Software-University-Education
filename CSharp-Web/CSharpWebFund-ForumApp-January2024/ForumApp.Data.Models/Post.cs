@@ -11,9 +11,11 @@ namespace ForumApp.Data.Models
         }
         [Key]
         public Guid Id { get; set; }
+
         [Required]
         [MaxLength(TitleMaxLength)]
         public string Title { get; set; } = null!;
+        
         [Required]
         [MaxLength(ContentMaxLength)]
         public string Content { get; set; } = null!;
