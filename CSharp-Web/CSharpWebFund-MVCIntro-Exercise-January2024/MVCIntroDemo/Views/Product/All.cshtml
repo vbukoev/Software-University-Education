@@ -1,0 +1,21 @@
+﻿@using MVCIntroDemo.ViewModels.Product;
+@model IEnumerable<ProductViewModel>
+@{
+    ViewData["Title"] = "All Products";
+}
+
+<div class="card" style="width: 18rem">
+    <div class="card-header">
+        @ViewData["Title"]
+    </div>
+    <ul class="list-group list-group-flush"> 
+        @foreach(ProductViewModel product in Model)
+        {
+            <li class="list-group-item">@product.Name - @product.Price$</li>
+        }
+    </ul>
+</div>
+
+<div class="row" >
+    <a class="btn btn-primary" asp-controller="Product" asp-action="DownloadProductsInfo">Download Products Info</a>
+</div>
