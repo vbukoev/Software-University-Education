@@ -1,4 +1,6 @@
-﻿@{
+﻿@using Watchlist.Models
+@model IEnumerable<MovieInfoViewModel>
+@{
     ViewBag.Title = "All Movies";
 }
 
@@ -6,7 +8,7 @@
 <h2 class="text-center">@ViewBag.Title</h2>
 <hr />
 
-@*<div class="text-center row">
+<div class="text-center row">
     @foreach (var movie in Model)
     {
         <div class="card col-4" style="width: 20rem;">
@@ -26,4 +28,3 @@
         </div>
     }
 </div>
-*@
