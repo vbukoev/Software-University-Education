@@ -222,22 +222,6 @@ namespace Homies.Controllers
             return RedirectToAction(nameof(All));
         }
 
-        private string GetUserId()
-        {
-            return User.FindFirstValue(ClaimTypes.NameIdentifier) ?? string.Empty;
-        }
-
-        private async Task<IEnumerable<TypeViewModel>> GetTypes()
-        {
-            return await data.Types
-                .AsNoTracking()
-                .Select(t => new TypeViewModel
-                {
-                    Id = t.Id,
-                    Name = t.Name
-                })
-                .ToListAsync();
-        }
 
         public async Task<IActionResult> Details(int id)
         {
@@ -263,6 +247,23 @@ namespace Homies.Controllers
             }
 
             return View(model);
+        }
+
+        private string GetUserId()
+        {
+            return User.FindFirstValue(ClaimTypes.NameIdentifier) ?? string.Empty;
+        }
+
+        private async Task<IEnumerable<TypeViewModel>> GetTypes()
+        {
+            return await data.Types
+                .AsNoTracking()
+                .Select(t => new TypeViewModel
+                {
+                    Id = t.Id,
+                    Name = t.Name
+                })
+                .ToListAsync();
         }
     }
 }
