@@ -15,11 +15,8 @@ namespace Library.Data.Models
         [MaxLength(50)]
         public string Name { get; set; }
 
-        [Comment("Books in the category")]
+        [Comment("Collection of Books")]
         public List<Book> Books { get; set; } = new List<Book>();
     }
 }
 
-//Has Id – a unique integer, Primary Key
-//    • Has Name – a string with min length 5 and max length 50 (required)
-//    • Has Books – a collection of type Books
