@@ -17,23 +17,23 @@ namespace SoftUniBazar.Data
         {
             modelBuilder
                 .Entity<AdBuyer>()
-                .HasKey(ab => new { ab.BuyerId, ab.AdId });
+                .HasKey(ab => new { ab.BuyerId, ab.AdId }); // Set the primary key
 
             modelBuilder.Entity<AdBuyer>()
                 .HasOne(ab => ab.Ad)
                 .WithMany(a => a.AdBuyers)
                 .HasForeignKey(ab => ab.AdId)
-                .OnDelete(DeleteBehavior.Restrict);
+                .OnDelete(DeleteBehavior.Restrict); 
 
             modelBuilder.Entity<AdBuyer>()
                 .HasOne(ab => ab.Buyer)
                 .WithMany()
                 .HasForeignKey(ab => ab.BuyerId)
-                .OnDelete(DeleteBehavior.Restrict);
+                .OnDelete(DeleteBehavior.Restrict); 
 
             modelBuilder.Entity<Ad>()
                 .Property(a => a.Price)
-                .HasColumnType("decimal(18, 2)");
+                .HasColumnType("decimal(18, 2)"); // Set the price to be decimal(18, 2)
 
 
             modelBuilder
